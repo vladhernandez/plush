@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @invite.name %>
+</p>
+
+<p>
+  <b>Collection:</b>
+  <%=h @invite.collection_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @invite.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_invite_path(@invite) %> |
+<%= link_to 'Back', invites_path %>
