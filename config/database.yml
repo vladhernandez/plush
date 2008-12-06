@@ -20,7 +20,7 @@ development:
   database: plush_development
   username: root
   password:
-  socket: /tmp/mysql.sock
+  # socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -31,12 +31,12 @@ test:
   database: plush_test
   username: root
   password:
-  socket: /tmp/mysql.sock
+  # socket: /tmp/mysql.sock
 
 production:
   adapter: mysql
   encoding: utf8
-  database: plush_production
-  username: root
-  password: 
-  socket: /tmp/mysql.sock
+  database: plush_prod
+  username: aglenn
+  password: glennsk8
+  # socket: /tmp/mysql.sock
