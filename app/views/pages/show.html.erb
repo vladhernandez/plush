@@ -1,43 +1,9 @@
-<p>
-  <b>Title:</b>
-  <%=h @page.title %>
-</p>
+<h1><%=h @page.title %></h1>
+<div id="page-content" class="scrollable">
+  <%= markdown @page.content %>  
+</div>
 
-<p>
-  <b>Breadcrumb:</b>
-  <%=h @page.breadcrumb %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%=h @page.content %>
-</p>
-
-<p>
-  <b>Parent:</b>
-  <%=h @page.parent_id %>
-</p>
-
-<p>
-  <b>Lft:</b>
-  <%=h @page.lft %>
-</p>
-
-<p>
-  <b>Rgt:</b>
-  <%=h @page.rgt %>
-</p>
-
-<p>
-  <b>Position:</b>
-  <%=h @page.position %>
-</p>
-
-<p>
-  <b>Layout:</b>
-  <%=h @page.layout %>
-</p>
-
-
+<% if logged_in? %>
 <%= link_to 'Edit', edit_page_path(@page) %> |
 <%= link_to 'Back', pages_path %>
+<% end %>

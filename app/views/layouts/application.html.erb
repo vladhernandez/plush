@@ -8,6 +8,14 @@
   <%= javascript_include_tag :defaults %>
 </head>
 <body>
-  <%= yield %>
+  <div id="nav-top">
+    <%= render :partial => "nav/top" %>
+  </div>
+  <div id="nav-side">
+    <%= render :partial => "nav/side" %>
+  </div>
+  <div id="content">
+    <%= yield %>    
+  </div>
 </body>
 </html>
