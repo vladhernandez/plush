@@ -2,6 +2,67 @@
 /* = Plush Main Stylesheet - Layout, Type, Forms = */
 /* =============================================== */
 
+/* = Reference - Colors, Sizes, etc
+			- Dark Grey = #262626 or whatever
+			- Base Font = 11px or whatever	
+*/
+
+
+/* = HTML Tags Etc                                = */
+/* ================================================ */
+body{}
+h1, h2, h3, h4, h5{}
+h1{}
+h2{}
+h3{}
+h4{}
+h5{}
+
+ul li{}
+a{}
+a:hover{}
+
+
+/* = Layout Blocks                               = */
+/* =============================================== */
+#site{width: 800px; height: 600px; margin: 0 auto; border: 1px solid; overflow:hidden;}
+#masthead{position: relative; height: 120px;}
+#main{width: 600px;float: right;}
+	#content{display: block; clear: both;}
+#side{width: 200px;float: left;}
+
+
+/* = Navigation                                   = */
+/* ================================================ */
+.nav{margin: 0; padding: 0;}
+.nav li{list-style: none; margin: 0; padding: 0;}
+
+#nav-utility{position: absolute; top: 20px; right: 40px;}
+
+#nav-top{clear: both;}
+.horiz{}
+.horiz li{float: left; display: block; padding: 10px 5px;}
+
+/* Nav Accordians */
+.horiz li ul{}
+.horiz li ul li{}
+
+/* Side Nav - Persistant and contextual */
+#nav-side{}
+#nav-side .global{}
+#nav-side .subnav{}
+
+
+/* = Generic Classes                              = */
+/* ================================================ */
 .scrollable{overflow:auto;}
+
+
+/* = Forms                                        = */
+/* ================================================ */
+
+
+/* = Admin Section	                              = */
+/* ================================================ */
 .admin_block{float: left; width: 175px; /*border: 1px solid;*/}
 .admin_block .scrollable{height: 200px;}

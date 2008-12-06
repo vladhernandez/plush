@@ -15,4 +15,9 @@ module ApplicationHelper
     klass_name = klass.to_s.capitalize
     link_to "Create New #{klass_name}", eval("new_#{klass_name.downcase.underscore}_path")
   end
+  
+  def logo_link
+    link_to(image_tag('/images/logo.gif'), '/', :id => 'logo')
+  end
+  
 end

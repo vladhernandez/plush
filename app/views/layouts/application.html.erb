@@ -8,14 +8,24 @@
   <%= javascript_include_tag :defaults %>
 </head>
 <body>
-  <div id="nav-top">
-    <%= render :partial => "nav/top" %>
-  </div>
-  <div id="nav-side">
-    <%= render :partial => "nav/side" %>
-  </div>
-  <div id="content">
-    <%= yield %>    
+  <div id="site">
+    <div id="masthead">
+      <%= logo_link %>
+      <%= render :partial => "nav/utility" %>
+    </div>
+    <div id="main">
+      <div id="nav-top">
+        <%= render :partial => "nav/top" %>
+      </div>
+      <div id="content">
+        <%= yield %>    
+      </div>      
+    </div>
+    <div id="side">
+      <div id="nav-side">
+        <%= render :partial => "nav/side" %>
+      </div>      
+    </div>
   </div>
 </body>
 </html>
