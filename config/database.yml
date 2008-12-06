@@ -39,4 +39,5 @@ production:
   database: plush_prod
   username: aglenn
   password: glennsk8
+  host: mysql.aaronglenn.ca
   # socket: /tmp/mysql.sock
