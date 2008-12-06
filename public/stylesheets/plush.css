@@ -2,4 +2,6 @@
 /* = Plush Main Stylesheet - Layout, Type, Forms = */
 /* =============================================== */
 
-
+.scrollable{overflow:auto;}
+.admin_block{float: left; width: 175px; /*border: 1px solid;*/}
+.admin_block .scrollable{height: 200px;}

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  product_id: 1
+  category_id: 1
+  invite_id: 1
+
+two:
+  title: MyString
+  product_id: 1
+  category_id: 1
+  invite_id: 1

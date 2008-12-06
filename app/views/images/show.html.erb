@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @image.title %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%=h @image.product_id %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @image.category_id %>
+</p>
+
+<p>
+  <b>Invite:</b>
+  <%=h @image.invite_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>
