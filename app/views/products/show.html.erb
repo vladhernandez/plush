@@ -5,17 +5,12 @@
 
 <p>
   <b>Category:</b>
-  <%=h @product.category_id %>
-</p>
-
-<p>
-  <b>Collection:</b>
-  <%=h @product.collection_id %>
+  <%=h @product.category.title %>
 </p>
 
 <p>
   <b>Description:</b>
-  <%=h @product.description %>
+  <%= markdown @product.description %>
 </p>
 
 

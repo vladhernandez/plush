@@ -2,10 +2,14 @@
 module ApplicationHelper
   def edit_list_for(items)
     links = '<div class="scrollable">'
+    links << '<ul class="admin-list">'
     items.each do |item|
+      links << "<li>"
       links << link_to(item.title, item)
-      links << " - #{link_to 'Edit', edit_item_path(item)}"
+      links << " - #{link_to 'Edit', eval("edit_#{item.class.name.underscore}_path(item)")}"
+      links << "</li>"
     end
+    links << '</ul>'
     links << '</div>'
     # links << new_link_for(items.first.class.name)
     links

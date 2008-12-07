@@ -1,0 +1,32 @@
+
+<p>
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :file %><br />
+  <%= f.file_field :file %>
+</p>
+
+
+
+<% if @product %>
+  <p>
+    <%= f.label :product_id %><br />
+    <%= f.text_field :product_id %>
+  </p>
+<% end %>
+
+<% if @category %>
+<p>
+  <%= f.label :category_id %><br />
+  <%= f.text_field :category_id %>
+</p>
+<% end %>
+
+<% if @invite %>
+<p>
+  <%= f.label :invite_id %><br />
+  <%= f.text_field :invite_id %>
+</p>
+<% end %>

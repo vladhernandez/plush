@@ -2,23 +2,7 @@
 
 <% form_for(@image) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :product_id %><br />
-    <%= f.text_field :product_id %>
-  </p>
-  <p>
-    <%= f.label :category_id %><br />
-    <%= f.text_field :category_id %>
-  </p>
-  <p>
-    <%= f.label :invite_id %><br />
-    <%= f.text_field :invite_id %>
-  </p>
+  <%= render :partial => "form", :locals => {:f => f} %>
   <p>
     <%= f.submit "Update" %>
   </p>

@@ -9,17 +9,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081206001406) do
+ActiveRecord::Schema.define(:version => 20081207175251) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
     t.string   "permalink"
-    t.integer  "parent_id",  :limit => 11
-    t.integer  "lft",        :limit => 11
-    t.integer  "rgt",        :limit => 11
-    t.integer  "position",   :limit => 11
+    t.integer  "parent_id",     :limit => 11
+    t.integer  "lft",           :limit => 11
+    t.integer  "rgt",           :limit => 11
+    t.integer  "position",      :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "category_type"
+  end
+
+  create_table "images", :force => true do |t|
+    t.string   "title"
+    t.integer  "product_id",        :limit => 11
+    t.integer  "category_id",       :limit => 11
+    t.integer  "invite_id",         :limit => 11
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size",    :limit => 11
   end
 
   create_table "invites", :force => true do |t|
@@ -53,12 +66,12 @@ ActiveRecord::Schema.define(:version => 20081206001406) do
   end
 
   create_table "products", :force => true do |t|
-    t.string   "name"
-    t.integer  "category_id",   :limit => 11
-    t.integer  "collection_id", :limit => 11
+    t.string   "title"
+    t.integer  "category_id", :limit => 11
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "permalink"
   end
 
   create_table "users", :force => true do |t|

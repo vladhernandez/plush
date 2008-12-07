@@ -19,7 +19,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Blog Posts
   map.resources :posts, :has_many => :images
-  map.blog '/blog', :controller => 'posts'
+  map.blog '/blog', :controller => 'posts', :action => 'index'
 
   # Login/Logout/Admin
   map.resources :users

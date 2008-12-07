@@ -25,11 +25,12 @@ a:hover{}
 
 /* = Layout Blocks                               = */
 /* =============================================== */
-#site{width: 800px; height: 600px; margin: 0 auto; border: 1px solid; overflow:hidden;}
+#site{width: 800px; min-height: 600px; margin: 0 auto; border: 1px solid;}
 #masthead{position: relative; height: 120px;}
 #main{width: 600px;float: right;}
 	#content{display: block; clear: both;}
 #side{width: 200px;float: left;}
+#footer{clear: both;}
 
 
 /* = Navigation                                   = */
