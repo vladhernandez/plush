@@ -36,8 +36,8 @@ test:
 production:
   adapter: mysql
   encoding: utf8
-  database: plush_prod
-  username: aglenn
-  password: glennsk8
-  host: mysql.aaronglenn.ca
+  database: plush_production_db
+  username: plushadmin
+  password: nikita
+  host: mysql.plush.dreamhosters.com
   # socket: /tmp/mysql.sock
