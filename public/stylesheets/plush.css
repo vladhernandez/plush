@@ -10,7 +10,7 @@
 
 /* = HTML Tags Etc                                = */
 /* ================================================ */
-body{margin:0; padding:0;}
+body{margin:0; padding:0; background:url(/images/layout/blue-grey-bg.gif);}
 h1, h2, h3, h4, h5{}
 h1{}
 h2{}
@@ -25,7 +25,7 @@ a:hover{}
 
 /* = Layout Blocks                               = */
 /* =============================================== */
-#site{width: 800px; min-height: 600px; margin: 0 auto; border: 1px solid;}
+#site{width: 798px; min-height: 600px; margin: 0 auto; border: 0px solid; background:url(/images/layout/base.png) no-repeat top left; padding:15px 24px 24px 19px;}
 #masthead{position: relative; height: 120px;}
 #main{width: 600px;float: right;}
 	#content{display: block; clear: both;}
