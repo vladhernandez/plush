@@ -54,6 +54,16 @@ a:hover{}
 #nav-side .subnav{}
 
 
+#nav-side li#side-about a{background-image:url(/images/nav/leftnav/about.gif);}
+#nav-side li#side-blog a{background-image:url(/images/nav/leftnav/blog.gif);}
+#nav-side li#side-faq a{background-image:url(/images/nav/leftnav/faq.gif);}
+#nav-side li#side-praise a{background-image:url(/images/nav/leftnav/praise.gif);}
+#nav-side li#side-contact a{background-image:url(/images/nav/leftnav/contact.gif);}
+#nav-side li a{background-position:left bottom; background-repeat:no-repeat;}
+#nav-side li a:hover{background-position:left top;}
+#nav-side li a{text-decoration:none; width:122px; height:20px; display:block;}
+#nav-side li a span{visibility:hidden;}
+
 /* = Generic Classes                              = */
 /* ================================================ */
 .scrollable{overflow:auto;}
