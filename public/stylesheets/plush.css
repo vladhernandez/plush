@@ -14,6 +14,7 @@ body{margin:0; padding:0; background:url(/images/layout/blue-grey-bg.gif);}
 h1, h2, h3, h4, h5{}
 h1{}
 h2{}
+h2.fancy{line-height:1.7em; font-size:17px; font-family:"Times New Roman",Times, serif; color:#686866;}
 h3{}
 h4{}
 h5{}
@@ -28,6 +29,8 @@ a:hover{}
 #site{width: 798px; min-height: 600px; margin: 0 auto; border: 0px solid; background:url(/images/layout/base.png) no-repeat top left; padding:15px 24px 24px 19px;}
 #masthead{position: relative; height: 120px;}
 #main{width: 600px;float: right;}
+.home #main #content{padding:0 60px 10px 30px;}
+
 	#content{display: block; clear: both;}
 #side{width: 200px;float: left;}
 #footer{clear: both;}
@@ -53,6 +56,16 @@ a:hover{}
 #nav-side .global{}
 #nav-side .subnav{}
 
+/* Home Link Boxes */
+.home #entry-links{}
+.home #entry-links .link {width:167px; height:182px;}
+.home #entry-links .link a{background-position:bottom left; background-repeat:no-repeat; display:block; text-decoration:none;}
+.home #entry-links .link a:hover{background-position:top left;}
+.home #entry-links #store{float:left;}
+.home #entry-links #custom{float:right; margin-right:50px;}
+.home #entry-links #store a{width:167px; height:182px;background-image:url(/images/home/store.jpg);}
+.home #entry-links #custom a{width:167px; height:182px;background-image:url(/images/home/custom.jpg);}
+
 
 #nav-side li#side-about a{background-image:url(/images/nav/leftnav/about.gif);}
 #nav-side li#side-blog a{background-image:url(/images/nav/leftnav/blog.gif);}
@@ -62,11 +75,12 @@ a:hover{}
 #nav-side li a{background-position:left bottom; background-repeat:no-repeat;}
 #nav-side li a:hover{background-position:left top;}
 #nav-side li a{text-decoration:none; width:122px; height:20px; display:block;}
-#nav-side li a span{visibility:hidden;}
+#nav-side li a span, .link span{visibility:hidden;}
 
 /* = Generic Classes                              = */
 /* ================================================ */
 .scrollable{overflow:auto;}
+.dotted{background:transparent url(/images/home/dotted-line.png) repeat-x; height:3px; border:0;}
 
 
 /* = Forms                                        = */

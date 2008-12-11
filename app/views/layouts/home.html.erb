@@ -4,30 +4,23 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Plush</title>
-  <%= stylesheet_link_tag 'blueprint', 'plush' %>
+  <%= stylesheet_link_tag 'blueprint', 'plush', 'sifr' %>
   <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'sifr' %>
+  <%= javascript_include_tag 'sifr-config' %>
 </head>
 <body class="home">
   <div id="site">
     <div id="masthead">
-      <%= logo_link %>
-      <%= render :partial => "nav/utility" %>
+      
+    
     </div>
     <div id="main">
-      <div id="nav-top">
-        <%= render :partial => "nav/top" %>
-      </div>
       <div id="content">
         <%= yield %>    
       </div>      
     </div>
     <div id="side">
-      <div id="nav-side">
-        <%= render :partial => "nav/side" %>
-      </div>      
-    </div>
-    <div id="footer">
-      <%= link_to "admin", admin_path %>
     </div>
   </div>
 </body>
