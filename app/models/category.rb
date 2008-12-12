@@ -6,7 +6,9 @@ class Category < ActiveRecord::Base
   
   
   named_scope :store_cats, :conditions => {:category_type => 'store'}
+  named_scope :store_root, :conditions => {:category_type => 'store', :parent_id => 1}
   named_scope :custom_cats, :conditions => {:category_type => 'custom'}
+  named_scope :custom_root, :conditions => {:category_type => 'custom', :parent_id => 1}
   named_scope :top_level, :conditions => {:parent_id => 'NULL'}
 
   has_permalink :title

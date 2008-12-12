@@ -64,4 +64,26 @@ Rails::Initializer.run do |config|
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
+  
+  
+  # ACTION MAILER ENVIRONMENT
+  # -----------------------------------------
+  config.action_mailer.smtp_settings = {
+    :address        => "smtp.gmail.com",
+    :port           => 587,
+    :domain         => "monkey@domain.com",
+    :authentication => :plain,
+    :user_name      => "monkey@domain.com",
+    :password       => "banana" 
+  }
+  # ActionMailer::Base.delivery_method = :smtp
+  # ActionMailer::Base.smtp_settings  = {
+  #   :address  => "plush.dreamhosters.com",
+  #   :port   => 25,
+  #   :domain   => "www.plush.ca"
+  # }
+  # 
+  # ActionMailer::Base.perform_deliveries = true
+  # ActionMailer::Base.raise_delivery_errors = true
+  # ActionMailer::Base.default_charset = "utf-8"
 end

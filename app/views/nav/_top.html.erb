@@ -1,7 +1,16 @@
-<ul id="nav-top" class="nav horiz">
-  <li><%= link_to 'Gift Certificates', '/gift-certificates' %></li>
-  <li><%= link_to 'Products', store_path %></li>
-  <li><%= link_to 'Process', '/process' %></li>
-  <li><%= link_to 'Shipping &amp; Returns', '/shipping-and-returns' %></li>
-  <li><%= link_to 'Disclaimers', '/disclaimers' %></li>
-</ul>
+  <ul id="nav-top" class="nav horiz">
+<% if params[:id] == 'custom-invitations'  %>
+  <%= nav_list_for Category.find_by_title('Custom Invitations') %>
+
+<% else %>
+    <li><%= link_to 'Gift Certificates', '/gift-certificates' %></li>
+    <li>
+      <%= link_to 'Products', store_path %>
+      <%= nav_list_for Category.find_by_title('Store') %>
+    </li>
+
+<% end %>
+    <li><%= link_to 'Process', '/process' %></li>
+    <li><%= link_to 'Shipping &amp; Returns', '/shipping-and-returns' %></li>
+    <li><%= link_to 'Disclaimers', '/disclaimers' %></li>
+  </ul>

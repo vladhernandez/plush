@@ -1,0 +1,10 @@
+<h2>Sample Request For <%= @product.title %></h2>
+
+
+<% form_tag"/products/sample/#{@product.permalink}" do |f| %>
+  
+  <%= text_field :sample, :name %>
+
+  <p><input type="submit" value="Continue &rarr;"></p>
+  
+<% end %>
