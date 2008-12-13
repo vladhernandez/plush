@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081212063713) do
+ActiveRecord::Schema.define(:version => 20081213001215) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -39,6 +39,80 @@ ActiveRecord::Schema.define(:version => 20081212063713) do
     t.string   "name"
     t.integer  "collection_id", :limit => 11
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "occasion_order_forms", :force => true do |t|
+    t.string   "name"
+    t.string   "mailing_address"
+    t.string   "mailing_address_2"
+    t.string   "shipping_address"
+    t.string   "shipping_address_2"
+    t.string   "phone_number"
+    t.string   "email_address"
+    t.string   "design_name"
+    t.integer  "quantity",           :limit => 11
+    t.string   "ordered_sample"
+    t.string   "sample_number"
+    t.string   "text_paper"
+    t.string   "text_paper_layer_2"
+    t.string   "text_paper_layer_3"
+    t.string   "text_paper_layer_4"
+    t.string   "font_color"
+    t.string   "ribbon_color"
+    t.boolean  "print_return"
+    t.boolean  "sealing_sticker"
+    t.boolean  "colored_envelope"
+    t.boolean  "lined_envelope"
+    t.boolean  "double_envelope"
+    t.text     "verse_information"
+    t.string   "type_of_event"
+    t.string   "rsvp_contact"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "other_sample_orders", :force => true do |t|
+    t.string   "name"
+    t.string   "mailing_address"
+    t.string   "mailing_address_2"
+    t.string   "phone_number"
+    t.string   "email_address"
+    t.date     "event_date"
+    t.string   "sample_name_1"
+    t.string   "sample_name_2"
+    t.string   "sample_name_3"
+    t.string   "text_paper"
+    t.string   "text_paper_layer_1"
+    t.string   "text_paper_layer_2"
+    t.string   "text_paper_layer_3"
+    t.string   "text_paper_2"
+    t.string   "text_paper_2_layer_1"
+    t.string   "text_paper_2_layer_2"
+    t.string   "text_paper_2_layer_3"
+    t.string   "text_paper_3"
+    t.string   "text_paper_3_layer_1"
+    t.string   "text_paper_3_layer_2"
+    t.string   "text_paper_3_layer_3"
+    t.string   "font_color_1"
+    t.string   "font_color_2"
+    t.string   "font_color_3"
+    t.string   "ribbon_color_1"
+    t.string   "ribbon_color_2"
+    t.string   "ribbon_color_3"
+    t.text     "special_requests"
+    t.integer  "samples_quantity",                 :limit => 11
+    t.integer  "samples_quantity_cost",            :limit => 11
+    t.integer  "paper_samples_quantity",           :limit => 11
+    t.integer  "paper_samples_quantity_cost",      :limit => 11
+    t.integer  "paper_swatch_deck_quantity",       :limit => 11
+    t.integer  "paper_swatch_deck_quantity_cost",  :limit => 11
+    t.integer  "ribbon_swatch_deck_quantity",      :limit => 11
+    t.integer  "ribbon_swatch_deck_quantity_cost", :limit => 11
+    t.integer  "subtotal",                         :limit => 11
+    t.integer  "gst",                              :limit => 11
+    t.integer  "total",                            :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -74,6 +148,62 @@ ActiveRecord::Schema.define(:version => 20081212063713) do
     t.string   "permalink"
   end
 
+  create_table "program_order_forms", :force => true do |t|
+    t.string   "name"
+    t.string   "mailing_address"
+    t.string   "mailing_address_2"
+    t.string   "shipping_address"
+    t.string   "shipping_address_2"
+    t.string   "phone_number"
+    t.string   "email_address"
+    t.date     "wedding_date"
+    t.string   "brides_name"
+    t.string   "grooms_name"
+    t.string   "design_contact_number"
+    t.string   "design_name"
+    t.integer  "quantity",              :limit => 11
+    t.string   "ordered_sample"
+    t.string   "sample_number"
+    t.string   "text_paper"
+    t.string   "text_paper_layer_2"
+    t.string   "text_paper_layer_3"
+    t.string   "text_paper_layer_4"
+    t.string   "font_color"
+    t.string   "ribbon_color"
+    t.text     "special_requests"
+    t.text     "program_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "thank_you_order_forms", :force => true do |t|
+    t.string   "name"
+    t.string   "mailing_address"
+    t.string   "mailing_address_2"
+    t.string   "shipping_address"
+    t.string   "shipping_address_2"
+    t.string   "phone_number"
+    t.string   "email_address"
+    t.date     "wedding_date"
+    t.string   "brides_name"
+    t.string   "grooms_name"
+    t.string   "design_contact_number"
+    t.string   "design_name"
+    t.integer  "quantity",              :limit => 11
+    t.string   "ordered_sample"
+    t.string   "sample_number"
+    t.string   "text_paper"
+    t.string   "text_paper_layer_2"
+    t.string   "text_paper_layer_3"
+    t.string   "text_paper_layer_4"
+    t.string   "font_color"
+    t.string   "ribbon_color"
+    t.text     "special_requests"
+    t.text     "card_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "login"
     t.string   "email"
@@ -83,6 +213,61 @@ ActiveRecord::Schema.define(:version => 20081212063713) do
     t.datetime "updated_at"
     t.string   "remember_token"
     t.datetime "remember_token_expires_at"
+  end
+
+  create_table "wedding_sample_orders", :force => true do |t|
+    t.string   "name"
+    t.string   "mailing_address"
+    t.string   "mailing_address_2"
+    t.string   "phone_number"
+    t.string   "email_address"
+    t.date     "event_date"
+    t.string   "sample_name_1"
+    t.string   "sample_name_2"
+    t.string   "sample_name_3"
+    t.string   "text_paper"
+    t.string   "text_paper_layer_1"
+    t.string   "text_paper_layer_2"
+    t.string   "text_paper_layer_3"
+    t.string   "text_paper_2"
+    t.string   "text_paper_2_layer_1"
+    t.string   "text_paper_2_layer_2"
+    t.string   "text_paper_2_layer_3"
+    t.string   "text_paper_3"
+    t.string   "text_paper_3_layer_1"
+    t.string   "text_paper_3_layer_2"
+    t.string   "text_paper_3_layer_3"
+    t.string   "font_color_1"
+    t.string   "font_color_2"
+    t.string   "font_color_3"
+    t.string   "ribbon_color_1"
+    t.string   "ribbon_color_2"
+    t.string   "ribbon_color_3"
+    t.string   "reply_card_style"
+    t.string   "paper_sample_color_1"
+    t.string   "paper_sample_color_2"
+    t.string   "paper_sample_color_3"
+    t.string   "paper_sample_color_4"
+    t.text     "special_requests"
+    t.integer  "invites_quantity",                 :limit => 11
+    t.integer  "invites_quantity_cost",            :limit => 11
+    t.integer  "save_the_date_quantity",           :limit => 11
+    t.integer  "save_the_date_quantity_cost",      :limit => 11
+    t.integer  "thank_you_cards_quantity",         :limit => 11
+    t.integer  "thank_you_cards_quantity_cost",    :limit => 11
+    t.integer  "programs_quantity",                :limit => 11
+    t.integer  "programs_quantity_cost",           :limit => 11
+    t.integer  "paper_samples_quantity",           :limit => 11
+    t.integer  "paper_samples_quantity_cost",      :limit => 11
+    t.integer  "paper_swatch_deck_quantity",       :limit => 11
+    t.integer  "paper_swatch_deck_quantity_cost",  :limit => 11
+    t.integer  "ribbon_swatch_deck_quantity",      :limit => 11
+    t.integer  "ribbon_swatch_deck_quantity_cost", :limit => 11
+    t.integer  "subtotal",                         :limit => 11
+    t.integer  "gst",                              :limit => 11
+    t.integer  "total",                            :limit => 11
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
