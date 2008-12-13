@@ -1,0 +1,104 @@
+<h1>Editing program_order_form</h1>
+
+<% form_for(@program_order_form) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :mailing_address %><br />
+    <%= f.text_field :mailing_address %>
+  </p>
+  <p>
+    <%= f.label :mailing_address_2 %><br />
+    <%= f.text_field :mailing_address_2 %>
+  </p>
+  <p>
+    <%= f.label :shipping_address %><br />
+    <%= f.text_field :shipping_address %>
+  </p>
+  <p>
+    <%= f.label :shipping_address_2 %><br />
+    <%= f.text_field :shipping_address_2 %>
+  </p>
+  <p>
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.label :email_address %><br />
+    <%= f.text_field :email_address %>
+  </p>
+  <p>
+    <%= f.label :wedding_date %><br />
+    <%= f.date_select :wedding_date %>
+  </p>
+  <p>
+    <%= f.label :brides_name %><br />
+    <%= f.text_field :brides_name %>
+  </p>
+  <p>
+    <%= f.label :grooms_name %><br />
+    <%= f.text_field :grooms_name %>
+  </p>
+  <p>
+    <%= f.label :design_contact_number %><br />
+    <%= f.text_field :design_contact_number %>
+  </p>
+  <p>
+    <%= f.label :design_name %><br />
+    <%= f.text_field :design_name %>
+  </p>
+  <p>
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </p>
+  <p>
+    <%= f.label :ordered_sample %><br />
+    <%= f.text_field :ordered_sample %>
+  </p>
+  <p>
+    <%= f.label :sample_number %><br />
+    <%= f.text_field :sample_number %>
+  </p>
+  <p>
+    <%= f.label :text_paper %><br />
+    <%= f.text_field :text_paper %>
+  </p>
+  <p>
+    <%= f.label :text_paper_layer_2 %><br />
+    <%= f.text_field :text_paper_layer_2 %>
+  </p>
+  <p>
+    <%= f.label :text_paper_layer_3 %><br />
+    <%= f.text_field :text_paper_layer_3 %>
+  </p>
+  <p>
+    <%= f.label :text_paper_layer_4 %><br />
+    <%= f.text_field :text_paper_layer_4 %>
+  </p>
+  <p>
+    <%= f.label :font_color %><br />
+    <%= f.text_field :font_color %>
+  </p>
+  <p>
+    <%= f.label :ribbon_color %><br />
+    <%= f.text_field :ribbon_color %>
+  </p>
+  <p>
+    <%= f.label :special_requests %><br />
+    <%= f.text_area :special_requests %>
+  </p>
+  <p>
+    <%= f.label :program_text %><br />
+    <%= f.text_area :program_text %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @program_order_form %> |
+<%= link_to 'Back', program_order_forms_path %>

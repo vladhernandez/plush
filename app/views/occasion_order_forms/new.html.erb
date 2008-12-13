@@ -1,0 +1,111 @@
+<h1>New occasion_order_form</h1>
+
+<% form_for(@occasion_order_form) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :mailing_address %><br />
+    <%= f.text_field :mailing_address %>
+  </p>
+  <p>
+    <%= f.label :mailing_address_2 %><br />
+    <%= f.text_field :mailing_address_2 %>
+  </p>
+  <p>
+    <%= f.label :shipping_address %><br />
+    <%= f.text_field :shipping_address %>
+  </p>
+  <p>
+    <%= f.label :shipping_address_2 %><br />
+    <%= f.text_field :shipping_address_2 %>
+  </p>
+  <p>
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.label :email_address %><br />
+    <%= f.text_field :email_address %>
+  </p>
+  <p>
+    <%= f.label :design_name %><br />
+    <%= f.text_field :design_name %>
+  </p>
+  <p>
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </p>
+  <p>
+    <%= f.label :ordered_sample %><br />
+    <%= f.text_field :ordered_sample %>
+  </p>
+  <p>
+    <%= f.label :sample_number %><br />
+    <%= f.text_field :sample_number %>
+  </p>
+  <p>
+    <%= f.label :text_paper %><br />
+    <%= f.text_field :text_paper %>
+  </p>
+  <p>
+    <%= f.label :text_paper_layer_2 %><br />
+    <%= f.text_field :text_paper_layer_2 %>
+  </p>
+  <p>
+    <%= f.label :text_paper_layer_3 %><br />
+    <%= f.text_field :text_paper_layer_3 %>
+  </p>
+  <p>
+    <%= f.label :text_paper_layer_4 %><br />
+    <%= f.text_field :text_paper_layer_4 %>
+  </p>
+  <p>
+    <%= f.label :font_color %><br />
+    <%= f.text_field :font_color %>
+  </p>
+  <p>
+    <%= f.label :ribbon_color %><br />
+    <%= f.text_field :ribbon_color %>
+  </p>
+  <p>
+    <%= f.label :print_return %><br />
+    <%= f.check_box :print_return %>
+  </p>
+  <p>
+    <%= f.label :sealing_sticker %><br />
+    <%= f.check_box :sealing_sticker %>
+  </p>
+  <p>
+    <%= f.label :colored_envelope %><br />
+    <%= f.check_box :colored_envelope %>
+  </p>
+  <p>
+    <%= f.label :lined_envelope %><br />
+    <%= f.check_box :lined_envelope %>
+  </p>
+  <p>
+    <%= f.label :double_envelope %><br />
+    <%= f.check_box :double_envelope %>
+  </p>
+  <p>
+    <%= f.label :verse_information %><br />
+    <%= f.text_area :verse_information %>
+  </p>
+  <p>
+    <%= f.label :type_of_event %><br />
+    <%= f.text_field :type_of_event %>
+  </p>
+  <p>
+    <%= f.label :rsvp_contact %><br />
+    <%= f.text_field :rsvp_contact %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', occasion_order_forms_path %>

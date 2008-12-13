@@ -1,0 +1,96 @@
+<h1>Listing other_sample_orders</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Mailing address</th>
+    <th>Mailing address 2</th>
+    <th>Phone number</th>
+    <th>Email address</th>
+    <th>Event date</th>
+    <th>Sample name 1</th>
+    <th>Sample name 2</th>
+    <th>Sample name 3</th>
+    <th>Text paper</th>
+    <th>Text paper layer 1</th>
+    <th>Text paper layer 2</th>
+    <th>Text paper layer 3</th>
+    <th>Text paper 2</th>
+    <th>Text paper 2 layer 1</th>
+    <th>Text paper 2 layer 2</th>
+    <th>Text paper 2 layer 3</th>
+    <th>Text paper 3</th>
+    <th>Text paper 3 layer 1</th>
+    <th>Text paper 3 layer 2</th>
+    <th>Text paper 3 layer 3</th>
+    <th>Font color 1</th>
+    <th>Font color 2</th>
+    <th>Font color 3</th>
+    <th>Ribbon color 1</th>
+    <th>Ribbon color 2</th>
+    <th>Ribbon color 3</th>
+    <th>Special requests</th>
+    <th>Samples quantity</th>
+    <th>Samples quantity cost</th>
+    <th>Paper samples quantity</th>
+    <th>Paper samples quantity cost</th>
+    <th>Paper swatch deck quantity</th>
+    <th>Paper swatch deck quantity cost</th>
+    <th>Ribbon swatch deck quantity</th>
+    <th>Ribbon swatch deck quantity cost</th>
+    <th>Subtotal</th>
+    <th>Gst</th>
+    <th>Total</th>
+  </tr>
+
+<% for other_sample_order in @other_sample_orders %>
+  <tr>
+    <td><%=h other_sample_order.name %></td>
+    <td><%=h other_sample_order.mailing_address %></td>
+    <td><%=h other_sample_order.mailing_address_2 %></td>
+    <td><%=h other_sample_order.phone_number %></td>
+    <td><%=h other_sample_order.email_address %></td>
+    <td><%=h other_sample_order.event_date %></td>
+    <td><%=h other_sample_order.sample_name_1 %></td>
+    <td><%=h other_sample_order.sample_name_2 %></td>
+    <td><%=h other_sample_order.sample_name_3 %></td>
+    <td><%=h other_sample_order.text_paper %></td>
+    <td><%=h other_sample_order.text_paper_layer_1 %></td>
+    <td><%=h other_sample_order.text_paper_layer_2 %></td>
+    <td><%=h other_sample_order.text_paper_layer_3 %></td>
+    <td><%=h other_sample_order.text_paper_2 %></td>
+    <td><%=h other_sample_order.text_paper_2_layer_1 %></td>
+    <td><%=h other_sample_order.text_paper_2_layer_2 %></td>
+    <td><%=h other_sample_order.text_paper_2_layer_3 %></td>
+    <td><%=h other_sample_order.text_paper_3 %></td>
+    <td><%=h other_sample_order.text_paper_3_layer_1 %></td>
+    <td><%=h other_sample_order.text_paper_3_layer_2 %></td>
+    <td><%=h other_sample_order.text_paper_3_layer_3 %></td>
+    <td><%=h other_sample_order.font_color_1 %></td>
+    <td><%=h other_sample_order.font_color_2 %></td>
+    <td><%=h other_sample_order.font_color_3 %></td>
+    <td><%=h other_sample_order.ribbon_color_1 %></td>
+    <td><%=h other_sample_order.ribbon_color_2 %></td>
+    <td><%=h other_sample_order.ribbon_color_3 %></td>
+    <td><%=h other_sample_order.special_requests %></td>
+    <td><%=h other_sample_order.samples_quantity %></td>
+    <td><%=h other_sample_order.samples_quantity_cost %></td>
+    <td><%=h other_sample_order.paper_samples_quantity %></td>
+    <td><%=h other_sample_order.paper_samples_quantity_cost %></td>
+    <td><%=h other_sample_order.paper_swatch_deck_quantity %></td>
+    <td><%=h other_sample_order.paper_swatch_deck_quantity_cost %></td>
+    <td><%=h other_sample_order.ribbon_swatch_deck_quantity %></td>
+    <td><%=h other_sample_order.ribbon_swatch_deck_quantity_cost %></td>
+    <td><%=h other_sample_order.subtotal %></td>
+    <td><%=h other_sample_order.gst %></td>
+    <td><%=h other_sample_order.total %></td>
+    <td><%= link_to 'Show', other_sample_order %></td>
+    <td><%= link_to 'Edit', edit_other_sample_order_path(other_sample_order) %></td>
+    <td><%= link_to 'Destroy', other_sample_order, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New other_sample_order', new_other_sample_order_path %>

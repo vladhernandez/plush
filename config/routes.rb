@@ -1,4 +1,18 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :occasion_order_forms
+
+  map.resources :program_order_forms
+
+  map.resources :thank_you_order_forms
+
+  map.resources :wedding_sample_orders
+
+  map.resources :wedding_sample_orders
+
+  map.resources :wedding_sample_orders
+
+  map.resources :other_sample_orders
+
 
   # Generic Images
   map.resources :images

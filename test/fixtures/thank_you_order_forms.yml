@@ -1,0 +1,51 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  mailing_address: MyString
+  mailing_address_2: MyString
+  shipping_address: MyString
+  shipping_address_2: MyString
+  phone_number: MyString
+  email_address: MyString
+  wedding_date: 2008-12-12
+  brides_name: MyString
+  grooms_name: MyString
+  design_contact_number: MyString
+  design_name: MyString
+  quantity: 1
+  ordered_sample: MyString
+  sample_number: MyString
+  text_paper: MyString
+  text_paper_layer_2: MyString
+  text_paper_layer_3: MyString
+  text_paper_layer_4: MyString
+  font_color: MyString
+  ribbon_color: MyString
+  special_requests: MyText
+  card_text: MyText
+
+two:
+  name: MyString
+  mailing_address: MyString
+  mailing_address_2: MyString
+  shipping_address: MyString
+  shipping_address_2: MyString
+  phone_number: MyString
+  email_address: MyString
+  wedding_date: 2008-12-12
+  brides_name: MyString
+  grooms_name: MyString
+  design_contact_number: MyString
+  design_name: MyString
+  quantity: 1
+  ordered_sample: MyString
+  sample_number: MyString
+  text_paper: MyString
+  text_paper_layer_2: MyString
+  text_paper_layer_3: MyString
+  text_paper_layer_4: MyString
+  font_color: MyString
+  ribbon_color: MyString
+  special_requests: MyText
+  card_text: MyText

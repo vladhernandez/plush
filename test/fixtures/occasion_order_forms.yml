@@ -1,0 +1,55 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  mailing_address: MyString
+  mailing_address_2: MyString
+  shipping_address: MyString
+  shipping_address_2: MyString
+  phone_number: MyString
+  email_address: MyString
+  design_name: MyString
+  quantity: 1
+  ordered_sample: MyString
+  sample_number: MyString
+  text_paper: MyString
+  text_paper_layer_2: MyString
+  text_paper_layer_3: MyString
+  text_paper_layer_4: MyString
+  font_color: MyString
+  ribbon_color: MyString
+  print_return: false
+  sealing_sticker: false
+  colored_envelope: false
+  lined_envelope: false
+  double_envelope: false
+  verse_information: MyText
+  type_of_event: MyString
+  rsvp_contact: MyString
+
+two:
+  name: MyString
+  mailing_address: MyString
+  mailing_address_2: MyString
+  shipping_address: MyString
+  shipping_address_2: MyString
+  phone_number: MyString
+  email_address: MyString
+  design_name: MyString
+  quantity: 1
+  ordered_sample: MyString
+  sample_number: MyString
+  text_paper: MyString
+  text_paper_layer_2: MyString
+  text_paper_layer_3: MyString
+  text_paper_layer_4: MyString
+  font_color: MyString
+  ribbon_color: MyString
+  print_return: false
+  sealing_sticker: false
+  colored_envelope: false
+  lined_envelope: false
+  double_envelope: false
+  verse_information: MyText
+  type_of_event: MyString
+  rsvp_contact: MyString
