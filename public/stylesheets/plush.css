@@ -29,10 +29,10 @@ a:hover{}
 #site{width: 798px; min-height: 600px; margin: 0 auto; border: 0px solid; background:url(/images/layout/base.png) no-repeat top left; padding:15px 24px 24px 19px;}
 #masthead{position: relative; height: 120px;}
 #main{width: 600px;float: right;}
-.home #main #content{padding:0 60px 10px 30px;}
+.home #main #content{padding:0 60px 10px 30px; overflow:auto;}
 
-	#content{display: block; clear: both;}
-#side{width: 200px;float: left;}
+	#content{display: block; clear: both; height:400px; overflow-y:scroll;}
+#side{width: 198px;float: left;}
 #footer{clear: both;}
 
 
@@ -49,6 +49,8 @@ a:hover{}
 #nav-top ul li a:hover{background-position:bottom left;}
 #nav-top ul li a span {visibility:hidden;}
 #nav-top ul ul{display:none;}
+#nav-top ul ul.active{display:block; position:absolute;}
+
 
 #nav-top-gift-certificates a{background-image:url(/images/nav/store/gift-certificates.gif); width:136px;}
 #nav-top-products a{background-image:url(/images/nav/store/products.gif); width:88px;}

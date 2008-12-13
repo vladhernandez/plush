@@ -7,7 +7,7 @@ class PagesController < ApplicationController
     end
     
     def determine_layout
-      if @object == Page.root || params[:action] == 'home'
+      if params[:action] == 'home'
         "home" 
       else
         'application'
