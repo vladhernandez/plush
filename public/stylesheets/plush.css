@@ -50,9 +50,9 @@ a:hover{}
 #nav-top ul li a:hover{background-position:bottom left;}
 #nav-top ul li a span {visibility:hidden;}
 
-#nav-top ul ul{display:none; padding-left:30px;}
-#nav-top ul ul.active{display:block; position:absolute; margin-top:-10px;}
-/*#nav-top ul ul.active ul.active{display:block; position:absolute; background:blue;}*/
+#nav-top ul ul{display:none; padding-left:30px; position:absolute; margin-top:-10px;}
+#nav-top ul ul.active{display:block;}
+#nav-top ul ul.active ul{margin:0; padding:0; position:relative;}
 
 #nav-top-gift-certificates a{background-image:url(/images/nav/store/gift-certificates.gif); width:136px;}
 #nav-top-products a{background-image:url(/images/nav/store/products.gif); width:88px;}
