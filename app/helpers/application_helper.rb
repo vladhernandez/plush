@@ -40,6 +40,35 @@ module ApplicationHelper
     links
   end
   
+  def accordion_nav_for(object)
+    object = object.first if object.is_a? Array
+    if object && object.children
+      links = '<ul>'
+      object.children.each do |item|
+        links << "<li id='#{item.permalink if item.permalink}' class='accordion_toggle'>"
+        links << item.title
+        links << "</li>"
+        links << accordion_nav_contents(item) if item.children
+      end
+        links << "</ul>"
+    end
+    links
+  end
+  
+  def accordion_nav_contents(object)
+    object = object.first if object.is_a? Array
+    if object && object.children
+      links = '<ul class="accordion_content">'
+      object.children.each do |item|
+        links << "<li id='#{item.permalink if item.permalink}'>"
+        links << link_to(item.title, item)
+        links << "</li>"
+      end
+      links << "</ul>"
+    end
+    links
+end  
+  
   def nav_active_class(item)
     'active' if @category == item
   end

@@ -44,19 +44,46 @@ a:hover{}
 #nav-utility{position: absolute; top: 20px; right: 40px;}
 
 #nav-top{clear: both; background:url(/images/nav/store/nav-dotted-line.png) no-repeat 11px 35px; width:561px; height:42px;}
-#nav-top ul, #nav-top ul li{margin;0; padding:0;}
+#nav-top ul, #nav-top ul li{margin:0; padding:0;}
+#nav-top ul li{border:0px solid blue;}
 #nav-top ul li a{font-family:"Times New Roman", Times, serif; color:#686866; text-decoration:none; background-position:bottom right; display:block; height:42px;}
 #nav-top ul li a:hover{background-position:bottom left;}
 #nav-top ul li a span {visibility:hidden;}
-#nav-top ul ul{display:none;}
-#nav-top ul ul.active{display:block; position:absolute;}
 
+#nav-top ul ul{display:none; padding-left:30px;}
+#nav-top ul ul.active{display:block; position:absolute; margin-top:-10px;}
+/*#nav-top ul ul.active ul.active{display:block; position:absolute; background:blue;}*/
 
 #nav-top-gift-certificates a{background-image:url(/images/nav/store/gift-certificates.gif); width:136px;}
 #nav-top-products a{background-image:url(/images/nav/store/products.gif); width:88px;}
 #nav-top-process a{background-image:url(/images/nav/store/process.gif); width:79px;}
 #nav-top-shipping-and-returns a{background-image:url(/images/nav/store/shipping.gif); width:154px;}
 #nav-top-disclaimers a{background-image:url(/images/nav/store/disclaimer.gif); width:104px;}
+
+#nav-top ul ul{background:#000;}
+#nav-top ul ul li{display:block; float:none; color:#fff;}
+#nav-top ul ul li a{background:none; display:block; width:auto; height:auto; }
+
+
+.accordion_toggle_active {
+
+}
+.accordion_toggle {
+background:#A9D06A
+border-bottom:1px solid #CDE99F;
+color:#000000;
+cursor:pointer;
+display:block;
+font-size:12px;
+font-weight:normal;
+padding:0 10px;
+text-decoration:none;
+}
+.accordion_content {
+background-color:#FFFFFF;
+color:#444444;
+overflow:hidden;
+}
 .horiz{}
 .horiz li{float: left; display: block; padding: 10px 5px;}
 

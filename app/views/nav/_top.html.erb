@@ -6,7 +6,7 @@
     <li class="top-nav-item" id="nav-top-gift-certificates"><%= link_to content_tag('span','Gift Certificates'), '/gift-certificates' %></li>
     <li class="top-nav-item" id="nav-top-products">
       <%= link_to content_tag('span','Products'), store_path %>
-      <%= nav_list_for Category.find_by_title('Store') %>
+      <%= accordion_nav_for Category.find_by_title('Store') %>
     </li>
 
 <% end %>
