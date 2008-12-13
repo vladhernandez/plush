@@ -2,20 +2,44 @@ require 'test_helper'
 
 class MailerTest < ActionMailer::TestCase
   tests Mailer
-  def test_contact_email
-    @expected.subject = 'Mailer#contact_email'
-    @expected.body    = read_fixture('contact_email')
+  def test_occasion_order
+    @expected.subject = 'Mailer#occasion_order'
+    @expected.body    = read_fixture('occasion_order')
     @expected.date    = Time.now
 
-    assert_equal @expected.encoded, Mailer.create_contact_email(@expected.date).encoded
+    assert_equal @expected.encoded, Mailer.create_occasion_order(@expected.date).encoded
   end
 
-  def test_sample_request
-    @expected.subject = 'Mailer#sample_request'
-    @expected.body    = read_fixture('sample_request')
+  def test_other_sample_order
+    @expected.subject = 'Mailer#other_sample_order'
+    @expected.body    = read_fixture('other_sample_order')
     @expected.date    = Time.now
 
-    assert_equal @expected.encoded, Mailer.create_sample_request(@expected.date).encoded
+    assert_equal @expected.encoded, Mailer.create_other_sample_order(@expected.date).encoded
+  end
+
+  def test_program_order
+    @expected.subject = 'Mailer#program_order'
+    @expected.body    = read_fixture('program_order')
+    @expected.date    = Time.now
+
+    assert_equal @expected.encoded, Mailer.create_program_order(@expected.date).encoded
+  end
+
+  def test_thank_you_order
+    @expected.subject = 'Mailer#thank_you_order'
+    @expected.body    = read_fixture('thank_you_order')
+    @expected.date    = Time.now
+
+    assert_equal @expected.encoded, Mailer.create_thank_you_order(@expected.date).encoded
+  end
+
+  def test_wedding_sample_order
+    @expected.subject = 'Mailer#wedding_sample_order'
+    @expected.body    = read_fixture('wedding_sample_order')
+    @expected.date    = Time.now
+
+    assert_equal @expected.encoded, Mailer.create_wedding_sample_order(@expected.date).encoded
   end
 
 end

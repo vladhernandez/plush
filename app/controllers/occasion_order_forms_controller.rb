@@ -41,17 +41,17 @@ class OccasionOrderFormsController < ApplicationController
   # POST /occasion_order_forms.xml
   def create
     @occasion_order_form = OccasionOrderForm.new(params[:occasion_order_form])
-
-    respond_to do |format|
-      if @occasion_order_form.save
-        flash[:notice] = 'OccasionOrderForm was successfully created.'
-        format.html { redirect_to(@occasion_order_form) }
-        format.xml  { render :xml => @occasion_order_form, :status => :created, :location => @occasion_order_form }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @occasion_order_form.errors, :status => :unprocessable_entity }
-      end
-    end
+    render :text => Mailer.create_occasion_order(@occasion_order_form)
+    # respond_to do |format|
+    #   if @occasion_order_form.save
+    #     flash[:notice] = 'OccasionOrderForm was successfully created.'
+    #     format.html { redirect_to(@occasion_order_form) }
+    #     format.xml  { render :xml => @occasion_order_form, :status => :created, :location => @occasion_order_form }
+    #   else
+    #     format.html { render :action => "new" }
+    #     format.xml  { render :xml => @occasion_order_form.errors, :status => :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PUT /occasion_order_forms/1

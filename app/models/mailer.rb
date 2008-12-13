@@ -1,8 +1,17 @@
 class Mailer < ActionMailer::Base
   
 
-  def contact_email(sent_at = Time.now)
-    subject    'Mailer#contact_email'
+  def occasion_order(occasion_order_form, sent_at = Time.now)
+    subject    'Mailer#occasion_order'
+    recipients ''
+    from       ''
+    sent_on    sent_at
+    
+    body       :occasion_order_form => occasion_order_form
+  end
+
+  def other_sample_order(sent_at = Time.now)
+    subject    'Mailer#other_sample_order'
     recipients ''
     from       ''
     sent_on    sent_at
@@ -10,8 +19,8 @@ class Mailer < ActionMailer::Base
     body       :greeting => 'Hi,'
   end
 
-  def sample_request(product, sent_at = Time.now)
-    subject    'Mailer#sample_request'
+  def program_order(sent_at = Time.now)
+    subject    'Mailer#program_order'
     recipients ''
     from       ''
     sent_on    sent_at
@@ -19,14 +28,22 @@ class Mailer < ActionMailer::Base
     body       :greeting => 'Hi,'
   end
 
-  def order_email(product, sent_at = Time.now)
-    subject    'Order Email'
+  def thank_you_order(sent_at = Time.now)
+    subject    'Mailer#thank_you_order'
     recipients ''
     from       ''
     sent_on    sent_at
     
-    body       :product => product
+    body       :greeting => 'Hi,'
   end
 
+  def wedding_sample_order(sent_at = Time.now)
+    subject    'Mailer#wedding_sample_order'
+    recipients ''
+    from       ''
+    sent_on    sent_at
+    
+    body       :greeting => 'Hi,'
+  end
 
 end
