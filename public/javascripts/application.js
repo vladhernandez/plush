@@ -3,6 +3,7 @@ var Plush = Class.create();
 Plush.prototype = {
 	initialize: function() {
 		this.nav_root = $('nav-top-list');
+		this.vertical_accordion=null;
 		this.init_nav();
 	},
 	init_nav: function(){
@@ -11,25 +12,29 @@ Plush.prototype = {
 		$$('.top-nav-item').each(function(node){
 			var ul = $A(node.getElementsByTagName("ul")).first();
 			if(ul!=null){
-				t.setupAccordions(ul);
+
 				node.onmouseover = function(){
                 	Element.show(ul);
                 }
 				node.onmouseout = function(){
-// 					Element.hide.delay(1,ul);
  					Element.hide(ul);
 				}
+			//	alert(ul.down().className);
+			//	t.vertical_accordion = new accordion(ul,{onEvent : 'click'});
+				//t.setupAccordions(ul);	
 			}
 			});
-		var verticalAccordions = $$('.accordion_toggle');
+		/*var verticalAccordions = $$('.accordion_toggle');
 			verticalAccordions.each(function(accordion) {
 		    $(accordion.next(0)).setStyle({
 		        height: '0px'
 		    });
-		});
+		});*/
+		
+		t.vertical_accordion = new accordion('nav-top-products');
 	},
 	setupAccordions : function(elm){
-	 	var verticalAccordion = new accordion(elm.up,{
+	 	this.vertical_accordion = new accordion(elm.up,{
 			onEvent : 'click'
 		});
 	//	window.console.log('setup done');
