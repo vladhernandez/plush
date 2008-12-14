@@ -4474,7 +4474,7 @@ accordion.prototype = {
 		}
 			
 		if (this.currentAccordion == this.showAccordion) {
-		  this.deactivate();
+		 // this.deactivate();
 		} else {
 		  this._handleAccordion();
 		}

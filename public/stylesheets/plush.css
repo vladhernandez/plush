@@ -43,47 +43,68 @@ a:hover{}
 
 #nav-utility{position: absolute; top: 20px; right: 40px;}
 
+/* = Top Nav                                      = */
+/* ================================================ */
+
 #nav-top{clear: both; background:url(/images/nav/store/nav-dotted-line.png) no-repeat 11px 35px; width:561px; height:42px;}
+
 #nav-top ul, #nav-top ul li{margin:0; padding:0;}
-#nav-top ul li{border:0px solid blue;}
-#nav-top ul li a{font-family:"Times New Roman", Times, serif; color:#686866; text-decoration:none; background-position:bottom right; display:block; height:42px;}
+/* = Top Nav 1st Tier                              = */
+/* ================================================ */
+#nav-top ul{padding-top:0px; height:auto; position:relative;}
+#nav-top ul li a{text-transform:none;font-family:"Times New Roman", Times, serif; color:#686866; text-decoration:none; background-position:bottom right; display:block; height:42px;}
 #nav-top ul li a:hover{background-position:bottom left;}
 #nav-top ul li a span {visibility:hidden;}
 
-#nav-top ul ul{display:none; padding-left:30px; position:absolute; margin-top:-10px;}
-#nav-top ul ul.active{display:block;}
-#nav-top ul ul.active ul{margin:0; padding:0; position:relative;}
-
+/* = Top Nav 1st Tier - Custom Nav Images         = */
+/* ================================================ */
 #nav-top-gift-certificates a{background-image:url(/images/nav/store/gift-certificates.gif); width:136px;}
 #nav-top-products a{background-image:url(/images/nav/store/products.gif); width:88px;}
 #nav-top-process a{background-image:url(/images/nav/store/process.gif); width:79px;}
 #nav-top-shipping-and-returns a{background-image:url(/images/nav/store/shipping.gif); width:154px;}
 #nav-top-disclaimers a{background-image:url(/images/nav/store/disclaimer.gif); width:104px;}
-
-#nav-top ul ul{background:#000;}
-#nav-top ul ul li{display:block; float:none; color:#fff;}
 #nav-top ul ul li a{background:none; display:block; width:auto; height:auto; }
 
+/* = Top Nav 2nd Tier                              = */
+/* ================================================ */
+#nav-top ul ul{		
+					margin-top:-6px; 
+					margin-left:15px; 
+					padding:5px 10px 15px 10px;
+					position:absolute; 
+					display:block; 
+					background:url(/images/nav/store/store_dropdown_paper.jpg) no-repeat top left; 
+					width:170px;
+					
+					}
+#nav-top ul ul.active{display:block;}
+ 
+#nav-top ul ul li{ 	display:block; 
+					float:none; 
+					color:#fff; 
+					text-transform:uppercase; 
+					font-family:"Times New Roman", Times, serif; 
+					font-size:10px; 
+					padding-right:10px;
+					}
 
-.accordion_toggle_active {
 
-}
-.accordion_toggle {
-background:#A9D06A
-border-bottom:1px solid #CDE99F;
-color:#000000;
-cursor:pointer;
-display:block;
-font-size:12px;
-font-weight:normal;
-padding:0 10px;
-text-decoration:none;
-}
-.accordion_content {
-background-color:#FFFFFF;
-color:#444444;
+/* = Top Nav 3rd Tier                              = */
+/* ================================================ */
+#nav-top ul ul ul{position:relative;}
+#nav-top ul ul ul{background:none; margin:0; padding:0;}
+
+/* = Accordion Classes                             = */
+/* ================================================ */
+.overflow {
 overflow:hidden;
 }
+.accordion_toggle_active {}
+.accordion_toggle {background:url(/images/nav/store/nav-dotted-line.png) no-repeat left bottom;cursor:pointer;display:block; margin-bottom:10px; padding-bottom:6px !important;}
+.accordion_content {overflow:hidden;}
+
+
+
 .horiz{}
 .horiz li{float: left; display: block; padding: 10px 5px;}
 
