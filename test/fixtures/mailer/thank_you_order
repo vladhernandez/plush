@@ -1,0 +1,3 @@
+Mailer#thank_you_order
+
+Find me in app/views/mailer/thank_you_order.erb
