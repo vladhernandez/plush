@@ -3,17 +3,13 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Product</th>
-    <th>Category</th>
-    <th>Invite</th>
+    <th>File</th>
   </tr>
 
 <% for image in @images %>
   <tr>
     <td><%=h image.title %></td>
-    <td><%=h image.product_id %></td>
-    <td><%=h image.category_id %></td>
-    <td><%=h image.invite_id %></td>
+    <td><%=h image.file.url %></td>
     <td><%= link_to 'Show', image %></td>
     <td><%= link_to 'Edit', edit_image_path(image) %></td>
     <td><%= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete %></td>

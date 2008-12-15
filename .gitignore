@@ -3,3 +3,5 @@ log/*
 tmp
 tmp/*
 *._*
+*.DS_Store
+public/files

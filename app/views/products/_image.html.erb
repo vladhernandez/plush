@@ -1,0 +1,4 @@
+      <% unless image.file.blank? %>
+        <%= linked_lightbox_image(image) %>
+        <%= link_to 'Edit', edit_image_url(image) %>
+      <% end %>

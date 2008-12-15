@@ -6,7 +6,7 @@
 </p>
 <p>
   <%= f.label :category_id %><br />
-  <%= f.select :category_id, Category.all.collect{|cat| [cat.title, cat.id]} %>
+  <%= f.select :category_id, Category.all.collect{|cat| [cat.title, cat.id] unless cat.title == 'Root'} %>
 </p>
 
 <p>

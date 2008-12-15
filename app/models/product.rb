@@ -7,5 +7,11 @@ class Product < ActiveRecord::Base
   def to_param
     permalink
   end
+  
+  def image_attributes=(attrs)
+    attrs.each do |attr|
+      images.build(attr)
+    end
+  end
 
 end

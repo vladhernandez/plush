@@ -1,4 +1,4 @@
-
+<% unless params[:product_id] %>
 <p>
   <%= f.label :title %><br />
   <%= f.text_field :title %>
@@ -7,26 +7,15 @@
   <%= f.label :file %><br />
   <%= f.file_field :file %>
 </p>
-
-
-
-<% if @product %>
-  <p>
-    <%= f.label :product_id %><br />
-    <%= f.text_field :product_id %>
-  </p>
 <% end %>
 
-<% if @category %>
-<p>
-  <%= f.label :category_id %><br />
-  <%= f.text_field :category_id %>
-</p>
-<% end %>
 
-<% if @invite %>
-<p>
-  <%= f.label :invite_id %><br />
-  <%= f.text_field :invite_id %>
-</p>
+<% if params[:product_id] %>
+<% image = Image.new(:product_id => params[:product_id]) %>
+<% fields_for "product[image_attributes][]", image do |image_form| %>
+	<p>
+		<%= image_form.label :file %><br />
+		<%= image_form.file_field :file %>
+	</p>
+<% end %>
 <% end %>

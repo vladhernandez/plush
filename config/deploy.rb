@@ -30,3 +30,8 @@ namespace :deploy do
     run "cd #{current_path}; touch tmp/restart.txt;"
   end
 end
+
+# Automatically symlink these directories from current/public to shared/public.
+ task :after_symlink, :roles => [:app, :web] do
+   run "ln -nfs #{shared_path}/public/files #{current_path}/public/files"
+ end

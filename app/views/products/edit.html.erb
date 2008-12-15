@@ -1,8 +1,16 @@
 <h1>Editing product</h1>
 
 <% form_for(@product, :html => {:multipart => true}) do |f| %>
-<%= render :partial => "form", :locals => {:f => f} %>
-
+  <%= render :partial => "form", :locals => {:f => f} %>
+  <div id="existing_images">
+    <%= render :partial => "image", :collection => @product.images %>
+  </div>
+  <div id="add_images">
+    
+  </div>
+  <p>
+    <%= link_to_remote "Add An Image", :update => "add_images", :url => new_product_image_path(@product), :method => :get %>
+  </p>
   <p>
     <%= f.submit "Update" %>
   </p>

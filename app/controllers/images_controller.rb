@@ -1,4 +1,8 @@
 class ImagesController < ApplicationController
+  
+  # Check for AJAX - Render no layout for those requests
+  layout proc{ |c| c.request.xhr? ? false : "application" }
+  
   # GET /images
   # GET /images.xml
   def index

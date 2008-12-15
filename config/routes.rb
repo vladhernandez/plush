@@ -23,7 +23,7 @@ ActionController::Routing::Routes.draw do |map|
   
   # map.resources :collections
   map.resources :categories, :has_many => :images
-  map.resources :products, :has_many => :images, :member => { :order => [:get, :post], :sample => [:get, :post] }
+  map.resources :products, :collection => { :add_image => [:get, :post] }, :has_many => :images
 
 
   # Custom Invites
