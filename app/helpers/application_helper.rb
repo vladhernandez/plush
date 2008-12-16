@@ -43,14 +43,14 @@ module ApplicationHelper
   def accordion_nav_for(object)
     object = object.first if object.is_a? Array
     if object && object.children
-      links = '<ul>'
+      links = '<dl class="accordion_holder">'
       object.children.each do |item|
-        links << "<li id='#{item.permalink if item.permalink}' class='accordion_toggle'>"
-        links << item.title
-        links << "</li>"
+        links << "<dt id='#{item.permalink if item.permalink}' class='accordion_toggle'>"
+        links << content_tag('span',item.title)
+        links << "</dt>"
         links << accordion_nav_contents(item) if item.children
       end
-        links << "</ul>"
+        links << "</dl>"
     end
     links
   end
@@ -58,13 +58,13 @@ module ApplicationHelper
   def accordion_nav_contents(object)
     object = object.first if object.is_a? Array
     if object && object.children
-      links = '<ul class="accordion_content">'
+      links = '<dd class="accordion_content">'
       object.children.each do |item|
-        links << "<li id='#{item.permalink if item.permalink}'>"
+        links << "<span id='#{item.permalink if item.permalink}'>"
         links << link_to(item.title, item)
-        links << "</li>"
+        links << "</span>"
       end
-      links << "</ul>"
+      links << "</dd>"
     end
     links
 end  

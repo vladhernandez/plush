@@ -46,14 +46,14 @@ a:hover{}
 /* = Top Nav                                      = */
 /* ================================================ */
 
-#nav-top{clear: both; background:url(/images/nav/store/nav-dotted-line.png) no-repeat 11px 35px; width:561px; height:42px;}
+#nav-top{clear: both; background:url(/images/home/dotted-line.png) no-repeat 11px 99%; width:561px; height:42px;}
 
 #nav-top ul, #nav-top ul li{margin:0; padding:0;}
 /* = Top Nav 1st Tier                              = */
 /* ================================================ */
 #nav-top ul{padding-top:0px; height:auto; position:relative;}
 #nav-top ul li a{text-transform:none;font-family:"Times New Roman", Times, serif; color:#686866; text-decoration:none; background-position:bottom right; display:block; height:42px;}
-#nav-top ul li a:hover{background-position:bottom left;}
+#nav-top ul li.active a, #nav-top ul li a:hover{background-position:bottom left;}
 #nav-top ul li a span {visibility:hidden;}
 
 /* = Top Nav 1st Tier - Custom Nav Images         = */
@@ -67,40 +67,41 @@ a:hover{}
 
 /* = Top Nav 2nd Tier                              = */
 /* ================================================ */
-#nav-top ul ul{		
+#nav-top ul dl{		
 					margin-top:-6px; 
 					margin-left:15px; 
 					padding:5px 10px 15px 10px;
 					position:absolute; 
 					display:block; 
-					background:url(/images/nav/store/store_dropdown_paper.jpg) no-repeat top left; 
+					background:url(/images/nav/store/store_dropdown_paper.jpg) repeat-y top left; 
 					width:170px;
-					
 					}
-#nav-top ul ul.active{display:block;}
+#nav-top ul dl.active{display:block;}
  
-#nav-top ul ul li{ 	display:block; 
+#nav-top ul dl dt{ 	display:block; 
 					float:none; 
 					color:#fff; 
 					text-transform:uppercase; 
 					font-family:"Times New Roman", Times, serif; 
 					font-size:10px; 
-					padding-right:10px;
+					padding:10px 10px 0px 0px;
+					position:relative;
 					}
 
-
+#nav-top ul dl dt span{padding:10px; padding-bottom:5px; padding-left:0;}
 /* = Top Nav 3rd Tier                              = */
 /* ================================================ */
-#nav-top ul ul ul{position:relative;}
-#nav-top ul ul ul{background:none; margin:0; padding:0;}
-
+#nav-top ul dl dd{position:relative; background:none; margin:0; padding:0;}
+#nav-top ul dl dd span{ padding:0; display:block; width:100%;}
+#nav-top ul dl dd span a{color:#fff; background:none; height:auto; display:block; width:100%;}
+#nav-top ul dl dd span a:hover{color:#84AEB3;}
 /* = Accordion Classes                             = */
 /* ================================================ */
 .overflow {
 overflow:hidden;
 }
-.accordion_toggle_active {}
-.accordion_toggle {background:url(/images/nav/store/nav-dotted-line.png) no-repeat left bottom;cursor:pointer;display:block; margin-bottom:10px; padding-bottom:6px !important;}
+.accordion_toggle_active span{background:url(/images/nav/store/sml_burst.png) no-repeat left top;}
+.accordion_toggle {background:url(/images/nav/store/nav-dotted-line.png) no-repeat left bottom;cursor:pointer;display:block; padding-top:10px; margin-bottom:10px; padding-bottom:6px !important;}
 .accordion_content {overflow:hidden;}
 
 

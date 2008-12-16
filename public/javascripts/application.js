@@ -8,29 +8,21 @@ Plush.prototype = {
 	},
 	init_nav: function(){
 		var t = this;
-		$$(".top-nav-item ul").each(function(node){Element.hide(node);});
+		$$(".top-nav-item dl").each(function(node){Element.hide(node);});
 		$$('.top-nav-item').each(function(node){
-			var ul = $A(node.getElementsByTagName("ul")).first();
+			var ul = $A(node.getElementsByTagName("dl")).first();
 			if(ul!=null){
 
 				node.onmouseover = function(){
                 	Element.show(ul);
+					this.addClassName("active");
                 }
 				node.onmouseout = function(){
  					Element.hide(ul);
+					this.removeClassName("active");
 				}
-			//	alert(ul.down().className);
-			//	t.vertical_accordion = new accordion(ul,{onEvent : 'click'});
-				//t.setupAccordions(ul);	
 			}
 			});
-		/*var verticalAccordions = $$('.accordion_toggle');
-			verticalAccordions.each(function(accordion) {
-		    $(accordion.next(0)).setStyle({
-		        height: '0px'
-		    });
-		});*/
-		
 		t.vertical_accordion = new accordion('nav-top-products');
 	},
 	setupAccordions : function(elm){
