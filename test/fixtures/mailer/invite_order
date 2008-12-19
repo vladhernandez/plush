@@ -1,0 +1,3 @@
+Mailer#invite_order
+
+Find me in app/views/mailer/invite_order.erb
