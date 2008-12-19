@@ -1,3 +1,6 @@
 <h2><%=h @category.title %></h2>
+<h3><%=h @category.subtitle %></h3>
+<hr class="dotted" />
+<p><%=h @category.description %></p>
 <%= render :partial => @category.children %>
 <%= render :partial => @category.products %>
