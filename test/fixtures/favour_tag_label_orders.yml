@@ -1,0 +1,49 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  mailing_address: MyString
+  shipping_address: MyString
+  phone_number: MyString
+  email_address: MyString
+  wedding_date: 2008-12-18
+  brides_name: MyString
+  grooms_name: MyString
+  ordered_invites: false
+  item_1: MyString
+  item_1_quantity: MyString
+  item_2: MyString
+  item_2_quantity: MyString
+  item_3: MyString
+  item_3_quantity: MyString
+  item_4: MyString
+  item_4_quantity: MyString
+  item_5: MyString
+  item_5_quantity: MyString
+  font_colours: MyString
+  special_requests: MyText
+  information: MyText
+
+two:
+  name: MyString
+  mailing_address: MyString
+  shipping_address: MyString
+  phone_number: MyString
+  email_address: MyString
+  wedding_date: 2008-12-18
+  brides_name: MyString
+  grooms_name: MyString
+  ordered_invites: false
+  item_1: MyString
+  item_1_quantity: MyString
+  item_2: MyString
+  item_2_quantity: MyString
+  item_3: MyString
+  item_3_quantity: MyString
+  item_4: MyString
+  item_4_quantity: MyString
+  item_5: MyString
+  item_5_quantity: MyString
+  font_colours: MyString
+  special_requests: MyText
+  information: MyText

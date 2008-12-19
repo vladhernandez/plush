@@ -1,0 +1,62 @@
+<h1>Listing favour_tag_label_orders</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Mailing address</th>
+    <th>Shipping address</th>
+    <th>Phone number</th>
+    <th>Email address</th>
+    <th>Wedding date</th>
+    <th>Brides name</th>
+    <th>Grooms name</th>
+    <th>Ordered invites</th>
+    <th>Item 1</th>
+    <th>Item 1 quantity</th>
+    <th>Item 2</th>
+    <th>Item 2 quantity</th>
+    <th>Item 3</th>
+    <th>Item 3 quantity</th>
+    <th>Item 4</th>
+    <th>Item 4 quantity</th>
+    <th>Item 5</th>
+    <th>Item 5 quantity</th>
+    <th>Font colours</th>
+    <th>Special requests</th>
+    <th>Information</th>
+  </tr>
+
+<% for favour_tag_label_order in @favour_tag_label_orders %>
+  <tr>
+    <td><%=h favour_tag_label_order.name %></td>
+    <td><%=h favour_tag_label_order.mailing_address %></td>
+    <td><%=h favour_tag_label_order.shipping_address %></td>
+    <td><%=h favour_tag_label_order.phone_number %></td>
+    <td><%=h favour_tag_label_order.email_address %></td>
+    <td><%=h favour_tag_label_order.wedding_date %></td>
+    <td><%=h favour_tag_label_order.brides_name %></td>
+    <td><%=h favour_tag_label_order.grooms_name %></td>
+    <td><%=h favour_tag_label_order.ordered_invites %></td>
+    <td><%=h favour_tag_label_order.item_1 %></td>
+    <td><%=h favour_tag_label_order.item_1_quantity %></td>
+    <td><%=h favour_tag_label_order.item_2 %></td>
+    <td><%=h favour_tag_label_order.item_2_quantity %></td>
+    <td><%=h favour_tag_label_order.item_3 %></td>
+    <td><%=h favour_tag_label_order.item_3_quantity %></td>
+    <td><%=h favour_tag_label_order.item_4 %></td>
+    <td><%=h favour_tag_label_order.item_4_quantity %></td>
+    <td><%=h favour_tag_label_order.item_5 %></td>
+    <td><%=h favour_tag_label_order.item_5_quantity %></td>
+    <td><%=h favour_tag_label_order.font_colours %></td>
+    <td><%=h favour_tag_label_order.special_requests %></td>
+    <td><%=h favour_tag_label_order.information %></td>
+    <td><%= link_to 'Show', favour_tag_label_order %></td>
+    <td><%= link_to 'Edit', edit_favour_tag_label_order_path(favour_tag_label_order) %></td>
+    <td><%= link_to 'Destroy', favour_tag_label_order, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New favour_tag_label_order', new_favour_tag_label_order_path %>

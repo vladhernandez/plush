@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :favour_tag_label_orders
+
+  map.resources :save_date_orders
+
+  map.resources :invite_orders
+
   map.resources :occasion_order_forms
 
   map.resources :program_order_forms

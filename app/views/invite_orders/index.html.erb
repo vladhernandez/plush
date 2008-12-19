@@ -1,0 +1,118 @@
+<h1>Listing invite_orders</h1>
+
+<table>
+  <tr>
+    <th>Contact name</th>
+    <th>Mailing address</th>
+    <th>Mailing address 2</th>
+    <th>Phone number</th>
+    <th>Email address</th>
+    <th>Design name</th>
+    <th>Quantity required</th>
+    <th>Ordered sample</th>
+    <th>Text paper</th>
+    <th>Paper layer 2</th>
+    <th>Paper layer 3</th>
+    <th>Paper layer 4</th>
+    <th>Font color</th>
+    <th>Ribbon color</th>
+    <th>Special requests</th>
+    <th>Invites design name</th>
+    <th>Invites quantity required</th>
+    <th>Invites sample ordered</th>
+    <th>Invites text paper</th>
+    <th>Invites layer 2</th>
+    <th>Invites layer 3</th>
+    <th>Invites layer 4</th>
+    <th>Invites font color</th>
+    <th>Invites ribbon color</th>
+    <th>Reply cards style</th>
+    <th>Map</th>
+    <th>Hotel info</th>
+    <th>Address labels</th>
+    <th>Coloured envelopes</th>
+    <th>Lined envelopes</th>
+    <th>Double envelopes</th>
+    <th>Invites special requests</th>
+    <th>Wedding date</th>
+    <th>Brides name</th>
+    <th>Grooms name</th>
+    <th>Brides parents</th>
+    <th>Grooms parents</th>
+    <th>Ceremony location</th>
+    <th>Reception location</th>
+    <th>Cocktails time</th>
+    <th>Dinner time</th>
+    <th>Dance time</th>
+    <th>Other time</th>
+    <th>Save the date verse</th>
+    <th>Invitation verse</th>
+    <th>Rsvp verse</th>
+    <th>Rsvp envelope address</th>
+    <th>Rsvp email phone</th>
+    <th>Map</th>
+    <th>Invites additional inserts</th>
+  </tr>
+
+<% for invite_order in @invite_orders %>
+  <tr>
+    <td><%=h invite_order.contact_name %></td>
+    <td><%=h invite_order.mailing_address %></td>
+    <td><%=h invite_order.mailing_address_2 %></td>
+    <td><%=h invite_order.phone_number %></td>
+    <td><%=h invite_order.email_address %></td>
+    <td><%=h invite_order.design_name %></td>
+    <td><%=h invite_order.quantity_required %></td>
+    <td><%=h invite_order.ordered_sample %></td>
+    <td><%=h invite_order.text_paper %></td>
+    <td><%=h invite_order.paper_layer_2 %></td>
+    <td><%=h invite_order.paper_layer_3 %></td>
+    <td><%=h invite_order.paper_layer_4 %></td>
+    <td><%=h invite_order.font_color %></td>
+    <td><%=h invite_order.ribbon_color %></td>
+    <td><%=h invite_order.special_requests %></td>
+    <td><%=h invite_order.invites_design_name %></td>
+    <td><%=h invite_order.invites_quantity_required %></td>
+    <td><%=h invite_order.invites_sample_ordered %></td>
+    <td><%=h invite_order.invites_text_paper %></td>
+    <td><%=h invite_order.invites_layer_2 %></td>
+    <td><%=h invite_order.invites_layer_3 %></td>
+    <td><%=h invite_order.invites_layer_4 %></td>
+    <td><%=h invite_order.invites_font_color %></td>
+    <td><%=h invite_order.invites_ribbon_color %></td>
+    <td><%=h invite_order.reply_cards_style %></td>
+    <td><%=h invite_order.map %></td>
+    <td><%=h invite_order.hotel_info %></td>
+    <td><%=h invite_order.address_labels %></td>
+    <td><%=h invite_order.coloured_envelopes %></td>
+    <td><%=h invite_order.lined_envelopes %></td>
+    <td><%=h invite_order.double_envelopes %></td>
+    <td><%=h invite_order.invites_special_requests %></td>
+    <td><%=h invite_order.wedding_date %></td>
+    <td><%=h invite_order.brides_name %></td>
+    <td><%=h invite_order.grooms_name %></td>
+    <td><%=h invite_order.brides_parents %></td>
+    <td><%=h invite_order.grooms_parents %></td>
+    <td><%=h invite_order.ceremony_location %></td>
+    <td><%=h invite_order.reception_location %></td>
+    <td><%=h invite_order.cocktails_time %></td>
+    <td><%=h invite_order.dinner_time %></td>
+    <td><%=h invite_order.dance_time %></td>
+    <td><%=h invite_order.other_time %></td>
+    <td><%=h invite_order.save_the_date_verse %></td>
+    <td><%=h invite_order.invitation_verse %></td>
+    <td><%=h invite_order.rsvp_verse %></td>
+    <td><%=h invite_order.rsvp_envelope_address %></td>
+    <td><%=h invite_order.rsvp_email_phone %></td>
+    <td><%=h invite_order.map %></td>
+    <td><%=h invite_order.invites_additional_inserts %></td>
+    <td><%= link_to 'Show', invite_order %></td>
+    <td><%= link_to 'Edit', edit_invite_order_path(invite_order) %></td>
+    <td><%= link_to 'Destroy', invite_order, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New invite_order', new_invite_order_path %>

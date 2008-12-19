@@ -1,4 +1,4 @@
-<h1>New program_order_form</h1>
+<h1>ORDER FORM – Programs</h1>
 
 <% form_for(@program_order_form) do |f| %>
   <%= f.error_messages %>
@@ -12,7 +12,7 @@
     <%= f.text_field :mailing_address %>
   </p>
   <p>
-    <%= f.label :mailing_address_2 %>
+    <%= f.label :mailing_address_2, "" %>
     <%= f.text_field :mailing_address_2 %>
   </p>
   <p>
@@ -20,7 +20,7 @@
     <%= f.text_field :shipping_address %>
   </p>
   <p>
-    <%= f.label :shipping_address_2 %>
+    <%= f.label :shipping_address_2, "(if different)" %>
     <%= f.text_field :shipping_address_2 %>
   </p>
   <p>
@@ -43,44 +43,46 @@
     <%= f.label :grooms_name %>
     <%= f.text_field :grooms_name %>
   </p>
-  <p>
-    <%= f.label :design_contact_number %>
+  <p>Did you order you invitations through us? If so, please indicate design and/or your contract number so we can match the fonts.
+    <%= f.label :design_contact_number, "" %>
     <%= f.text_field :design_contact_number %>
   </p>
+  
   <p>
     <%= f.label :design_name %>
     <%= f.text_field :design_name %>
   </p>
   <p>
-    <%= f.label :quantity %>
+    <%= f.label :quantity, "Quantity required:" %>
     <%= f.text_field :quantity %>
   </p>
   <p>
-    <%= f.label :ordered_sample %>
+    <%= f.label :ordered_sample, "Did you order a sample?" %>
     <%= f.text_field :ordered_sample %>
   </p>
   <p>
-    <%= f.label :sample_number %>
+    <%= f.label :sample_number, "If so, indicate sample number from your quote sheet:" %>
     <%= f.text_field :sample_number %>
   </p>
+  <h2>Paper Selection</h2>
   <p>
     <%= f.label :text_paper %>
     <%= f.text_field :text_paper %>
   </p>
   <p>
-    <%= f.label :text_paper_layer_2 %>
+    <%= f.label :text_paper_layer_2, "Layer 2:" %>
     <%= f.text_field :text_paper_layer_2 %>
   </p>
   <p>
-    <%= f.label :text_paper_layer_3 %>
+    <%= f.label :text_paper_layer_3, "Layer 3:" %>
     <%= f.text_field :text_paper_layer_3 %>
   </p>
   <p>
-    <%= f.label :text_paper_layer_4 %>
+    <%= f.label :text_paper_layer_4, "Layer 4:" %>
     <%= f.text_field :text_paper_layer_4 %>
   </p>
   <p>
-    <%= f.label :font_color %>
+    <%= f.label :font_color, "Font colour/s:" %>
     <%= f.text_field :font_color %>
   </p>
   <p>
@@ -88,13 +90,26 @@
     <%= f.text_field :ribbon_color %>
   </p>
   <p>
-    <%= f.label :special_requests %>
+    <%= f.label :special_requests, "Modifications/special requests. Please indicate the sample number. (charges may apply)" %>
     <%= f.text_area :special_requests %>
   </p>
   <p>
-    <%= f.label :program_text %>
+    <%= f.label :program_text, "Program text. <br />Please send in a seperate MS word Document saved with your names and dated created" %>
     <%= f.text_area :program_text %>
   </p>
+
+
+  <strong>Notes:</strong>
+  <ul>
+  <li>Once we receive your order we will send you a contract with estimated timelines and deposit requirements (50% payable by Visa or MasterCard). </li>
+  <li>We will send you PDF text proofs within 1 week of receiving your order.</li>
+  <li>Once you approve all text proofs it will take 2 – 4 weeks to complete your order.</li>
+  <li>The remaining 50% is due when your order is shipped. </li>
+</ul>
+  <p>Don’t hesitate to contact us if you have any questions. Thank you and we look forward to working with you!</p>
+
+
+  
   <p>
     <%= f.submit "Create" %>
   </p>

@@ -1,0 +1,2 @@
+module FavourTagLabelOrdersHelper
+end

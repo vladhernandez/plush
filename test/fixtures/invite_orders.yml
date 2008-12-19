@@ -1,0 +1,105 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  contact_name: MyString
+  mailing_address: MyString
+  mailing_address_2: MyString
+  phone_number: MyString
+  email_address: MyString
+  design_name: MyString
+  quantity_required: MyString
+  ordered_sample: false
+  text_paper: MyString
+  paper_layer_2: MyString
+  paper_layer_3: MyString
+  paper_layer_4: MyString
+  font_color: MyString
+  ribbon_color: MyString
+  special_requests: MyText
+  invites_design_name: MyString
+  invites_quantity_required: MyString
+  invites_sample_ordered: false
+  invites_text_paper: MyString
+  invites_layer_2: MyString
+  invites_layer_3: MyString
+  invites_layer_4: MyString
+  invites_font_color: MyString
+  invites_ribbon_color: MyString
+  reply_cards_style: MyString
+  map: false
+  hotel_info: MyString
+  address_labels: false
+  coloured_envelopes: false
+  lined_envelopes: false
+  double_envelopes: false
+  invites_special_requests: MyText
+  wedding_date: 2008-12-18
+  brides_name: MyString
+  grooms_name: MyString
+  brides_parents: MyString
+  grooms_parents: MyString
+  ceremony_location: MyString
+  reception_location: MyString
+  cocktails_time: 2008-12-18 22:40:43
+  dinner_time: 2008-12-18 22:40:43
+  dance_time: 2008-12-18 22:40:43
+  other_time: MyString
+  save_the_date_verse: MyText
+  invitation_verse: MyText
+  rsvp_verse: MyText
+  rsvp_envelope_address: MyText
+  rsvp_email_phone: MyString
+  map: MyString
+  invites_additional_inserts: MyText
+
+two:
+  contact_name: MyString
+  mailing_address: MyString
+  mailing_address_2: MyString
+  phone_number: MyString
+  email_address: MyString
+  design_name: MyString
+  quantity_required: MyString
+  ordered_sample: false
+  text_paper: MyString
+  paper_layer_2: MyString
+  paper_layer_3: MyString
+  paper_layer_4: MyString
+  font_color: MyString
+  ribbon_color: MyString
+  special_requests: MyText
+  invites_design_name: MyString
+  invites_quantity_required: MyString
+  invites_sample_ordered: false
+  invites_text_paper: MyString
+  invites_layer_2: MyString
+  invites_layer_3: MyString
+  invites_layer_4: MyString
+  invites_font_color: MyString
+  invites_ribbon_color: MyString
+  reply_cards_style: MyString
+  map: false
+  hotel_info: MyString
+  address_labels: false
+  coloured_envelopes: false
+  lined_envelopes: false
+  double_envelopes: false
+  invites_special_requests: MyText
+  wedding_date: 2008-12-18
+  brides_name: MyString
+  grooms_name: MyString
+  brides_parents: MyString
+  grooms_parents: MyString
+  ceremony_location: MyString
+  reception_location: MyString
+  cocktails_time: 2008-12-18 22:40:43
+  dinner_time: 2008-12-18 22:40:43
+  dance_time: 2008-12-18 22:40:43
+  other_time: MyString
+  save_the_date_verse: MyText
+  invitation_verse: MyText
+  rsvp_verse: MyText
+  rsvp_envelope_address: MyText
+  rsvp_email_phone: MyString
+  map: MyString
+  invites_additional_inserts: MyText
