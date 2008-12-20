@@ -1,23 +1,15 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :favour_tag_label_orders
 
-  map.resources :save_date_orders
-
-  map.resources :invite_orders
-
-  map.resources :occasion_order_forms
-
-  map.resources :program_order_forms
-
-  map.resources :thank_you_order_forms
-
-  map.resources :wedding_sample_orders
-
-  map.resources :wedding_sample_orders
-
-  map.resources :wedding_sample_orders
-
-  map.resources :other_sample_orders
+  # Form Resources
+   map.resources *%w( favour_tag_label_orders
+                      save_date_orders
+                      invite_orders
+                      occasion_order_forms
+                      program_order_forms
+                      thank_you_order_forms
+                      wedding_sample_orders
+                      other_sample_orders 
+                    )
 
 
   # Generic Images
