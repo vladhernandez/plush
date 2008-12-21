@@ -41,7 +41,7 @@ class FavourTagLabelOrdersController < ApplicationController
   # POST /favour_tag_label_orders.xml
   def create
     @favour_tag_label_order = FavourTagLabelOrder.new(params[:favour_tag_label_order])
-
+    
     respond_to do |format|
       if @favour_tag_label_order.save
         flash[:notice] = 'FavourTagLabelOrder was successfully created.'

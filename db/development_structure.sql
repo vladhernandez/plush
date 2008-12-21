@@ -14,6 +14,35 @@ CREATE TABLE `categories` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
 
+CREATE TABLE `favour_tag_label_orders` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) default NULL,
+  `mailing_address` varchar(255) default NULL,
+  `shipping_address` varchar(255) default NULL,
+  `phone_number` varchar(255) default NULL,
+  `email_address` varchar(255) default NULL,
+  `wedding_date` date default NULL,
+  `brides_name` varchar(255) default NULL,
+  `grooms_name` varchar(255) default NULL,
+  `ordered_invites` tinyint(1) default NULL,
+  `item_1` varchar(255) default NULL,
+  `item_1_quantity` varchar(255) default NULL,
+  `item_2` varchar(255) default NULL,
+  `item_2_quantity` varchar(255) default NULL,
+  `item_3` varchar(255) default NULL,
+  `item_3_quantity` varchar(255) default NULL,
+  `item_4` varchar(255) default NULL,
+  `item_4_quantity` varchar(255) default NULL,
+  `item_5` varchar(255) default NULL,
+  `item_5_quantity` varchar(255) default NULL,
+  `font_colours` varchar(255) default NULL,
+  `special_requests` text,
+  `information` text,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 CREATE TABLE `images` (
   `id` int(11) NOT NULL auto_increment,
   `title` varchar(255) default NULL,
@@ -28,6 +57,62 @@ CREATE TABLE `images` (
   `file_updated_at` datetime default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `invite_orders` (
+  `id` int(11) NOT NULL auto_increment,
+  `contact_name` varchar(255) default NULL,
+  `mailing_address` varchar(255) default NULL,
+  `mailing_address_2` varchar(255) default NULL,
+  `phone_number` varchar(255) default NULL,
+  `email_address` varchar(255) default NULL,
+  `design_name` varchar(255) default NULL,
+  `quantity_required` varchar(255) default NULL,
+  `ordered_sample` tinyint(1) default NULL,
+  `text_paper` varchar(255) default NULL,
+  `paper_layer_2` varchar(255) default NULL,
+  `paper_layer_3` varchar(255) default NULL,
+  `paper_layer_4` varchar(255) default NULL,
+  `font_color` varchar(255) default NULL,
+  `ribbon_color` varchar(255) default NULL,
+  `special_requests` text,
+  `invites_design_name` varchar(255) default NULL,
+  `invites_quantity_required` varchar(255) default NULL,
+  `invites_sample_ordered` tinyint(1) default NULL,
+  `invites_text_paper` varchar(255) default NULL,
+  `invites_layer_2` varchar(255) default NULL,
+  `invites_layer_3` varchar(255) default NULL,
+  `invites_layer_4` varchar(255) default NULL,
+  `invites_font_color` varchar(255) default NULL,
+  `invites_ribbon_color` varchar(255) default NULL,
+  `reply_cards_style` varchar(255) default NULL,
+  `map` tinyint(255) default NULL,
+  `hotel_info` varchar(255) default NULL,
+  `address_labels` tinyint(1) default NULL,
+  `coloured_envelopes` tinyint(1) default NULL,
+  `lined_envelopes` tinyint(1) default NULL,
+  `double_envelopes` tinyint(1) default NULL,
+  `invites_special_requests` text,
+  `wedding_date` date default NULL,
+  `brides_name` varchar(255) default NULL,
+  `grooms_name` varchar(255) default NULL,
+  `brides_parents` varchar(255) default NULL,
+  `grooms_parents` varchar(255) default NULL,
+  `ceremony_location` varchar(255) default NULL,
+  `reception_location` varchar(255) default NULL,
+  `cocktails_time` time default NULL,
+  `dinner_time` time default NULL,
+  `dance_time` time default NULL,
+  `other_time` varchar(255) default NULL,
+  `save_the_date_verse` text,
+  `invitation_verse` text,
+  `rsvp_verse` text,
+  `rsvp_envelope_address` text,
+  `rsvp_email_phone` varchar(255) default NULL,
+  `invites_additional_inserts` text,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `invites` (
   `id` int(11) NOT NULL auto_increment,
@@ -184,6 +269,62 @@ CREATE TABLE `program_order_forms` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE `save_date_orders` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) default NULL,
+  `mailing_address` varchar(255) default NULL,
+  `mailing_address_2` varchar(255) default NULL,
+  `phone_number` varchar(255) default NULL,
+  `email_address` varchar(255) default NULL,
+  `wedding_date` date default NULL,
+  `sample_name` varchar(255) default NULL,
+  `sample_name_2` varchar(255) default NULL,
+  `sample_name_3` varchar(255) default NULL,
+  `text_paper_1` varchar(255) default NULL,
+  `text_paper_1_layer_1` varchar(255) default NULL,
+  `text_paper_1_layer_2` varchar(255) default NULL,
+  `text_paper_1_layer_3` varchar(255) default NULL,
+  `text_paper_2` varchar(255) default NULL,
+  `text_paper_2_layer_1` varchar(255) default NULL,
+  `text_paper_2_layer_2` varchar(255) default NULL,
+  `text_paper_2_layer_3` varchar(255) default NULL,
+  `text_paper_3` varchar(255) default NULL,
+  `text_paper_3_layer_1` varchar(255) default NULL,
+  `text_paper_3_layer_2` varchar(255) default NULL,
+  `text_paper_3_layer_3` varchar(255) default NULL,
+  `font_color_1` varchar(255) default NULL,
+  `font_color_2` varchar(255) default NULL,
+  `font_color_3` varchar(255) default NULL,
+  `ribbon_color_1` varchar(255) default NULL,
+  `ribbon_color_2` varchar(255) default NULL,
+  `ribbon_color_3` varchar(255) default NULL,
+  `reply_card_styles` varchar(255) default NULL,
+  `paper_sample_color_1` varchar(255) default NULL,
+  `paper_sample_color_2` varchar(255) default NULL,
+  `paper_sample_color_4` varchar(255) default NULL,
+  `special_requests` text,
+  `invitations_quantity` varchar(255) default NULL,
+  `invitations_subtotal` varchar(255) default NULL,
+  `save_the_dates_quantity` varchar(255) default NULL,
+  `save_the_dates_subtotal` varchar(255) default NULL,
+  `thank_you_cards_quantity` varchar(255) default NULL,
+  `thank_you_cards_subtotal` varchar(255) default NULL,
+  `programs_quantity` varchar(255) default NULL,
+  `programs_subtotal` varchar(255) default NULL,
+  `paper_samples_quantity` varchar(255) default NULL,
+  `paper_samples_subtotal` varchar(255) default NULL,
+  `paper_swatch_deck_quantity` varchar(255) default NULL,
+  `paper_swatch_deck_subtotal` varchar(255) default NULL,
+  `ribbon_swatch_deck` varchar(255) default NULL,
+  `ribbon_swatch_deck_subtotal` varchar(255) default NULL,
+  `subtotal` varchar(255) default NULL,
+  `gst` varchar(255) default NULL,
+  `total` varchar(255) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 CREATE TABLE `schema_migrations` (
   `version` varchar(255) NOT NULL,
   UNIQUE KEY `unique_schema_migrations` (`version`)
@@ -328,3 +469,9 @@ INSERT INTO schema_migrations (version) VALUES ('20081213001215');
 INSERT INTO schema_migrations (version) VALUES ('20081214232729');
 
 INSERT INTO schema_migrations (version) VALUES ('20081217053714');
+
+INSERT INTO schema_migrations (version) VALUES ('20081219054043');
+
+INSERT INTO schema_migrations (version) VALUES ('20081219060510');
+
+INSERT INTO schema_migrations (version) VALUES ('20081219062212');
