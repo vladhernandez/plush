@@ -1,4 +1,11 @@
 <p>
+  Thumb 75x100
+  Large 187x240
+  XLarge 750x550
+  <%= select_tag 'image_files[][usage]', [["Thumb", 'thumb'],["Large", 'large'],["XLarge", 'xlarge']] %>
+</p>
+
+<p>
   Image:
     <%= file_field_tag "image_files[][file]" %>
 </p>

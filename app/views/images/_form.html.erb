@@ -13,6 +13,10 @@
 <% if params[:product_id] %>
 <% image = Image.new(:product_id => params[:product_id]) %>
 <% fields_for "product[image_attributes][]", image do |image_form| %>
+<p>
+
+  <%= select_tag :usage, options_for_select([["Thumb", 'thumb'],["Large", 'large'],["XLarge", 'xlarge']]) %>
+</p>
 	<p>
 		<%= image_form.label :file %><br />
 		<%= image_form.file_field :file %>
