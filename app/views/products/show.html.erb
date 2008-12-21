@@ -1,11 +1,9 @@
-<%= image_tag @product.images.large.first unless @product.images.large.empty? %>
+<%= default_product_image(@product) %>
 
 <h2><%= @product.title %></h2>
-hello
 <%= markdown @product.description %>
-<%= @product.images.large.inspect %>
-<% @product.images.large.each do |image, i| %>
-  <%= link_to i, image.file.url %>
+<% @product.images.large.each_with_index do |image, i| %>
+  <%= link_to i+1, image.file.url, :class => 'large_image_link' %>
 <% end %>
 
 

@@ -1,25 +1,33 @@
+
+
 <% unless params[:product_id] %>
+<p>
+  <%= f.label :usage %><br>
+  <%= f.select :usage, [["Thumb", 'thumb'],["Large", 'large'],["XLarge", 'xlarge']] %>
+</p>
 <p>
   <%= f.label :title %><br />
   <%= f.text_field :title %>
 </p>
 <p>
+  <%= image_tag @image.file.url %><br>
   <%= f.label :file %><br />
   <%= f.file_field :file %>
 </p>
 <% end %>
 
-
 <% if params[:product_id] %>
-<% image = Image.new(:product_id => params[:product_id]) %>
-<% fields_for "product[image_attributes][]", image do |image_form| %>
-<p>
+  
 
-  <%= select_tag :usage, options_for_select([["Thumb", 'thumb'],["Large", 'large'],["XLarge", 'xlarge']]) %>
-</p>
-	<p>
-		<%= image_form.label :file %><br />
-		<%= image_form.file_field :file %>
-	</p>
-<% end %>
+  <% image = Image.new(:product_id => params[:product_id]) %>
+  <% fields_for "product[image_attributes][]", image do |image_form| %>
+  <p>
+    <%= image_form.label :usage %><br>
+    <%= image_form.select :usage, [["Thumb", 'thumb'],["Large", 'large'],["XLarge", 'xlarge']] %>
+  </p>
+  	<p>
+  		<%= image_form.label :file %><br />
+  		<%= image_form.file_field :file %>
+  	</p>
+  <% end %>
 <% end %>
