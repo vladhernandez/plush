@@ -1,21 +1,12 @@
-<p>
-  <b>Title:</b>
-  <%=h @product.title %>
-</p>
+<%= image_tag @product.images.large.first unless @product.images.large.empty? %>
 
-<p>
-  <b>Category:</b>
-  <%=h @product.category.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= markdown @product.description %>
-</p>
-
-
-
-
+<h2><%= @product.title %></h2>
+hello
+<%= markdown @product.description %>
+<%= @product.images.large.inspect %>
+<% @product.images.large.each do |image, i| %>
+  <%= link_to i, image.file.url %>
+<% end %>
 
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
