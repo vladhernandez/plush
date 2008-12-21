@@ -14,6 +14,6 @@ class FormObserver < ActiveRecord::Observer
       # use the model name to infer the mailer method
       # this creates and fires the email created by Mailer
       # email config details are in enviroment.rb
-      eval("Mailer.deliver_#{form.class.underscore}")
+      eval("Mailer.deliver_#{form.class.underscore}(form)")
     end
 end
