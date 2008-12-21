@@ -1,4 +1,7 @@
 <div id="product_<%= product.id %>" class="product">
   <h3><%= link_to product.title, product %></h3>
+	<% product.images.each do|image|%>
+		<%= image_tag image.file.url%>
+	<% end %> 
   <%= markdown product.description %>
 </div>
