@@ -55,8 +55,9 @@ CREATE TABLE `images` (
   `file_content_type` varchar(255) default NULL,
   `file_file_size` int(11) default NULL,
   `file_updated_at` datetime default NULL,
+  `usage` varchar(255) default NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `invite_orders` (
   `id` int(11) NOT NULL auto_increment,
@@ -214,6 +215,7 @@ CREATE TABLE `pages` (
   `layout` varchar(255) default NULL,
   `created_at` datetime default NULL,
   `updated_at` datetime default NULL,
+  `permalink` varchar(255) default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
@@ -225,6 +227,7 @@ CREATE TABLE `posts` (
   `active` tinyint(1) default NULL,
   `created_at` datetime default NULL,
   `updated_at` datetime default NULL,
+  `permalink` varchar(255) default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -475,3 +478,9 @@ INSERT INTO schema_migrations (version) VALUES ('20081219054043');
 INSERT INTO schema_migrations (version) VALUES ('20081219060510');
 
 INSERT INTO schema_migrations (version) VALUES ('20081219062212');
+
+INSERT INTO schema_migrations (version) VALUES ('20081221003202');
+
+INSERT INTO schema_migrations (version) VALUES ('20081221065958');
+
+INSERT INTO schema_migrations (version) VALUES ('20081221070620');

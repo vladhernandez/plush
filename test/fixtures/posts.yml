@@ -2,12 +2,14 @@
 
 one:
   title: MyString
+  permalink: my-post
   date: 2008-12-05
   content: MyText
   active: false
 
 two:
   title: MyString
+  permalink: myother
   date: 2008-12-05
   content: MyText
   active: false

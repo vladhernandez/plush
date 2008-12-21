@@ -1,0 +1,300 @@
+--- 
+categories_020: 
+  permalink: portfolio
+  updated_at: 2008-12-12 04:04:44
+  title: Portfolio
+  lft: 
+  id: "76"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "75"
+  created_at: 2008-12-12 04:04:44
+categories_009: 
+  permalink: programs
+  updated_at: 2008-12-12 04:04:44
+  title: Programs
+  lft: 
+  id: "65"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "64"
+  created_at: 2008-12-12 04:04:44
+categories_021: 
+  permalink: weddings
+  updated_at: 2008-12-12 04:04:44
+  title: Weddings
+  lft: 
+  id: "77"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "76"
+  created_at: 2008-12-12 04:04:44
+categories_010: 
+  permalink: favour-tags-labels
+  updated_at: 2008-12-12 04:04:44
+  title: Favour Tags & Labels
+  lft: 
+  id: "66"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "64"
+  created_at: 2008-12-12 04:04:44
+categories_022: 
+  permalink: corporate
+  updated_at: 2008-12-12 04:04:44
+  title: Corporate
+  lft: 
+  id: "78"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "76"
+  created_at: 2008-12-12 04:04:44
+categories_011: 
+  permalink: seating-arrangements
+  updated_at: 2008-12-12 04:04:44
+  title: Seating Arrangements
+  lft: 
+  id: "67"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "64"
+  created_at: 2008-12-12 04:04:44
+categories_023: 
+  permalink: social
+  updated_at: 2008-12-12 04:04:44
+  title: Social
+  lft: 
+  id: "79"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "76"
+  created_at: 2008-12-12 04:04:44
+categories_012: 
+  permalink: accessories
+  updated_at: 2008-12-12 04:04:44
+  title: Accessories
+  lft: 
+  id: "68"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "64"
+  created_at: 2008-12-12 04:04:44
+categories_001: 
+  permalink: root
+  updated_at: 2008-12-12 04:04:44
+  title: Root
+  lft: 
+  id: "57"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: 
+  created_at: 2008-12-12 04:04:44
+categories_013: 
+  permalink: thank-you-cards
+  updated_at: 2008-12-12 04:04:44
+  title: Thank You Cards
+  lft: 
+  id: "69"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "64"
+  created_at: 2008-12-12 04:04:44
+categories_002: 
+  permalink: store
+  updated_at: 2008-12-12 04:04:44
+  title: Store
+  lft: 
+  id: "58"
+  description: 
+  subtitle: 
+  category_type: store
+  position: 
+  rgt: 
+  parent_id: "57"
+  created_at: 2008-12-12 04:04:44
+categories_014: 
+  permalink: other-special-occasions
+  updated_at: 2008-12-12 04:04:44
+  title: Other Special Occasions
+  lft: 
+  id: "70"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "58"
+  created_at: 2008-12-12 04:04:44
+categories_003: 
+  permalink: wedding-invitation-collection
+  updated_at: 2008-12-12 04:04:44
+  title: Wedding Invitation Collection
+  lft: 
+  id: "59"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "58"
+  created_at: 2008-12-12 04:04:44
+categories_015: 
+  permalink: shower-invitations
+  updated_at: 2008-12-12 04:04:44
+  title: Shower Invitations
+  lft: 
+  id: "71"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "70"
+  created_at: 2008-12-12 04:04:44
+categories_004: 
+  permalink: classic
+  updated_at: 2008-12-12 04:04:44
+  title: Classic
+  lft: 
+  id: "60"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "59"
+  created_at: 2008-12-12 04:04:44
+categories_016: 
+  permalink: baby-announcements-thank-yous
+  updated_at: 2008-12-12 04:04:44
+  title: Baby Announcements & Thank Yous
+  lft: 
+  id: "72"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "70"
+  created_at: 2008-12-12 04:04:44
+categories_005: 
+  permalink: couture
+  updated_at: 2008-12-12 04:04:44
+  title: Couture
+  lft: 
+  id: "61"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "59"
+  created_at: 2008-12-12 04:04:44
+categories_017: 
+  permalink: grad-announcements-thank-yous
+  updated_at: 2008-12-12 04:04:44
+  title: Grad Announcements & Thank Yous
+  lft: 
+  id: "73"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "70"
+  created_at: 2008-12-12 04:04:44
+categories_006: 
+  permalink: destination
+  updated_at: 2008-12-12 04:04:44
+  title: Destination
+  lft: 
+  id: "62"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "59"
+  created_at: 2008-12-12 04:04:44
+categories_018: 
+  permalink: holiday-cards-invitations
+  updated_at: 2008-12-12 04:04:44
+  title: Holiday Cards & Invitations
+  lft: 
+  id: "74"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "70"
+  created_at: 2008-12-12 04:04:44
+categories_007: 
+  permalink: modern
+  updated_at: 2008-12-12 04:04:44
+  title: Modern
+  lft: 
+  id: "63"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "59"
+  created_at: 2008-12-12 04:04:44
+categories_019: 
+  permalink: custom-invitations
+  updated_at: 2008-12-12 04:04:44
+  title: Custom Invitations
+  lft: 
+  id: "75"
+  description: 
+  subtitle: 
+  category_type: custom
+  position: 
+  rgt: 
+  parent_id: "57"
+  created_at: 2008-12-12 04:04:44
+categories_008: 
+  permalink: wedding-stationary
+  updated_at: 2008-12-12 04:04:44
+  title: Wedding Stationary
+  lft: 
+  id: "64"
+  description: 
+  subtitle: 
+  category_type: 
+  position: 
+  rgt: 
+  parent_id: "58"
+  created_at: 2008-12-12 04:04:44

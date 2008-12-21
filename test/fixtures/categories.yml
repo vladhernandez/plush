@@ -1,17 +1,300 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  title: MyString
-  permalink: MyString
-  parent_id: 1
-  lft: 1
-  rgt: 1
-  position: 1
-
-two:
-  title: MyString
-  permalink: MyString
-  parent_id: 1
-  lft: 1
-  rgt: 1
-  position: 1
+--- 
+category_00069: 
+  permalink: thank-you-cards
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Thank You Cards
+  lft: 
+  id: 69
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 64
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00058: 
+  permalink: store
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Store
+  lft: 
+  id: 58
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 57
+  category_type: store
+  created_at: 2008-12-12 04:04:44 Z
+category_00059: 
+  permalink: wedding-invitation-collection
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Wedding Invitation Collection
+  lft: 
+  id: 59
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 58
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00070: 
+  permalink: other-special-occasions
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Other Special Occasions
+  lft: 
+  id: 70
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 58
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00071: 
+  permalink: shower-invitations
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Shower Invitations
+  lft: 
+  id: 71
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 70
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00060: 
+  permalink: classic
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Classic
+  lft: 
+  id: 60
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 59
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00061: 
+  permalink: couture
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Couture
+  lft: 
+  id: 61
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 59
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00072: 
+  permalink: baby-announcements-thank-yous
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Baby Announcements & Thank Yous
+  lft: 
+  id: 72
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 70
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00073: 
+  permalink: grad-announcements-thank-yous
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Grad Announcements & Thank Yous
+  lft: 
+  id: 73
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 70
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00062: 
+  permalink: destination
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Destination
+  lft: 
+  id: 62
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 59
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00063: 
+  permalink: modern
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Modern
+  lft: 
+  id: 63
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 59
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00074: 
+  permalink: holiday-cards-invitations
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Holiday Cards & Invitations
+  lft: 
+  id: 74
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 70
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00075: 
+  permalink: custom-invitations
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Custom Invitations
+  lft: 
+  id: 75
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 57
+  category_type: custom
+  created_at: 2008-12-12 04:04:44 Z
+category_00064: 
+  permalink: wedding-stationary
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Wedding Stationary
+  lft: 
+  id: 64
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 58
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00065: 
+  permalink: programs
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Programs
+  lft: 
+  id: 65
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 64
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00076: 
+  permalink: portfolio
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Portfolio
+  lft: 
+  id: 76
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 75
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00077: 
+  permalink: weddings
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Weddings
+  lft: 
+  id: 77
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 76
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00066: 
+  permalink: favour-tags-labels
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Favour Tags & Labels
+  lft: 
+  id: 66
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 64
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00067: 
+  permalink: seating-arrangements
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Seating Arrangements
+  lft: 
+  id: 67
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 64
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00078: 
+  permalink: corporate
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Corporate
+  lft: 
+  id: 78
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 76
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00079: 
+  permalink: social
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Social
+  lft: 
+  id: 79
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 76
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00057: 
+  permalink: root
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Root
+  lft: 
+  id: 57
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
+category_00068: 
+  permalink: accessories
+  updated_at: 2008-12-12 04:04:44 Z
+  title: Accessories
+  lft: 
+  id: 68
+  subtitle: 
+  description: 
+  rgt: 
+  position: 
+  parent_id: 64
+  category_type: 
+  created_at: 2008-12-12 04:04:44 Z
