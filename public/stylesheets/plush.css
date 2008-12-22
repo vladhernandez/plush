@@ -149,6 +149,10 @@ overflow:hidden;
 .scrollable{overflow:auto;}
 .dotted{background:transparent url(/images/home/dotted-line.png) repeat-x; height:3px; border:0;}
 
+/*Products & Categories */
+.product{width:75px; float:left; margin-right:50px;}
+.product h3{text-align:center;}
+.product h3 a{color:#686866; font-size:16px; font-family:"Times New Roman",Times, Serif; font-style: italic;}
 
 /* = Forms                                        = */
 /* ================================================ */
