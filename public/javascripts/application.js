@@ -30,9 +30,15 @@ Plush.prototype = {
 			onEvent : 'click'
 		});
 	//	window.console.log('setup done');
+	},
+	replaceFlash : function(ele,swfFile,w,h){
+		var flashTargetEle = $ele;
+			var so = new SWFObject(swf, "flashReplaced", w, h, "9", "#FFFFFF");
+			so.addParam("wmode","transparent");
+			so.write(ele);
 	}
-   
 
+	
 }
 
 Event.observe(window, 'load', function(){
