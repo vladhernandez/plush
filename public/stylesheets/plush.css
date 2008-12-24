@@ -22,19 +22,24 @@ h5{}
 ul li{}
 a{}
 a:hover{}
+a:active{outline: none;}
+a:focus{-moz-outline-style: none;}
 
 
 /* = Layout Blocks                               = */
 /* =============================================== */
 #site{width: 798px; min-height: 600px; margin: 0 auto; border: 0px solid; background:url(/images/layout/base.png) no-repeat top left; padding:15px 24px 24px 19px;}
 #masthead{position: relative; height: 120px;}
-#main{width: 600px;float: right;}
+#main{width: 580px;float: right; margin-right:20px;}
 .home #main #content{padding:0 60px 10px 30px; overflow:auto;}
 
-	#content{display: block; clear: both; height:400px; overflow-y:scroll;}
+#content{display: block; clear: both; height:380px; width:550px; overflow-y:scroll; 	background:url(/images/layout/10_black.png) repeat top left; margin-left:11px; margin-top:20px;}
 #side{width: 198px;float: left;}
 #footer{clear: both;}
 
+#sleeve{
+	margin:0 10px 0 20px; 
+	}
 
 /* = Navigation                                   = */
 /* ================================================ */
@@ -143,6 +148,15 @@ overflow:hidden;
 /* ================================================ */
 .scrollable{overflow:auto;}
 .dotted{background:transparent url(/images/home/dotted-line.png) repeat-x; height:3px; border:0;}
+.column{float:left; display:inline; width:45%;}
+.column.product-image{width:187px; margin-right:20px;}
+.column.product-contents{width:270px;}
+
+/*Products & Categories */
+.product{width:75px; float:left; margin-right:50px;}
+.product h3{text-align:center;}
+.product h3 a{color:#686866; font-size:16px; font-family:"Times New Roman",Times, Serif; font-style: italic;}
+#product-detail{margin-top:20px;}
 
 
 /* = Forms                                        = */
