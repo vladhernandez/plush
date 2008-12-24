@@ -1,4 +1,5 @@
 class WeddingSampleOrdersController < ApplicationController
+      before_filter :login_required, :except => ['show', 'new', 'create']
   # GET /wedding_sample_orders
   # GET /wedding_sample_orders.xml
   def index

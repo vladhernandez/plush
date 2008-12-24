@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+      before_filter :login_required, :except => ['show']
   layout :determine_layout
   resource_controller
   private

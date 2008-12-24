@@ -1,4 +1,5 @@
 class OccasionOrderFormsController < ApplicationController
+      before_filter :login_required, :except => ['show', 'new', 'create']
   # GET /occasion_order_forms
   # GET /occasion_order_forms.xml
   def index

@@ -1,4 +1,5 @@
 class ThankYouOrderFormsController < ApplicationController
+      before_filter :login_required, :except => ['show', 'new', 'create']
   # GET /thank_you_order_forms
   # GET /thank_you_order_forms.xml
   def index

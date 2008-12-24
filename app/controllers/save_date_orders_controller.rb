@@ -1,4 +1,5 @@
 class SaveDateOrdersController < ApplicationController
+      before_filter :login_required, :except => ['show', 'new', 'create']
   # GET /save_date_orders
   # GET /save_date_orders.xml
   def index

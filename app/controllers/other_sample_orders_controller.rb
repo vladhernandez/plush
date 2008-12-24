@@ -1,4 +1,5 @@
 class OtherSampleOrdersController < ApplicationController
+      before_filter :login_required, :except => ['show', 'new', 'create']
   # GET /other_sample_orders
   # GET /other_sample_orders.xml
   def index

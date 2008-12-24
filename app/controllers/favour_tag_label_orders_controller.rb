@@ -1,4 +1,5 @@
 class FavourTagLabelOrdersController < ApplicationController
+    before_filter :login_required, :except => ['show', 'new', 'create']
   # GET /favour_tag_label_orders
   # GET /favour_tag_label_orders.xml
   def index

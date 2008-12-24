@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_filter :login_required, :except => 'show'
+  caches_page :show
   resource_controller
   private
     def object

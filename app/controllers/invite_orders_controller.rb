@@ -1,4 +1,5 @@
 class InviteOrdersController < ApplicationController
+      before_filter :login_required, :except => ['show', 'new', 'create']
   # GET /invite_orders
   # GET /invite_orders.xml
   def index
