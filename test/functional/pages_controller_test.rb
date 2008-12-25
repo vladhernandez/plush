@@ -1,6 +1,16 @@
 require 'test_helper'
 
 class PagesControllerTest < ActionController::TestCase
+
+  should "get gift certicates" do
+    get "gift-certificates"
+    assert_response :success
+    assert_template 'gift-certificates'
+    assert_select 'h1'
+  end
+
+
+
   def test_should_get_index
     get :index
     assert_response :success

@@ -17,14 +17,18 @@ ActionController::Routing::Routes.draw do |map|
   
   # Pages - Static or Dynamic
   map.resources :pages
-  map.store '/store', :controller => 'pages', :action => 'store'
-  
+
   # map.resources :collections
-  map.resources :categories, :has_many => :images
+  map.resources :categories, :member => {:store => :get, :custom => :get}, :has_many => :images
   map.resources :products, :collection => { :add_image => [:get, :post] }, :has_many => :images
 
-
+  # Store
+  map.store '/store', :controller => 'categories', :action => 'store'
+  
   # Custom Invites
+  map.custom '/custom', :controller => 'categories', :action => 'custom'
+  
+  # Do we ditch the invites controller?
   map.resources :invites, :has_many => :images
   map.custom_invites '/custom-invitations', :controller => 'invites', :action => 'index'
 

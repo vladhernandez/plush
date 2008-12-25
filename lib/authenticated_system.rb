@@ -4,6 +4,7 @@ module AuthenticatedSystem
     # Preloads @current_user with the user model if they're logged in.
     def logged_in?
       !!current_user
+      # true # TEMP for testing
     end
 
     # Accesses the current user from the session. 

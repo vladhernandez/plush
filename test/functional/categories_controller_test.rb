@@ -2,6 +2,15 @@ require 'test_helper'
 
 class CategoriesControllerTest < ActionController::TestCase
   
+  should "allow unique view (store) for '/store' " do
+    get "store"
+    assert_response :success
+  end
+  
+  should "allow unique view (custom) for '/custom' " do
+    get "custom"
+    assert_response :success
+  end
   
   
   def test_should_get_index
