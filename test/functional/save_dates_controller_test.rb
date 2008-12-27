@@ -4,10 +4,9 @@ class SaveDatesControllerTest < ActionController::TestCase
   
   should "send an email after order is created" do
     post :create, :save_date => { }
-    assert_sent_email
-    # assert_sent_email do |email|
-    #    email.subject =~ /hi there/ && email.to.include?('none@none.com')
-    # end
+    assert_sent_email do |email|
+       email.subject =~ /Save The Date/
+    end
   end
   
   

@@ -1,24 +1,31 @@
 require 'test_helper'
 
 class OccasionsControllerTest < ActionController::TestCase
+  should "send an email after order is created" do
+    post :create, :occasion => { }
+    assert_sent_email do |email|
+       email.subject =~ /Occasion /
+    end
+  end
+  
   # def test_should_get_index
   #   get :index
   #   assert_response :success
   #   assert_not_nil assigns(:occasions)
   # end
   # 
-  # def test_should_get_new
-  #   get :new
-  #   assert_response :success
-  # end
-  # 
-  # def test_should_create_occasion
-  #   assert_difference('OccasionOrderForm.count') do
-  #     post :create, :occasion => { }
-  #   end
-  # 
-  #   assert_redirected_to occasion_path(assigns(:occasion))
-  # end
+  def test_should_get_new
+    get :new
+    assert_response :success
+  end
+  
+  def test_should_create_occasion
+    assert_difference('Occasion.count') do
+      post :create, :occasion => { }
+    end
+  
+    assert_redirected_to occasion_path(assigns(:occasion))
+  end
   # 
   # def test_should_show_occasion
   #   get :show, :id => occasions(:one).id

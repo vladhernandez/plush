@@ -1,14 +1,15 @@
 # require 'deprec'
-
-default_run_options[:pty] = true
-set :repository,  "aglenn@git.aaronglenn.ca:/home/aglenn/git/plush.git"
+default_run_options[:pty] = false
+# set :use_sudo, false
+set :user, 'plushadmin'
+set :password, "nikita"
+set :repository,  "gitdeployer@git.aaronglenn.ca:/home/gitdeployer/git/plush.git"
 
 set :scm, "git"
-set :scm_passphrase, "glennsk8" #This is your custom users password
+set :scm_user, 'gitdeployer'
+set :scm_passphrase, "giterdone" #This is your custom users password
 set :deploy_via, :remote_cache
 
-set :user, "plushadmin"
-set :use_sudo, false
 
 set :application, "plush"
 set :domain, "plush.dreamhosters.com"

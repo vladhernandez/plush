@@ -61,7 +61,9 @@ Rails::Initializer.run do |config|
   # This is necessary if your schema can't be completely dumped by the schema dumper,
   # like if you have constraints or database-specific column types
   # config.active_record.schema_format = :sql
-  
+  config.active_record.observers = :order_observer
+   
+   
   config.load_paths << "#{RAILS_ROOT}/app/models/orders"
   config.load_paths << "#{RAILS_ROOT}/app/controllers/orders"
   config.load_paths << "#{RAILS_ROOT}/app/views/orders"

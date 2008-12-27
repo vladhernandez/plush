@@ -1,24 +1,32 @@
 require 'test_helper'
 
 class ProgramsControllerTest < ActionController::TestCase
+  should "send an email after order is created" do
+    post :create, :program => { }
+    assert_sent_email do |email|
+       email.subject =~ /Program /
+    end
+  end
+  
+  
   # def test_should_get_index
   #   get :index
   #   assert_response :success
   #   assert_not_nil assigns(:programs)
   # end
   # 
-  # def test_should_get_new
-  #   get :new
-  #   assert_response :success
-  # end
-  # 
-  # def test_should_create_program
-  #   assert_difference('ProgramOrderForm.count') do
-  #     post :create, :program => { }
-  #   end
-  # 
-  #   assert_redirected_to program_path(assigns(:program))
-  # end
+  def test_should_get_new
+    get :new
+    assert_response :success
+  end
+  
+  def test_should_create_program
+    assert_difference('Program.count') do
+      post :create, :program => { }
+    end
+  
+    assert_redirected_to program_path(assigns(:program))
+  end
   # 
   # def test_should_show_program
   #   get :show, :id => programs(:one).id

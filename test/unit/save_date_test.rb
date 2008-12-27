@@ -1,8 +1,11 @@
 require 'test_helper'
 
 class SaveDateTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  def test_truth
-    assert true
+
+  should "send an email after it is saved" do
+    @order = SaveDate.new
+    @order.save
+    assert_sent_email
   end
+
 end

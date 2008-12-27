@@ -1,6 +1,14 @@
 require 'test_helper'
 
 class ThankYousControllerTest < ActionController::TestCase
+  should "send an email after order is created" do
+    post :create, :thank_you => { }
+    assert_sent_email do |email|
+       email.subject =~ /Thank You /
+    end
+  end
+  
+
   # def test_should_get_index
   #   get :index
   #   assert_response :success
