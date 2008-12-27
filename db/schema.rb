@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081221070620) do
+ActiveRecord::Schema.define(:version => 20081227195650) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20081221070620) do
     t.text     "description"
   end
 
-  create_table "favour_tag_label_orders", :force => true do |t|
+  create_table "favour_tag_labels", :force => true do |t|
     t.string   "name"
     t.string   "mailing_address"
     t.string   "shipping_address"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(:version => 20081221070620) do
     t.string   "usage"
   end
 
-  create_table "invite_orders", :force => true do |t|
+  create_table "invites", :force => true do |t|
     t.string   "contact_name"
     t.string   "mailing_address"
     t.string   "mailing_address_2"
@@ -120,15 +120,7 @@ ActiveRecord::Schema.define(:version => 20081221070620) do
     t.datetime "updated_at"
   end
 
-  create_table "invites", :force => true do |t|
-    t.string   "name"
-    t.integer  "collection_id", :limit => 11
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "occasion_order_forms", :force => true do |t|
+  create_table "occasions", :force => true do |t|
     t.string   "name"
     t.string   "mailing_address"
     t.string   "mailing_address_2"
@@ -158,7 +150,7 @@ ActiveRecord::Schema.define(:version => 20081221070620) do
     t.datetime "updated_at"
   end
 
-  create_table "other_sample_orders", :force => true do |t|
+  create_table "other_samples", :force => true do |t|
     t.string   "name"
     t.string   "mailing_address"
     t.string   "mailing_address_2"
@@ -235,7 +227,7 @@ ActiveRecord::Schema.define(:version => 20081221070620) do
     t.string   "permalink"
   end
 
-  create_table "program_order_forms", :force => true do |t|
+  create_table "programs", :force => true do |t|
     t.string   "name"
     t.string   "mailing_address"
     t.string   "mailing_address_2"
@@ -263,7 +255,7 @@ ActiveRecord::Schema.define(:version => 20081221070620) do
     t.datetime "updated_at"
   end
 
-  create_table "save_date_orders", :force => true do |t|
+  create_table "save_dates", :force => true do |t|
     t.string   "name"
     t.string   "mailing_address"
     t.string   "mailing_address_2"
@@ -317,7 +309,7 @@ ActiveRecord::Schema.define(:version => 20081221070620) do
     t.datetime "updated_at"
   end
 
-  create_table "thank_you_order_forms", :force => true do |t|
+  create_table "thank_yous", :force => true do |t|
     t.string   "name"
     t.string   "mailing_address"
     t.string   "mailing_address_2"
@@ -356,7 +348,7 @@ ActiveRecord::Schema.define(:version => 20081221070620) do
     t.datetime "remember_token_expires_at"
   end
 
-  create_table "wedding_sample_orders", :force => true do |t|
+  create_table "wedding_samples", :force => true do |t|
     t.string   "name"
     t.string   "mailing_address"
     t.string   "mailing_address_2"

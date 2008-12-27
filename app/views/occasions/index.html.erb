@@ -1,0 +1,68 @@
+<h1>Listing occasions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Mailing address</th>
+    <th>Mailing address 2</th>
+    <th>Shipping address</th>
+    <th>Shipping address 2</th>
+    <th>Phone number</th>
+    <th>Email address</th>
+    <th>Design name</th>
+    <th>Quantity</th>
+    <th>Ordered sample</th>
+    <th>Sample number</th>
+    <th>Text paper</th>
+    <th>Text paper layer 2</th>
+    <th>Text paper layer 3</th>
+    <th>Text paper layer 4</th>
+    <th>Font color</th>
+    <th>Ribbon color</th>
+    <th>Print return</th>
+    <th>Sealing sticker</th>
+    <th>Colored envelope</th>
+    <th>Lined envelope</th>
+    <th>Double envelope</th>
+    <th>Verse information</th>
+    <th>Type of event</th>
+    <th>Rsvp contact</th>
+  </tr>
+
+<% for occasion in @occasions %>
+  <tr>
+    <td><%=h occasion.name %></td>
+    <td><%=h occasion.mailing_address %></td>
+    <td><%=h occasion.mailing_address_2 %></td>
+    <td><%=h occasion.shipping_address %></td>
+    <td><%=h occasion.shipping_address_2 %></td>
+    <td><%=h occasion.phone_number %></td>
+    <td><%=h occasion.email_address %></td>
+    <td><%=h occasion.design_name %></td>
+    <td><%=h occasion.quantity %></td>
+    <td><%=h occasion.ordered_sample %></td>
+    <td><%=h occasion.sample_number %></td>
+    <td><%=h occasion.text_paper %></td>
+    <td><%=h occasion.text_paper_layer_2 %></td>
+    <td><%=h occasion.text_paper_layer_3 %></td>
+    <td><%=h occasion.text_paper_layer_4 %></td>
+    <td><%=h occasion.font_color %></td>
+    <td><%=h occasion.ribbon_color %></td>
+    <td><%=h occasion.print_return %></td>
+    <td><%=h occasion.sealing_sticker %></td>
+    <td><%=h occasion.colored_envelope %></td>
+    <td><%=h occasion.lined_envelope %></td>
+    <td><%=h occasion.double_envelope %></td>
+    <td><%=h occasion.verse_information %></td>
+    <td><%=h occasion.type_of_event %></td>
+    <td><%=h occasion.rsvp_contact %></td>
+    <td><%= link_to 'Show', occasion %></td>
+    <td><%= link_to 'Edit', edit_occasion_path(occasion) %></td>
+    <td><%= link_to 'Destroy', occasion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New occasion', new_occasion_path %>

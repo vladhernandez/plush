@@ -14,7 +14,7 @@ CREATE TABLE `categories` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
 
-CREATE TABLE `favour_tag_label_orders` (
+CREATE TABLE `favour_tag_labels` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(255) default NULL,
   `mailing_address` varchar(255) default NULL,
@@ -59,7 +59,7 @@ CREATE TABLE `images` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
-CREATE TABLE `invite_orders` (
+CREATE TABLE `invites` (
   `id` int(11) NOT NULL auto_increment,
   `contact_name` varchar(255) default NULL,
   `mailing_address` varchar(255) default NULL,
@@ -115,17 +115,7 @@ CREATE TABLE `invite_orders` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `invites` (
-  `id` int(11) NOT NULL auto_increment,
-  `name` varchar(255) default NULL,
-  `collection_id` int(11) default NULL,
-  `description` text,
-  `created_at` datetime default NULL,
-  `updated_at` datetime default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-CREATE TABLE `occasion_order_forms` (
+CREATE TABLE `occasions` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(255) default NULL,
   `mailing_address` varchar(255) default NULL,
@@ -157,7 +147,7 @@ CREATE TABLE `occasion_order_forms` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `other_sample_orders` (
+CREATE TABLE `other_samples` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(255) default NULL,
   `mailing_address` varchar(255) default NULL,
@@ -242,7 +232,7 @@ CREATE TABLE `products` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=264 DEFAULT CHARSET=utf8;
 
-CREATE TABLE `program_order_forms` (
+CREATE TABLE `programs` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(255) default NULL,
   `mailing_address` varchar(255) default NULL,
@@ -272,7 +262,7 @@ CREATE TABLE `program_order_forms` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `save_date_orders` (
+CREATE TABLE `save_dates` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(255) default NULL,
   `mailing_address` varchar(255) default NULL,
@@ -333,7 +323,7 @@ CREATE TABLE `schema_migrations` (
   UNIQUE KEY `unique_schema_migrations` (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `thank_you_order_forms` (
+CREATE TABLE `thank_yous` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(255) default NULL,
   `mailing_address` varchar(255) default NULL,
@@ -376,7 +366,7 @@ CREATE TABLE `users` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `wedding_sample_orders` (
+CREATE TABLE `wedding_samples` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(255) default NULL,
   `mailing_address` varchar(255) default NULL,
@@ -484,3 +474,5 @@ INSERT INTO schema_migrations (version) VALUES ('20081221003202');
 INSERT INTO schema_migrations (version) VALUES ('20081221065958');
 
 INSERT INTO schema_migrations (version) VALUES ('20081221070620');
+
+INSERT INTO schema_migrations (version) VALUES ('20081227195650');

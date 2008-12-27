@@ -1,22 +1,22 @@
 class Mailer < ActionMailer::Base
   
 
-  def occasion_order(occasion_order_form, sent_at = Time.now)
+  def occasion_order(occasion, sent_at = Time.now)
     subject    'Mailer#occasion_order'
     recipients ''
     from       ''
     sent_on    sent_at
     
-    body       :occasion_order_form => occasion_order_form
+    body       :occasion => occasion
   end
 
-  def other_sample_order(other_sample_order, sent_at = Time.now)
-    subject    'Mailer#other_sample_order'
+  def other_sample(other_sample, sent_at = Time.now)
+    subject    'Mailer#other_sample'
     recipients ''
     from       ''
     sent_on    sent_at
     
-    body       :other_sample_order => other_sample_order
+    body       :other_sample => other_sample
   end
 
   def program_order(program_order, sent_at = Time.now)
@@ -37,22 +37,22 @@ class Mailer < ActionMailer::Base
     body       :thank_you_order => thank_you_order
   end
 
-  def wedding_sample_order(wedding_sample_order, sent_at = Time.now)
-    subject    'Mailer#wedding_sample_order'
+  def wedding_sample(wedding_sample, sent_at = Time.now)
+    subject    'Mailer#wedding_sample'
     recipients ''
     from       ''
     sent_on    sent_at
     
-    body       :wedding_sample_order => wedding_sample_order
+    body       :wedding_sample => wedding_sample
   end
 
-  def invite_order(invite_order, sent_at = Time.now)
-    subject    'Mailer#invite_order'
+  def invite(invite, sent_at = Time.now)
+    subject    'Mailer#invite'
     recipients ''
     from       ''
     sent_on    sent_at
     
-    body       :invite_order => invite_order
+    body       :invite => invite
   end
 
   def save_date(save_date, sent_at = Time.now)

@@ -1,0 +1,62 @@
+<h1>Listing favour_tag_labels</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Mailing address</th>
+    <th>Shipping address</th>
+    <th>Phone number</th>
+    <th>Email address</th>
+    <th>Wedding date</th>
+    <th>Brides name</th>
+    <th>Grooms name</th>
+    <th>Ordered invites</th>
+    <th>Item 1</th>
+    <th>Item 1 quantity</th>
+    <th>Item 2</th>
+    <th>Item 2 quantity</th>
+    <th>Item 3</th>
+    <th>Item 3 quantity</th>
+    <th>Item 4</th>
+    <th>Item 4 quantity</th>
+    <th>Item 5</th>
+    <th>Item 5 quantity</th>
+    <th>Font colours</th>
+    <th>Special requests</th>
+    <th>Information</th>
+  </tr>
+
+<% for favour_tag_label in @favour_tag_labels %>
+  <tr>
+    <td><%=h favour_tag_label.name %></td>
+    <td><%=h favour_tag_label.mailing_address %></td>
+    <td><%=h favour_tag_label.shipping_address %></td>
+    <td><%=h favour_tag_label.phone_number %></td>
+    <td><%=h favour_tag_label.email_address %></td>
+    <td><%=h favour_tag_label.wedding_date %></td>
+    <td><%=h favour_tag_label.brides_name %></td>
+    <td><%=h favour_tag_label.grooms_name %></td>
+    <td><%=h favour_tag_label.ordered_invites %></td>
+    <td><%=h favour_tag_label.item_1 %></td>
+    <td><%=h favour_tag_label.item_1_quantity %></td>
+    <td><%=h favour_tag_label.item_2 %></td>
+    <td><%=h favour_tag_label.item_2_quantity %></td>
+    <td><%=h favour_tag_label.item_3 %></td>
+    <td><%=h favour_tag_label.item_3_quantity %></td>
+    <td><%=h favour_tag_label.item_4 %></td>
+    <td><%=h favour_tag_label.item_4_quantity %></td>
+    <td><%=h favour_tag_label.item_5 %></td>
+    <td><%=h favour_tag_label.item_5_quantity %></td>
+    <td><%=h favour_tag_label.font_colours %></td>
+    <td><%=h favour_tag_label.special_requests %></td>
+    <td><%=h favour_tag_label.information %></td>
+    <td><%= link_to 'Show', favour_tag_label %></td>
+    <td><%= link_to 'Edit', edit_favour_tag_label_path(favour_tag_label) %></td>
+    <td><%= link_to 'Destroy', favour_tag_label, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New favour_tag_label', new_favour_tag_label_path %>

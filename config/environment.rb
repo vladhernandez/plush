@@ -61,6 +61,11 @@ Rails::Initializer.run do |config|
   # This is necessary if your schema can't be completely dumped by the schema dumper,
   # like if you have constraints or database-specific column types
   # config.active_record.schema_format = :sql
+  
+  config.load_paths << "#{RAILS_ROOT}/app/models/orders"
+  config.load_paths << "#{RAILS_ROOT}/app/controllers/orders"
+  config.load_paths << "#{RAILS_ROOT}/app/views/orders"
+  # config.load_paths << "#{RAILS_ROOT}/app/views/orders"
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
@@ -68,14 +73,26 @@ Rails::Initializer.run do |config|
   
   # ACTION MAILER ENVIRONMENT
   # -----------------------------------------
+  # config.action_mailer.smtp_settings = {
+  #   :address        => "smtp.gmail.com",
+  #   :port           => 587,
+  #   :domain         => "monkey@domain.com",
+  #   :authentication => :plain,
+  #   :user_name      => "monkey@domain.com",
+  #   :password       => "banana" 
+  # }
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address        => "smtp.gmail.com",
-    :port           => 587,
-    :domain         => "monkey@domain.com",
-    :authentication => :plain,
-    :user_name      => "monkey@domain.com",
-    :password       => "banana" 
+       :address        => "mail.plush.dreamhosters.com",
+       :port           => 587,
+       :domain         => "plush.dreamhosters.com",
+       :authentication => :login,
+       :user_name      => "plush",
+       :password       => "nikita"
   }
+  # ActionMailer::Base.perform_deliveries = true
+  # ActionMailer::Base.default_charset = "utf-8"
+  
   # ActionMailer::Base.delivery_method = :smtp
   # ActionMailer::Base.smtp_settings  = {
   #   :address  => "plush.dreamhosters.com",
