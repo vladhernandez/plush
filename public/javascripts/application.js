@@ -23,13 +23,10 @@ Plush.prototype = {
 				}
 			}
 			});
-		t.vertical_accordion = new accordion('nav-top-products');
-	},
-	setupAccordions : function(elm){
-	 	this.vertical_accordion = new accordion(elm.up,{
-			onEvent : 'click'
-		});
-	//	window.console.log('setup done');
+		if($('nav-top-products')){
+			t.vertical_accordion = new accordion('nav-top-products');
+		}
+		
 	},
 	replaceFlash : function(ele,swfFile,w,h){
 		var flashTargetEle = $ele;
