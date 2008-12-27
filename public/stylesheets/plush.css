@@ -31,9 +31,13 @@ a:focus{-moz-outline-style: none;}
 #site{width: 798px; min-height: 600px; margin: 0 auto; border: 0px solid; background:url(/images/layout/base.png) no-repeat top left; padding:15px 24px 24px 19px;}
 #masthead{position: relative; height: 120px;}
 #main{width: 580px;float: right; margin-right:20px;}
-.home #main #content{padding:0 60px 10px 30px; overflow:auto;}
 
-#content{display: block; clear: both; height:380px; width:550px; overflow-y:scroll; 	background:url(/images/layout/10_black.png) repeat top left; margin-left:11px; margin-top:20px;}
+#content{display: block; clear: both; height:380px; width:550px; overflow-y:scroll; margin-left:11px; margin-top:20px;}
+.landing #content{overflow-y:hidden; height:auto;}
+.shaded #content{background:url(/images/layout/10_black.png) repeat top left;}
+.home #main #content{padding:0 60px 10px 30px; overflow:auto; background:none !important;}
+
+
 #side{width: 198px;float: left;}
 #footer{clear: both;}
 
@@ -119,7 +123,7 @@ overflow:hidden;
 .horiz li ul li{}
 
 /* Side Nav - Persistant and contextual */
-#nav-side{}
+#nav-side{margin-top:63px;  background:url(/images/home/dotted-line.png) no-repeat top left;}
 #nav-side .global{}
 #nav-side .subnav{}
 

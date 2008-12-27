@@ -73,6 +73,12 @@ end
     'active' if @category == item
   end
   
-  
+  def page_class_name
+    content_class="shaded"
+    if !@category
+      content_class+=" landing"
+    end
+    content_class
+  end
   
 end
