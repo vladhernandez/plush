@@ -1,0 +1,118 @@
+<h1>Listing wedding_samples</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Mailing address</th>
+    <th>Mailing address 2</th>
+    <th>Phone number</th>
+    <th>Email address</th>
+    <th>Event date</th>
+    <th>Sample name 1</th>
+    <th>Sample name 2</th>
+    <th>Sample name 3</th>
+    <th>Text paper</th>
+    <th>Text paper layer 1</th>
+    <th>Text paper layer 2</th>
+    <th>Text paper layer 3</th>
+    <th>Text paper 2</th>
+    <th>Text paper 2 layer 1</th>
+    <th>Text paper 2 layer 2</th>
+    <th>Text paper 2 layer 3</th>
+    <th>Text paper 3</th>
+    <th>Text paper 3 layer 1</th>
+    <th>Text paper 3 layer 2</th>
+    <th>Text paper 3 layer 3</th>
+    <th>Font color 1</th>
+    <th>Font color 2</th>
+    <th>Font color 3</th>
+    <th>Ribbon color 1</th>
+    <th>Ribbon color 2</th>
+    <th>Ribbon color 3</th>
+    <th>Reply card style</th>
+    <th>Paper sample color 1</th>
+    <th>Paper sample color 2</th>
+    <th>Paper sample color 3</th>
+    <th>Paper sample color 4</th>
+    <th>Special requests</th>
+    <th>Invites quantity</th>
+    <th>Invites quantity cost</th>
+    <th>Save the date quantity</th>
+    <th>Save the date quantity cost</th>
+    <th>Thank you cards quantity</th>
+    <th>Thank you cards quantity cost</th>
+    <th>Programs quantity</th>
+    <th>Programs quantity cost</th>
+    <th>Paper samples quantity</th>
+    <th>Paper samples quantity cost</th>
+    <th>Paper swatch deck quantity</th>
+    <th>Paper swatch deck quantity cost</th>
+    <th>Ribbon swatch deck quantity</th>
+    <th>Ribbon swatch deck quantity cost</th>
+    <th>Subtotal</th>
+    <th>Gst</th>
+    <th>Total</th>
+  </tr>
+
+<% for wedding_sample in @wedding_samples %>
+  <tr>
+    <td><%=h wedding_sample.name %></td>
+    <td><%=h wedding_sample.mailing_address %></td>
+    <td><%=h wedding_sample.mailing_address_2 %></td>
+    <td><%=h wedding_sample.phone_number %></td>
+    <td><%=h wedding_sample.email_address %></td>
+    <td><%=h wedding_sample.event_date %></td>
+    <td><%=h wedding_sample.sample_name_1 %></td>
+    <td><%=h wedding_sample.sample_name_2 %></td>
+    <td><%=h wedding_sample.sample_name_3 %></td>
+    <td><%=h wedding_sample.text_paper %></td>
+    <td><%=h wedding_sample.text_paper_layer_1 %></td>
+    <td><%=h wedding_sample.text_paper_layer_2 %></td>
+    <td><%=h wedding_sample.text_paper_layer_3 %></td>
+    <td><%=h wedding_sample.text_paper_2 %></td>
+    <td><%=h wedding_sample.text_paper_2_layer_1 %></td>
+    <td><%=h wedding_sample.text_paper_2_layer_2 %></td>
+    <td><%=h wedding_sample.text_paper_2_layer_3 %></td>
+    <td><%=h wedding_sample.text_paper_3 %></td>
+    <td><%=h wedding_sample.text_paper_3_layer_1 %></td>
+    <td><%=h wedding_sample.text_paper_3_layer_2 %></td>
+    <td><%=h wedding_sample.text_paper_3_layer_3 %></td>
+    <td><%=h wedding_sample.font_color_1 %></td>
+    <td><%=h wedding_sample.font_color_2 %></td>
+    <td><%=h wedding_sample.font_color_3 %></td>
+    <td><%=h wedding_sample.ribbon_color_1 %></td>
+    <td><%=h wedding_sample.ribbon_color_2 %></td>
+    <td><%=h wedding_sample.ribbon_color_3 %></td>
+    <td><%=h wedding_sample.reply_card_style %></td>
+    <td><%=h wedding_sample.paper_sample_color_1 %></td>
+    <td><%=h wedding_sample.paper_sample_color_2 %></td>
+    <td><%=h wedding_sample.paper_sample_color_3 %></td>
+    <td><%=h wedding_sample.paper_sample_color_4 %></td>
+    <td><%=h wedding_sample.special_requests %></td>
+    <td><%=h wedding_sample.invites_quantity %></td>
+    <td><%=h wedding_sample.invites_quantity_cost %></td>
+    <td><%=h wedding_sample.save_the_date_quantity %></td>
+    <td><%=h wedding_sample.save_the_date_quantity_cost %></td>
+    <td><%=h wedding_sample.thank_you_cards_quantity %></td>
+    <td><%=h wedding_sample.thank_you_cards_quantity_cost %></td>
+    <td><%=h wedding_sample.programs_quantity %></td>
+    <td><%=h wedding_sample.programs_quantity_cost %></td>
+    <td><%=h wedding_sample.paper_samples_quantity %></td>
+    <td><%=h wedding_sample.paper_samples_quantity_cost %></td>
+    <td><%=h wedding_sample.paper_swatch_deck_quantity %></td>
+    <td><%=h wedding_sample.paper_swatch_deck_quantity_cost %></td>
+    <td><%=h wedding_sample.ribbon_swatch_deck_quantity %></td>
+    <td><%=h wedding_sample.ribbon_swatch_deck_quantity_cost %></td>
+    <td><%=h wedding_sample.subtotal %></td>
+    <td><%=h wedding_sample.gst %></td>
+    <td><%=h wedding_sample.total %></td>
+    <td><%= link_to 'Show', wedding_sample %></td>
+    <td><%= link_to 'Edit', edit_wedding_sample_path(wedding_sample) %></td>
+    <td><%= link_to 'Destroy', wedding_sample, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New wedding_sample', new_wedding_sample_path %>

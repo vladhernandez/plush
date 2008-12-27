@@ -2,16 +2,110 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Collection</th>
-    <th>Description</th>
+    <th>Contact name</th>
+    <th>Mailing address</th>
+    <th>Mailing address 2</th>
+    <th>Phone number</th>
+    <th>Email address</th>
+    <th>Design name</th>
+    <th>Quantity required</th>
+    <th>Ordered sample</th>
+    <th>Text paper</th>
+    <th>Paper layer 2</th>
+    <th>Paper layer 3</th>
+    <th>Paper layer 4</th>
+    <th>Font color</th>
+    <th>Ribbon color</th>
+    <th>Special requests</th>
+    <th>Invites design name</th>
+    <th>Invites quantity required</th>
+    <th>Invites sample ordered</th>
+    <th>Invites text paper</th>
+    <th>Invites layer 2</th>
+    <th>Invites layer 3</th>
+    <th>Invites layer 4</th>
+    <th>Invites font color</th>
+    <th>Invites ribbon color</th>
+    <th>Reply cards style</th>
+    <th>Map</th>
+    <th>Hotel info</th>
+    <th>Address labels</th>
+    <th>Coloured envelopes</th>
+    <th>Lined envelopes</th>
+    <th>Double envelopes</th>
+    <th>Invites special requests</th>
+    <th>Wedding date</th>
+    <th>Brides name</th>
+    <th>Grooms name</th>
+    <th>Brides parents</th>
+    <th>Grooms parents</th>
+    <th>Ceremony location</th>
+    <th>Reception location</th>
+    <th>Cocktails time</th>
+    <th>Dinner time</th>
+    <th>Dance time</th>
+    <th>Other time</th>
+    <th>Save the date verse</th>
+    <th>Invitation verse</th>
+    <th>Rsvp verse</th>
+    <th>Rsvp envelope address</th>
+    <th>Rsvp email phone</th>
+    <th>Map</th>
+    <th>Invites additional inserts</th>
   </tr>
 
 <% for invite in @invites %>
   <tr>
-    <td><%=h invite.name %></td>
-    <td><%=h invite.collection_id %></td>
-    <td><%=h invite.description %></td>
+    <td><%=h invite.contact_name %></td>
+    <td><%=h invite.mailing_address %></td>
+    <td><%=h invite.mailing_address_2 %></td>
+    <td><%=h invite.phone_number %></td>
+    <td><%=h invite.email_address %></td>
+    <td><%=h invite.design_name %></td>
+    <td><%=h invite.quantity_required %></td>
+    <td><%=h invite.ordered_sample %></td>
+    <td><%=h invite.text_paper %></td>
+    <td><%=h invite.paper_layer_2 %></td>
+    <td><%=h invite.paper_layer_3 %></td>
+    <td><%=h invite.paper_layer_4 %></td>
+    <td><%=h invite.font_color %></td>
+    <td><%=h invite.ribbon_color %></td>
+    <td><%=h invite.special_requests %></td>
+    <td><%=h invite.invites_design_name %></td>
+    <td><%=h invite.invites_quantity_required %></td>
+    <td><%=h invite.invites_sample_ordered %></td>
+    <td><%=h invite.invites_text_paper %></td>
+    <td><%=h invite.invites_layer_2 %></td>
+    <td><%=h invite.invites_layer_3 %></td>
+    <td><%=h invite.invites_layer_4 %></td>
+    <td><%=h invite.invites_font_color %></td>
+    <td><%=h invite.invites_ribbon_color %></td>
+    <td><%=h invite.reply_cards_style %></td>
+    <td><%=h invite.map %></td>
+    <td><%=h invite.hotel_info %></td>
+    <td><%=h invite.address_labels %></td>
+    <td><%=h invite.coloured_envelopes %></td>
+    <td><%=h invite.lined_envelopes %></td>
+    <td><%=h invite.double_envelopes %></td>
+    <td><%=h invite.invites_special_requests %></td>
+    <td><%=h invite.wedding_date %></td>
+    <td><%=h invite.brides_name %></td>
+    <td><%=h invite.grooms_name %></td>
+    <td><%=h invite.brides_parents %></td>
+    <td><%=h invite.grooms_parents %></td>
+    <td><%=h invite.ceremony_location %></td>
+    <td><%=h invite.reception_location %></td>
+    <td><%=h invite.cocktails_time %></td>
+    <td><%=h invite.dinner_time %></td>
+    <td><%=h invite.dance_time %></td>
+    <td><%=h invite.other_time %></td>
+    <td><%=h invite.save_the_date_verse %></td>
+    <td><%=h invite.invitation_verse %></td>
+    <td><%=h invite.rsvp_verse %></td>
+    <td><%=h invite.rsvp_envelope_address %></td>
+    <td><%=h invite.rsvp_email_phone %></td>
+    <td><%=h invite.map %></td>
+    <td><%=h invite.invites_additional_inserts %></td>
     <td><%= link_to 'Show', invite %></td>
     <td><%= link_to 'Edit', edit_invite_path(invite) %></td>
     <td><%= link_to 'Destroy', invite, :confirm => 'Are you sure?', :method => :delete %></td>

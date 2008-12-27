@@ -1,0 +1,64 @@
+<h1>Listing thank_yous</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Mailing address</th>
+    <th>Mailing address 2</th>
+    <th>Shipping address</th>
+    <th>Shipping address 2</th>
+    <th>Phone number</th>
+    <th>Email address</th>
+    <th>Wedding date</th>
+    <th>Brides name</th>
+    <th>Grooms name</th>
+    <th>Design contact number</th>
+    <th>Design name</th>
+    <th>Quantity</th>
+    <th>Ordered sample</th>
+    <th>Sample number</th>
+    <th>Text paper</th>
+    <th>Text paper layer 2</th>
+    <th>Text paper layer 3</th>
+    <th>Text paper layer 4</th>
+    <th>Font color</th>
+    <th>Ribbon color</th>
+    <th>Special requests</th>
+    <th>Card text</th>
+  </tr>
+
+<% for thank_you in @thank_yous %>
+  <tr>
+    <td><%=h thank_you.name %></td>
+    <td><%=h thank_you.mailing_address %></td>
+    <td><%=h thank_you.mailing_address_2 %></td>
+    <td><%=h thank_you.shipping_address %></td>
+    <td><%=h thank_you.shipping_address_2 %></td>
+    <td><%=h thank_you.phone_number %></td>
+    <td><%=h thank_you.email_address %></td>
+    <td><%=h thank_you.wedding_date %></td>
+    <td><%=h thank_you.brides_name %></td>
+    <td><%=h thank_you.grooms_name %></td>
+    <td><%=h thank_you.design_contact_number %></td>
+    <td><%=h thank_you.design_name %></td>
+    <td><%=h thank_you.quantity %></td>
+    <td><%=h thank_you.ordered_sample %></td>
+    <td><%=h thank_you.sample_number %></td>
+    <td><%=h thank_you.text_paper %></td>
+    <td><%=h thank_you.text_paper_layer_2 %></td>
+    <td><%=h thank_you.text_paper_layer_3 %></td>
+    <td><%=h thank_you.text_paper_layer_4 %></td>
+    <td><%=h thank_you.font_color %></td>
+    <td><%=h thank_you.ribbon_color %></td>
+    <td><%=h thank_you.special_requests %></td>
+    <td><%=h thank_you.card_text %></td>
+    <td><%= link_to 'Show', thank_you %></td>
+    <td><%= link_to 'Edit', edit_thank_you_path(thank_you) %></td>
+    <td><%= link_to 'Destroy', thank_you, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New thank_you', new_thank_you_path %>

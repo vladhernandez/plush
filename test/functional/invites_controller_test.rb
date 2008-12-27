@@ -13,7 +13,7 @@ class InvitesControllerTest < ActionController::TestCase
   # end
   # 
   # def test_should_create_invite
-  #   assert_difference('Invite.count') do
+  #   assert_difference('InviteOrder.count') do
   #     post :create, :invite => { }
   #   end
   # 
@@ -36,7 +36,7 @@ class InvitesControllerTest < ActionController::TestCase
   # end
   # 
   # def test_should_destroy_invite
-  #   assert_difference('Invite.count', -1) do
+  #   assert_difference('InviteOrder.count', -1) do
   #     delete :destroy, :id => invites(:one).id
   #   end
   # 

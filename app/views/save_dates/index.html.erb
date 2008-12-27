@@ -1,0 +1,116 @@
+<h1>Listing save_dates</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Mailing address</th>
+    <th>Mailing address 2</th>
+    <th>Phone number</th>
+    <th>Email address</th>
+    <th>Wedding date</th>
+    <th>Sample name</th>
+    <th>Sample name 2</th>
+    <th>Sample name 3</th>
+    <th>Text paper 1</th>
+    <th>Text paper 1 layer 1</th>
+    <th>Text paper 1 layer 2</th>
+    <th>Text paper 1 layer 3</th>
+    <th>Text paper 2</th>
+    <th>Text paper 2 layer 1</th>
+    <th>Text paper 2 layer 2</th>
+    <th>Text paper 2 layer 3</th>
+    <th>Text paper 3</th>
+    <th>Text paper 3 layer 1</th>
+    <th>Text paper 3 layer 2</th>
+    <th>Text paper 3 layer 3</th>
+    <th>Font color 1</th>
+    <th>Font color 2</th>
+    <th>Font color 3</th>
+    <th>Ribbon color 1</th>
+    <th>Ribbon color 2</th>
+    <th>Ribbon color 3</th>
+    <th>Reply card styles</th>
+    <th>Paper sample color 1</th>
+    <th>Paper sample color 2</th>
+    <th>Paper sample color 4</th>
+    <th>Special requests</th>
+    <th>Invitations quantity</th>
+    <th>Invitations subtotal</th>
+    <th>Save the dates quantity</th>
+    <th>Save the dates subtotal</th>
+    <th>Thank you cards quantity</th>
+    <th>Thank you cards subtotal</th>
+    <th>Programs quantity</th>
+    <th>Programs subtotal</th>
+    <th>Paper samples quantity</th>
+    <th>Paper samples subtotal</th>
+    <th>Paper swatch deck quantity</th>
+    <th>Paper swatch deck subtotal</th>
+    <th>Ribbon swatch deck</th>
+    <th>Ribbon swatch deck subtotal</th>
+    <th>Subtotal</th>
+    <th>Gst</th>
+    <th>Total</th>
+  </tr>
+
+<% for save_date in @save_dates %>
+  <tr>
+    <td><%=h save_date.name %></td>
+    <td><%=h save_date.mailing_address %></td>
+    <td><%=h save_date.mailing_address_2 %></td>
+    <td><%=h save_date.phone_number %></td>
+    <td><%=h save_date.email_address %></td>
+    <td><%=h save_date.wedding_date %></td>
+    <td><%=h save_date.sample_name %></td>
+    <td><%=h save_date.sample_name_2 %></td>
+    <td><%=h save_date.sample_name_3 %></td>
+    <td><%=h save_date.text_paper_1 %></td>
+    <td><%=h save_date.text_paper_1_layer_1 %></td>
+    <td><%=h save_date.text_paper_1_layer_2 %></td>
+    <td><%=h save_date.text_paper_1_layer_3 %></td>
+    <td><%=h save_date.text_paper_2 %></td>
+    <td><%=h save_date.text_paper_2_layer_1 %></td>
+    <td><%=h save_date.text_paper_2_layer_2 %></td>
+    <td><%=h save_date.text_paper_2_layer_3 %></td>
+    <td><%=h save_date.text_paper_3 %></td>
+    <td><%=h save_date.text_paper_3_layer_1 %></td>
+    <td><%=h save_date.text_paper_3_layer_2 %></td>
+    <td><%=h save_date.text_paper_3_layer_3 %></td>
+    <td><%=h save_date.font_color_1 %></td>
+    <td><%=h save_date.font_color_2 %></td>
+    <td><%=h save_date.font_color_3 %></td>
+    <td><%=h save_date.ribbon_color_1 %></td>
+    <td><%=h save_date.ribbon_color_2 %></td>
+    <td><%=h save_date.ribbon_color_3 %></td>
+    <td><%=h save_date.reply_card_styles %></td>
+    <td><%=h save_date.paper_sample_color_1 %></td>
+    <td><%=h save_date.paper_sample_color_2 %></td>
+    <td><%=h save_date.paper_sample_color_4 %></td>
+    <td><%=h save_date.special_requests %></td>
+    <td><%=h save_date.invitations_quantity %></td>
+    <td><%=h save_date.invitations_subtotal %></td>
+    <td><%=h save_date.save_the_dates_quantity %></td>
+    <td><%=h save_date.save_the_dates_subtotal %></td>
+    <td><%=h save_date.thank_you_cards_quantity %></td>
+    <td><%=h save_date.thank_you_cards_subtotal %></td>
+    <td><%=h save_date.programs_quantity %></td>
+    <td><%=h save_date.programs_subtotal %></td>
+    <td><%=h save_date.paper_samples_quantity %></td>
+    <td><%=h save_date.paper_samples_subtotal %></td>
+    <td><%=h save_date.paper_swatch_deck_quantity %></td>
+    <td><%=h save_date.paper_swatch_deck_subtotal %></td>
+    <td><%=h save_date.ribbon_swatch_deck %></td>
+    <td><%=h save_date.ribbon_swatch_deck_subtotal %></td>
+    <td><%=h save_date.subtotal %></td>
+    <td><%=h save_date.gst %></td>
+    <td><%=h save_date.total %></td>
+    <td><%= link_to 'Show', save_date %></td>
+    <td><%= link_to 'Edit', edit_save_date_path(save_date) %></td>
+    <td><%= link_to 'Destroy', save_date, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New save_date', new_save_date_path %>

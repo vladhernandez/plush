@@ -1,0 +1,109 @@
+<h1>ORDER FORM – Favour Tags &amp; Labels</h1>
+
+<% form_for(@favour_tag_label) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :mailing_address %>
+    <%= f.text_field :mailing_address %>
+  </p>
+  <p>
+    <%= f.label :shipping_address, "Shipping address <br /> (if different)" %>
+    <%= f.text_field :shipping_address %>
+  </p>
+  <p>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.label :email_address %>
+    <%= f.text_field :email_address %>
+  </p>
+  <p>
+    <%= f.label :wedding_date %>
+    <%= f.date_select :wedding_date %>
+  </p>
+  <p>
+    <%= f.label :brides_name, "Bride's Name" %>
+    <%= f.text_field :brides_name %>
+  </p>
+  <p>
+    <%= f.label :grooms_name, "Groom's Name" %>
+    <%= f.text_field :grooms_name %>
+  </p>
+  <p>
+    <%= f.label :ordered_invites %>
+    <%= f.check_box :ordered_invites %>
+  </p>
+  <p>
+    <%= f.label :item_1, " Item 1 (indicate item, size & colour/s):" %>
+    <%= f.text_field :item_1 %>
+  </p>
+  <p>
+    <%= f.label :item_1_quantity %>
+    <%= f.text_field :item_1_quantity %>
+  </p>
+  <p>
+    <%= f.label :item_2, " Item 2 (indicate item, size & colour/s):" %>
+    <%= f.text_field :item_2 %>
+  </p>
+  <p>
+    <%= f.label :item_2_quantity %>
+    <%= f.text_field :item_2_quantity %>
+  </p>
+  <p>
+    <%= f.label :item_3, " Item 3 (indicate item, size & colour/s):" %>
+    <%= f.text_field :item_3 %>
+  </p>
+  <p>
+    <%= f.label :item_3_quantity %>
+    <%= f.text_field :item_3_quantity %>
+  </p>
+  <p>
+    <%= f.label :item_4, " Item 4 (indicate item, size & colour/s):" %>
+    <%= f.text_field :item_4 %>
+  </p>
+  <p>
+    <%= f.label :item_4_quantity %>
+    <%= f.text_field :item_4_quantity %>
+  </p>
+  <p>
+    <%= f.label :item_5, " Item 5 (indicate item, size & colour/s):" %>
+    <%= f.text_field :item_5 %>
+  </p>
+  <p>
+    <%= f.label :item_5_quantity %>
+    <%= f.text_field :item_5_quantity %>
+  </p>
+  <p>
+    <%= f.label :font_colours, "Font colour/s" %>
+    <%= f.text_field :font_colours %>
+  </p>
+  <p>
+    <%= f.label :special_requests, "Modifications/special requests. Please indicate the item name. (charges may apply)" %>
+    <%= f.text_area :special_requests %>
+  </p>
+  <p>
+    <%= f.label :information %>
+    <%= f.text_area :information %>
+  </p>
+  <p>
+    Notes:
+    <ol>
+    <li>Once we receive your order we will send you a contract with estimated timelines and deposit requirements (50% payable by Visa or MasterCard). </li>
+    <li>We will send you PDF text proofs within 1 week of receiving your order.</li>
+    <li>Once you approve all text proofs it will take 2 – 3 weeks to complete your order.</li>
+    <li>The remaining 50% is due when your order is shipped. </li>
+    </ol>
+  </p>
+  <p>    Don't hesitate to contact us if you have any questions. Thank you and we look forward to working with you!</p>
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', favour_tag_labels_path %>

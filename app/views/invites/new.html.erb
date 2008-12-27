@@ -1,7 +1,235 @@
-<h1>New invite</h1>
+<h1>ORDER FORM – Invitations</h1>
 
-<% form_for(@invite, :html => {:multipart => true}) do |f| %>
-<%= render :partial => "form", :locals => {:f => f} %>
+<% form_for(@invite) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :contact_name %>
+    <%= f.text_field :contact_name %>
+  </p>
+  <p>
+    <%= f.label :mailing_address %>
+    <%= f.text_field :mailing_address %>
+  </p>
+  <p>
+    <%= f.label :mailing_address_2 %>
+    <%= f.text_field :mailing_address_2 %>
+  </p>
+  <p>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.label :email_address %>
+    <%= f.text_field :email_address %>
+  </p>
+  <h3>SAVE THE DATES (if required)</h3>
+  <p>
+    <%= f.label :design_name %>
+    <%= f.text_field :design_name %>
+  </p>
+  <p>
+    <%= f.label :quantity_required %>
+    <%= f.text_field :quantity_required %>
+  </p>
+  <p>
+    <%= f.label :ordered_sample, "Did you order a sample? If so, indicate sample number from your quote sheet" %>
+    <%= f.check_box :ordered_sample %>
+  </p>
+  <p>Paper Selection</p>
+  <p>
+    <%= f.label :text_paper %>
+    <%= f.text_field :text_paper %>
+  </p>
+  <p>
+    <%= f.label :paper_layer_2 %>
+    <%= f.text_field :paper_layer_2 %>
+  </p>
+  <p>
+    <%= f.label :paper_layer_3 %>
+    <%= f.text_field :paper_layer_3 %>
+  </p>
+  <p>
+    <%= f.label :paper_layer_4 %>
+    <%= f.text_field :paper_layer_4 %>
+  </p>
+  <p>
+    <%= f.label :font_color, "Font colour/s:" %>
+    <%= f.text_field :font_color %>
+  </p>
+  <p>
+    <%= f.label :ribbon_color, "Ribbon colour/s:" %>
+    <%= f.text_field :ribbon_color %>
+  </p>
+  <p>
+    <%= f.label :special_requests, "Modifications/special requests. (charges may apply)" %>
+    <%= f.text_area :special_requests %>
+  </p>
+  <h2>INVITATIONS</h2>
+  
+  <p>
+    <%= f.label :invites_design_name, "Design name:" %>
+    <%= f.text_field :invites_design_name %>
+  </p>
+  <p>
+    <%= f.label :invites_quantity_required, "Quantity required:" %>
+    <%= f.text_field :invites_quantity_required %>
+  </p>
+  <p>
+    <%= f.label :invites_sample_ordered, "Did you order a sample? If so, indicate sample number from your quote sheet:" %>
+    <%= f.check_box :invites_sample_ordered %>
+  </p>
+  <p>Paper Selection</p>
+  <p>
+    <%= f.label :invites_text_paper, "Text paper:" %>
+    <%= f.text_field :invites_text_paper %>
+  </p>
+  <p>
+    <%= f.label :invites_layer_2, "Layer 2:" %>
+    <%= f.text_field :invites_layer_2 %>
+  </p>
+  <p>
+    <%= f.label :invites_layer_3, "Layer 3:" %>
+    <%= f.text_field :invites_layer_3 %>
+  </p>
+  <p>
+    <%= f.label :invites_layer_4, "Layer 4:" %>
+    <%= f.text_field :invites_layer_4 %>
+  </p>
+  <p>
+    <%= f.label :invites_font_color, "Font colour/s:" %>
+    <%= f.text_field :invites_font_color %>
+  </p>
+  <p>
+    <%= f.label :invites_ribbon_color, "Ribbon colour:" %>
+    <%= f.text_field :invites_ribbon_color %>
+  </p>
+  <p>
+    <%= f.label :reply_cards_style, "Reply Cards Style (check one)" %>
+    <%= f.text_field :reply_cards_style %>
+    Traditional mail back:
+      Postcard:
+      E-mail / phone:
+  </p>
+
+  
+  <p>Select additional items required.</p>
+  <p>
+    <%= f.label :map %>
+    <%= f.check_box :map %>
+  </p>
+  <p>
+    <%= f.label :hotel_info %>
+    <%= f.text_field :hotel_info %>
+  </p>
+  Additional inserts (please specify):
+  <p>
+    <%= f.label :address_labels, "Address labels / sealing stickers:" %>
+    <%= f.check_box :address_labels %>
+  </p>
+  <p>
+    <%= f.label :coloured_envelopes, "Metallic / coloured envelopes:" %>
+    <%= f.check_box :coloured_envelopes %>
+  </p>
+  <p>
+    <%= f.label :lined_envelopes, "Lined envelopes:" %>
+    <%= f.check_box :lined_envelopes %>
+  </p>
+  <p>
+    <%= f.label :double_envelopes, "Double envelopes:" %>
+    <%= f.check_box :double_envelopes %>
+  </p>
+  <p>
+    <%= f.label :invites_special_requests, "Modifications/special requests. (charges may apply)" %>
+    <%= f.text_area :invites_special_requests %>
+  </p>
+  
+  
+  <h2>WEDDING INFORMATION</h2>
+  <p>
+    <%= f.label :wedding_date %>
+    <%= f.date_select :wedding_date %>
+  </p>
+  <p>
+    <%= f.label :brides_name, "Bride's name:" %>
+    <%= f.text_field :brides_name %>
+  </p>
+  <p>
+    <%= f.label :grooms_name, "Groom's name:" %>
+    <%= f.text_field :grooms_name %>
+  </p>
+  <p>
+    <%= f.label :brides_parents, "Bride's Parents (if on invite):" %>
+    <%= f.text_field :brides_parents %>
+  </p>
+  <p>
+    <%= f.label :grooms_parents, "Groom's Parents (if on invite):" %>
+    <%= f.text_field :grooms_parents %>
+  </p>
+  <p>
+    <%= f.label :ceremony_location %>
+    <%= f.text_field :ceremony_location %>
+  </p>
+  <p>
+    <%= f.label :reception_location %>
+    <%= f.text_field :reception_location %>
+  </p>
+  <p>Reception times:</p>
+  <p>
+    <%= f.label :cocktails_time, "Cocktails" %>
+    <%= f.datetime_select :cocktails_time %>
+  </p>
+  <p>
+    <%= f.label :dinner_time, "Dinner" %>
+    <%= f.datetime_select :dinner_time %>
+  </p>
+  <p>
+    <%= f.label :dance_time, "Dance" %>
+    <%= f.datetime_select :dance_time %>
+  </p>
+  <p>
+    <%= f.label :other_time, "Other" %>
+    <%= f.text_field :other_time %>
+  </p>
+  <p>
+    <%= f.label :save_the_date_verse %>
+    <%= f.text_area :save_the_date_verse %>
+  </p>
+  <p>
+    <%= f.label :invitation_verse %>
+    <%= f.text_area :invitation_verse %>
+  </p>
+  <p>
+    <%= f.label :rsvp_verse, "RSVP verse:" %>
+    <%= f.text_area :rsvp_verse %>
+  </p>
+  <p>
+    <%= f.label :rsvp_envelope_address, "RSVP envelope address:" %>
+    <%= f.text_area :rsvp_envelope_address %>
+  </p>
+  <p>
+    <%= f.label :rsvp_email_phone, "E-Mail / phone number for RSVP (if using this option)" %>
+    <%= f.text_field :rsvp_email_phone %>
+  </p>
+  <p>
+    <%= f.label :map, "Map – key locations required" %>
+    <%= f.text_field :map %>
+  </p>
+  <p>
+    <%= f.label :invites_additional_inserts, "Additional insert(s) – Info required" %>
+    <%= f.text_area :invites_additional_inserts %>
+  </p>
+  
+
+  <p>Notes:</p>
+  <ol>
+  <li>Once we receive your order we will send you a contract with estimated timelines and deposit requirements (50% payable by Visa or MasterCard). </li>
+  <li>We will send you PDF text proofs of your invitations and inserts within 1 week of receiving your order.</li>
+  <li>Once you approve all text proofs it will take 2 – 4 weeks to complete your order.</li>
+  <li>The remaining 50% is due when your order is shipped. </li>
+  </ol>
+  <p>Don't hesitate to contact us if you have any questions. Thank you and we look forward to working with you!</p>
+  
   <p>
     <%= f.submit "Create" %>
   </p>

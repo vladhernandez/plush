@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  before_filter :login_required
+  # before_filter :login_required
   def index
     @pages = Page.all
     @posts = Post.all

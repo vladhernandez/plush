@@ -1,0 +1,100 @@
+<h1>Editing favour_tag_label</h1>
+
+<% form_for(@favour_tag_label) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :mailing_address %><br />
+    <%= f.text_field :mailing_address %>
+  </p>
+  <p>
+    <%= f.label :shipping_address %><br />
+    <%= f.text_field :shipping_address %>
+  </p>
+  <p>
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.label :email_address %><br />
+    <%= f.text_field :email_address %>
+  </p>
+  <p>
+    <%= f.label :wedding_date %><br />
+    <%= f.date_select :wedding_date %>
+  </p>
+  <p>
+    <%= f.label :brides_name %><br />
+    <%= f.text_field :brides_name %>
+  </p>
+  <p>
+    <%= f.label :grooms_name %><br />
+    <%= f.text_field :grooms_name %>
+  </p>
+  <p>
+    <%= f.label :ordered_invites %><br />
+    <%= f.check_box :ordered_invites %>
+  </p>
+  <p>
+    <%= f.label :item_1 %><br />
+    <%= f.text_field :item_1 %>
+  </p>
+  <p>
+    <%= f.label :item_1_quantity %><br />
+    <%= f.text_field :item_1_quantity %>
+  </p>
+  <p>
+    <%= f.label :item_2 %><br />
+    <%= f.text_field :item_2 %>
+  </p>
+  <p>
+    <%= f.label :item_2_quantity %><br />
+    <%= f.text_field :item_2_quantity %>
+  </p>
+  <p>
+    <%= f.label :item_3 %><br />
+    <%= f.text_field :item_3 %>
+  </p>
+  <p>
+    <%= f.label :item_3_quantity %><br />
+    <%= f.text_field :item_3_quantity %>
+  </p>
+  <p>
+    <%= f.label :item_4 %><br />
+    <%= f.text_field :item_4 %>
+  </p>
+  <p>
+    <%= f.label :item_4_quantity %><br />
+    <%= f.text_field :item_4_quantity %>
+  </p>
+  <p>
+    <%= f.label :item_5 %><br />
+    <%= f.text_field :item_5 %>
+  </p>
+  <p>
+    <%= f.label :item_5_quantity %><br />
+    <%= f.text_field :item_5_quantity %>
+  </p>
+  <p>
+    <%= f.label :font_colours %><br />
+    <%= f.text_field :font_colours %>
+  </p>
+  <p>
+    <%= f.label :special_requests %><br />
+    <%= f.text_area :special_requests %>
+  </p>
+  <p>
+    <%= f.label :information %><br />
+    <%= f.text_area :information %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @favour_tag_label %> |
+<%= link_to 'Back', favour_tag_labels_path %>
