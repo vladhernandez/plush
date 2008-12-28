@@ -8,5 +8,10 @@ class AdminController < ApplicationController
     @products = Product.all
     @users = User.all
   end
+  
+  def test_email
+    @email = Mailer.deliver_test_email
+    render :text => @email.inspect
+  end
 
 end

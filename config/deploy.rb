@@ -1,5 +1,5 @@
 # require 'deprec'
-default_run_options[:pty] = false
+default_run_options[:pty] = true
 # set :use_sudo, false
 set :user, 'plushadmin'
 set :password, "nikita"
