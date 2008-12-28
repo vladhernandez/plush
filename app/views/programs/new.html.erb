@@ -31,7 +31,7 @@
     <%= f.label :email_address %>
     <%= f.text_field :email_address %>
   </p>
-  <p>
+  <p class="date_select">
     <%= f.label :wedding_date %>
     <%= f.date_select :wedding_date %>
   </p>
@@ -43,7 +43,10 @@
     <%= f.label :grooms_name %>
     <%= f.text_field :grooms_name %>
   </p>
-  <p>Did you order you invitations through us? If so, please indicate design and/or your contract number so we can match the fonts.
+  
+  
+  <p class="fullwidth">Did you order you invitations through us? If so, please indicate design and/or your contract number so we can match the fonts.</p>
+  <p>
     <%= f.label :design_contact_number, "" %>
     <%= f.text_field :design_contact_number %>
   </p>
@@ -86,31 +89,31 @@
     <%= f.text_field :font_color %>
   </p>
   <p>
-    <%= f.label :ribbon_color %>
+    <%= f.label :ribbon_color, "Ribbon colour/s:" %>
     <%= f.text_field :ribbon_color %>
   </p>
-  <p>
+  <p class="textarea">
     <%= f.label :special_requests, "Modifications/special requests. Please indicate the sample number. (charges may apply)" %>
     <%= f.text_area :special_requests %>
   </p>
-  <p>
+  <p class="textarea">
     <%= f.label :program_text, "Program text. <br />Please send in a seperate MS word Document saved with your names and dated created" %>
     <%= f.text_area :program_text %>
   </p>
 
 
-  <strong>Notes:</strong>
-  <ul>
+  <h4>Notes:</h4>
+  <ol>
   <li>Once we receive your order we will send you a contract with estimated timelines and deposit requirements (50% payable by Visa or MasterCard). </li>
   <li>We will send you PDF text proofs within 1 week of receiving your order.</li>
   <li>Once you approve all text proofs it will take 2 – 4 weeks to complete your order.</li>
   <li>The remaining 50% is due when your order is shipped. </li>
-</ul>
-  <p>Don't hesitate to contact us if you have any questions. Thank you and we look forward to working with you!</p>
+  </ol>
+  <p class="fullwidth">Don't hesitate to contact us if you have any questions. <br>Thank you and we look forward to working with you!</p>
 
 
   
-  <p>
+  <p class="submit">
     <%= f.submit "Create" %>
   </p>
 <% end %>

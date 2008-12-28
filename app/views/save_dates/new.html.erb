@@ -1,4 +1,4 @@
-<h1>New save_date</h1>
+<h1>ORDER FORM - Save The Date</h1>
 
 <% form_for(@save_date) do |f| %>
   <%= f.error_messages %>
@@ -23,7 +23,7 @@
     <%= f.label :email_address %>
     <%= f.text_field :email_address %>
   </p>
-  <p>
+  <p class="date_select">
     <%= f.label :wedding_date %>
     <%= f.date_select :wedding_date %>
   </p>
@@ -40,177 +40,159 @@
     <%= f.label :sample_name_3, "Sample name (3):" %>
     <%= f.text_field :sample_name_3 %>
   </p>
-  <p>Paper Selection</p>
-  <p>
+  <h3>Paper Selection</h3>
+  <p class="fullwidth">
     <%= f.label :text_paper_1, "(1) Text paper:" %>
     <%= f.text_field :text_paper_1 %>
   </p>
-  <p>
+  <p class="choice">
     <%= f.label :text_paper_1_layer_1, "Layer 1:" %>
     <%= f.text_field :text_paper_1_layer_1 %>
-  </p>
-  <p>
     <%= f.label :text_paper_1_layer_2, "Layer 2:" %>
     <%= f.text_field :text_paper_1_layer_2 %>
-  </p>
-  <p>
     <%= f.label :text_paper_1_layer_3, "Layer 3:" %>
     <%= f.text_field :text_paper_1_layer_3 %>
   </p>
-  <p>
+  <p class="fullwidth">
     <%= f.label :text_paper_2, "(2) Text paper:" %>
     <%= f.text_field :text_paper_2 %>
   </p>
-  <p>
+  <p class="choice">
     <%= f.label :text_paper_2_layer_1, "Layer 1:" %>
     <%= f.text_field :text_paper_2_layer_1 %>
-  </p>
-  <p>
     <%= f.label :text_paper_2_layer_2, "Layer 2:" %>
     <%= f.text_field :text_paper_2_layer_2 %>
-  </p>
-  <p>
     <%= f.label :text_paper_2_layer_3, "Layer 3:" %>
     <%= f.text_field :text_paper_2_layer_3 %>
   </p>
-  <p>
+  <p class="fullwidth">
     <%= f.label :text_paper_3, "(3) Text paper:" %>
     <%= f.text_field :text_paper_3 %>
   </p>
-  <p>
+  <p class="choice">
     <%= f.label :text_paper_3_layer_1 , "Layer 1:"%>
     <%= f.text_field :text_paper_3_layer_1 %>
-  </p>
-  <p>
     <%= f.label :text_paper_3_layer_2, "Layer 2:" %>
     <%= f.text_field :text_paper_3_layer_2 %>
-  </p>
-  <p>
     <%= f.label :text_paper_3_layer_3, "Layer 3:" %>
     <%= f.text_field :text_paper_3_layer_3 %>
   </p>
-  <p>
+  <div class="clear">
+    
+  </div>
+  <p class="choice">
     <%= f.label :font_color_1, "Font colour (1):" %>
     <%= f.text_field :font_color_1 %>
-  </p>
-  <p>
     <%= f.label :font_color_2, "Font colour (2):" %>
     <%= f.text_field :font_color_2 %>
-  </p>
-  <p>
     <%= f.label :font_color_3, "Font colour (3):" %>
     <%= f.text_field :font_color_3 %>
   </p>
-  <p>
+  <p class="choice">
     <%= f.label :ribbon_color_1, "Ribbon colour (1):" %>
     <%= f.text_field :ribbon_color_1 %>
-  </p>
-  <p>
     <%= f.label :ribbon_color_2, "Ribbon colour (2):" %>
     <%= f.text_field :ribbon_color_2 %>
-  </p>
-  <p>
     <%= f.label :ribbon_color_3, "Ribbon colour (3):" %>
     <%= f.text_field :ribbon_color_3 %>
   </p>
+    <label>Reply Cards Style (check one):</label><br>
   <p>
-    <%= f.label :reply_card_styles, "Reply Card Style (traditional mail back, postcard or e-mail/phone)" %>
-    <%= f.text_field :reply_card_styles %>
+    <%= f.radio_button :reply_card_styles, "traditional" %> Traditional mail back:<br>
+    <%= f.radio_button :reply_card_styles, "postcard" %> Postcard:<br>
+    <%= f.radio_button :reply_card_styles, "email_phone" %> E-mail / phone:<br>
+    
   </p>
-  <p>Paper Samples</p>
-  <p>
+  
+  <h4>Paper Samples</h4>
+  <p class="choice">
     <%= f.label :paper_sample_color_1, "Colour 1" %>
     <%= f.text_field :paper_sample_color_1 %>
-  </p>
-  <p>
     <%= f.label :paper_sample_color_2, "Colour 2" %>
     <%= f.text_field :paper_sample_color_2 %>
-  </p>
-  <p>
     <%= f.label :paper_sample_color_4, "Colour 4" %>
     <%= f.text_field :paper_sample_color_4 %>
   </p>
-  <p>
+  <div class="clear">
+    
+  </div>
     <%= f.label :special_requests, "Modifications/special requests. Please indicate the sample number. (charges may apply)" %>
     <%= f.text_area :special_requests %>
-  </p>
-  <p>Remember:</p>
+  <div class="clear">
+    
+  </div>
+
+  <h4>Remember:</h4>
   <ol>
   <li>Your samples will reflect the colours you selected but will have generic wording. We will insert your wording once you place your order. </li>
   <li>If we have your selected papers in stock we will mail your sample along with pricing details within 1 week. If the papers are not in stock we will mail your sample within 2 weeks. We will contact you if there are any delays or backorders.</li>
   <li>We will e-mail you to confirm we received your sample order within 24 hours. If you don't hear from us, please give us a call at 403.226.3041.</li>
 </ol>
-  <p>Placing your order:</p>
+
+  <h4>Placing your order:</h4>
   <ol>
   <li>After you've received your samples and settled on a design and colours, please fill out our online order form and we will contact you to confirm your order and get your 50% deposit. (payable by Visa or MC).</li>
   <li>Once we receive your order we'll send you a contract with estimated timelines. Within a week of receiving your order we'll send you PDF text proofs of your invitations and inserts for your approval.</li>
   <li>Once you approve all text proofs we will complete your order in 2 – 4 weeks (depending on the style).</li>
   <li>The remaining 50% is due when your order is shipped. </li>
 </ol>
-  <p>Don't hesitate to contact us if you have any questions. Thank you and we look forward to working with you!</p>
-  Invitations 	                   
-  Save the dates	 x $10/sample =
-  Thank you cards	 x $10/sample =
-  Programs	 x $10/sample =
-  Paper samples	 x $1/sample =
-  Paper swatch deck	 x $15/deck =
-  Ribbon swatch deck	 x $5/deck =
-  
-  <p>
+  <p class="fullwidth">Don't hesitate to contact us if you have any questions. <br>Thank you and we look forward to working with you!</p>
+  <h3>Invitations </h3>	                     
+  <p class="quantity_group">
     <%= f.label :invitations_quantity, "Invitations" %>
-    <%= f.text_field :invitations_quantity %>
+    <%= f.text_field :invitations_quantity, :class => 'quantity' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :invitations_subtotal, "x $20/sample = " %>
-    <%= f.text_field :invitations_subtotal %>
+    <%= f.text_field :invitations_subtotal, :class => 'subtotal' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :save_the_dates_quantity, "Save the dates" %>
-    <%= f.text_field :save_the_dates_quantity %>
+    <%= f.text_field :save_the_dates_quantity, :class => 'quantity' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :save_the_dates_subtotal, "x $10/sample =" %>
-    <%= f.text_field :save_the_dates_subtotal %>
+    <%= f.text_field :save_the_dates_subtotal, :class => 'subtotal' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :thank_you_cards_quantity, "Thank you cards" %>
-    <%= f.text_field :thank_you_cards_quantity %>
+    <%= f.text_field :thank_you_cards_quantity, :class => 'quantity' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :thank_you_cards_subtotal, "x $10/sample =" %>
-    <%= f.text_field :thank_you_cards_subtotal %>
+    <%= f.text_field :thank_you_cards_subtotal, :class => 'subtotal' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :programs_quantity, "Programs" %>
-    <%= f.text_field :programs_quantity %>
+    <%= f.text_field :programs_quantity, :class => 'quantity' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :programs_subtotal, "x $10/sample =" %>
-    <%= f.text_field :programs_subtotal %>
+    <%= f.text_field :programs_subtotal, :class => 'subtotal' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :paper_samples_quantity, "Paper samples" %>
-    <%= f.text_field :paper_samples_quantity %>
+    <%= f.text_field :paper_samples_quantity, :class => 'quantity' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :paper_samples_subtotal, "x $1/sample =" %>
-    <%= f.text_field :paper_samples_subtotal %>
+    <%= f.text_field :paper_samples_subtotal, :class => 'subtotal' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :paper_swatch_deck_quantity, "Paper swatch deck	 x $15/deck =" %>
-    <%= f.text_field :paper_swatch_deck_quantity %>
+    <%= f.text_field :paper_swatch_deck_quantity, :class => 'quantity' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :paper_swatch_deck_subtotal, "x $15/deck =" %>
-    <%= f.text_field :paper_swatch_deck_subtotal %>
+    <%= f.text_field :paper_swatch_deck_subtotal, :class => 'subtotal' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :ribbon_swatch_deck, "Ribbon swatch deck" %>
-    <%= f.text_field :ribbon_swatch_deck %>
+    <%= f.text_field :ribbon_swatch_deck, :class => 'quantity' %>
   </p>
-  <p>
+  <p class="quantity_group">
     <%= f.label :ribbon_swatch_deck_subtotal, "x $5/deck =" %>
-    <%= f.text_field :ribbon_swatch_deck_subtotal %>
+    <%= f.text_field :ribbon_swatch_deck_subtotal, :class => 'subtotal' %>
   </p>
   <p>
     <%= f.label :subtotal %>

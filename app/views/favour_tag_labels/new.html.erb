@@ -35,6 +35,7 @@
     <%= f.label :grooms_name, "Groom's Name" %>
     <%= f.text_field :grooms_name %>
   </p>
+  <p>Did you order you invitations through us? If so, please indicate design and/or your contract number so we can match the fonts.</p>
   <p>
     <%= f.label :ordered_invites %>
     <%= f.check_box :ordered_invites %>
@@ -42,41 +43,31 @@
   <p>
     <%= f.label :item_1, " Item 1 (indicate item, size & colour/s):" %>
     <%= f.text_field :item_1 %>
-  </p>
-  <p>
-    <%= f.label :item_1_quantity %>
+    <%= f.label :item_1_quantity, "Quantity required:" %>
     <%= f.text_field :item_1_quantity %>
   </p>
   <p>
     <%= f.label :item_2, " Item 2 (indicate item, size & colour/s):" %>
     <%= f.text_field :item_2 %>
-  </p>
-  <p>
-    <%= f.label :item_2_quantity %>
+    <%= f.label :item_2_quantity, "Quantity required:" %>
     <%= f.text_field :item_2_quantity %>
   </p>
   <p>
     <%= f.label :item_3, " Item 3 (indicate item, size & colour/s):" %>
     <%= f.text_field :item_3 %>
-  </p>
-  <p>
-    <%= f.label :item_3_quantity %>
+    <%= f.label :item_3_quantity, "Quantity required:" %>
     <%= f.text_field :item_3_quantity %>
   </p>
   <p>
     <%= f.label :item_4, " Item 4 (indicate item, size & colour/s):" %>
     <%= f.text_field :item_4 %>
-  </p>
-  <p>
-    <%= f.label :item_4_quantity %>
+    <%= f.label :item_4_quantity, "Quantity required:" %>
     <%= f.text_field :item_4_quantity %>
   </p>
   <p>
     <%= f.label :item_5, " Item 5 (indicate item, size & colour/s):" %>
     <%= f.text_field :item_5 %>
-  </p>
-  <p>
-    <%= f.label :item_5_quantity %>
+    <%= f.label :item_5_quantity, "Quantity required:" %>
     <%= f.text_field :item_5_quantity %>
   </p>
   <p>
@@ -88,7 +79,7 @@
     <%= f.text_area :special_requests %>
   </p>
   <p>
-    <%= f.label :information %>
+    <%= f.label :information, "Text/information" %>
     <%= f.text_area :information %>
   </p>
   <p>

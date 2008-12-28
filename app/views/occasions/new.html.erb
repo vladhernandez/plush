@@ -47,6 +47,7 @@
     <%= f.label :sample_number, "If so, indicate sample number from your quote sheet:" %>
     <%= f.text_field :sample_number %>
   </p>
+  <div class="clear"></div>
   
   <h2>Paper Selection</h2>
   <p>
@@ -74,40 +75,36 @@
     <%= f.text_field :ribbon_color %>
   </p>
   <h2>Select additional items required.</h2>
-  <p>
-    <%= f.label :print_return, "Print return on outer envelope:" %>
+  <p class="checkbox_group">
     <%= f.check_box :print_return %>
-  </p>
-  <p>
-    <%= f.label :sealing_sticker, "Address labels / sealing sticker:" %>
+    <%= f.label :print_return, "Print return on outer envelope:" %>
     <%= f.check_box :sealing_sticker %>
-  </p>
-  <p>
-    <%= f.label :colored_envelope,"Metallic / coloured envelopes:" %>
+    <%= f.label :sealing_sticker, "Address labels / sealing sticker:" %>
     <%= f.check_box :colored_envelope %>
-  </p>
-  <p>
-    <%= f.label :lined_envelope %>
+    <%= f.label :colored_envelope,"Metallic / coloured envelopes:" %>
     <%= f.check_box :lined_envelope %>
-  </p>
-  <p>
-    <%= f.label :double_envelope %>
+    <%= f.label :lined_envelope %>
     <%= f.check_box :double_envelope %>
+    <%= f.label :double_envelope %>
   </p>
-  <p>
+  <div class="clear"></div>
     <%= f.label :verse_information, "Verse Information. <br />(Please email in a seperate MS word Document saved with your names and dated created)" %>
     <%= f.text_area :verse_information %>
-  </p>
-  <p>
+  <p class="fullwidth">
     <%= f.label :type_of_event, "Type of event / occasion." %>
     <%= f.text_field :type_of_event %>
   </p>
-  <p>
+  <div class="clear">
+    
+  </div>
+  <p >
     <%= f.label :rsvp_contact, "E-mail / phone number for RSVP. (if required)" %>
     <%= f.text_field :rsvp_contact %>
   </p>
+  <div class="clear"></div>
+  
 <p>
-  Notes:
+  <h4>Notes:</h4>
   <ol>
   <li>Once we receive your order we will send you a contract with estimated timelines and deposit requirements (50% payable by Visa or MasterCard). </li>
   <li>We will send you PDF text proofs within 1 week of receiving your order.</li>
@@ -115,13 +112,13 @@
   <li>The remaining 50% is due when your order is shipped. </li>
   </ol>
 </p>
-<p>
-  Don't hesitate to contact us if you have any questions. Thank you and we look forward to working with you!
+<p class="fullwidth">
+  Don't hesitate to contact us if you have any questions. <br>Thank you and we look forward to working with you!
 </p>
 
   
   
-  <p>
+  <p class="submit">
     <%= f.submit "Create" %>
   </p>
 <% end %>
