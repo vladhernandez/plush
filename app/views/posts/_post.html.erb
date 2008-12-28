@@ -1,2 +1,5 @@
-<%= post.date %>
-<%= markdown post.content %>
+<div class="blog_post">
+  <h3><%= post.title %></h3>
+  <p class="blog_post_date"><%= post.date %></p>
+  <div class="blog_post_content"><%= markdown post.content %></div>
+</div>

@@ -11,7 +11,7 @@ class AdminController < ApplicationController
   
   def test_email
     @email = Mailer.deliver_test_email
-    render :text => @email.inspect
+    render :text => @email
   end
 
 end

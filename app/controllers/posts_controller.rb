@@ -6,6 +6,10 @@ class PostsController < ApplicationController
       @object ||= Post.find_by_permalink(params[:id])
     end
     def collection
-      @collection ||= Post.find(:all, :order => 'created_at DESC')
+      if params[:action] == 'archive'
+        @collection ||= Post.find(:all, :order => 'date DESC')
+      else
+        @collection ||= Post.current.find(:all, :order => 'date DESC')
+      end
     end
 end

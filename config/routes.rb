@@ -36,8 +36,9 @@ ActionController::Routing::Routes.draw do |map|
 
 
   # Blog Posts
-  map.resources :posts, :has_many => :images
+  map.resources :posts, :has_many => :images, :collection => {:blog => :get, :archive => :get}
   map.blog '/blog', :controller => 'posts', :action => 'index'
+  map.blog_archive '/blog/archive', :controller => 'posts', :action => 'index', :archive => true
 
   # Login/Logout/Admin
   map.resources :users

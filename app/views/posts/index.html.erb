@@ -1,2 +1,4 @@
 <h1>Blog</h1>
 <%= render :partial => @posts %>
+
+<p><%= link_to 'Archive', blog_archive_path unless params[:archive] %></p>

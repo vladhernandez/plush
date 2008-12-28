@@ -1,6 +1,24 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
+  
+  should "show the top 5 blog posts on the 'blog' page and an archive link" do
+    get 'index'
+    assert_response :success
+    assert_template 'index'
+    assert_not_nil assigns(:posts)
+    assert_equal assigns(:posts).size, 5
+  end
+  
+  should "show all the blog posts on the 'archive' page" do
+    get 'archive'
+    assert_response :success
+    assert_template 'index'
+    assert_not_nil assigns(:posts)
+    assert_equal assigns(:posts).size, 6
+  end
+  
+  
   def test_should_get_index
     get :index
     assert_response :success

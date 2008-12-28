@@ -84,24 +84,24 @@ Rails::Initializer.run do |config|
   #   :password       => "banana" 
   # }
   config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #      :address        => "mail.dreamhost.com",
-  #      :port           => 587,
-  #      :domain         => "plush.dreamhosters.com",
-  #      :authentication => :login,
-  #      :user_name      => "plush",
-  #      :password       => "nikita"
-  # }
-  require 'smtp_tls'
-
-  config.action_mailer.server_settings = {
-    :address => "smtp.gmail.com",
-    :port => "587",
-    :domain => "localhost.plush.dreamhosters.com",
-    :authentication => :plain,
-    :user_name => "plushadmin",
-    :password => "nikita"
+  config.action_mailer.smtp_settings = {
+       :address        => "mail.plush.dreamhosters.com",
+       :port           => 587,
+       :domain         => "plush.dreamhosters.com",
+       :authentication => :login,
+       :user_name      => "plushadmin",
+       :password       => "nikita"
   }
+  # require 'smtp_tls'
+  # 
+  # config.action_mailer.smtp_settings = {
+  #   :address => "smtp.gmail.com",
+  #   :port => "587",
+  #   :domain => "localhost.plush.dreamhosters.com",
+  #   :authentication => :plain,
+  #   :user_name => "plushadmin",
+  #   :password => "nikita"
+  # }
   # ActionMailer::Base.perform_deliveries = true
   # ActionMailer::Base.default_charset = "utf-8"
   

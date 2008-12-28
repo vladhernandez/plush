@@ -13,3 +13,29 @@ two:
   date: 2008-12-05
   content: MyText
   active: false
+three:
+  title: MyString
+  permalink: my-post
+  date: 2008-12-05
+  content: MyText
+  active: false
+
+four:
+  title: MyString
+  permalink: myother
+  date: 2008-12-05
+  content: MyText
+  active: false
+five:
+  title: MyString
+  permalink: my-post
+  date: 2008-12-05
+  content: MyText
+  active: false
+
+six:
+  title: MyString
+  permalink: myother
+  date: 2008-12-05
+  content: MyText
+  active: false
