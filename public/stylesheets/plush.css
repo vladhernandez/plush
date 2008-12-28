@@ -28,14 +28,15 @@ a:focus{-moz-outline-style: none;}
 
 /* = Layout Blocks                               = */
 /* =============================================== */
-#site{width: 798px; min-height: 600px; margin: 0 auto; border: 0px solid; background:url(/images/layout/base.png) no-repeat top left; padding:15px 24px 24px 19px;}
+#site{width: 798px; height: 600px; margin: 0 auto; border: 0px solid; background:url(/images/layout/base.png) no-repeat top left; padding:15px 24px 24px 19px;}
+
 #masthead{position: relative; height: 120px;}
-#main{width: 580px;float: right; margin-right:20px;}
+#main{padding:0; border:0px solid red; width: 580px;float: right; margin-right:20px; display:inline;}
 
 #content{display: block; clear: both; height:380px; width:550px; overflow-y:scroll; margin-left:11px; margin-top:20px;}
 .landing #content{overflow-y:hidden; height:auto;}
 .shaded #content{background:url(/images/layout/10_black.png) repeat top left;}
-.home #main #content{padding:0 60px 10px 30px; overflow:auto; background:none !important;}
+.home #main #content{padding:0; margin-top:0; height:400px; overflow:hidden; background:none !important;}
 
 
 #side{width: 198px;float: left;}
@@ -106,14 +107,10 @@ a:focus{-moz-outline-style: none;}
 #nav-top ul dl dd span a:hover{color:#84AEB3;}
 /* = Accordion Classes                             = */
 /* ================================================ */
-.overflow {
-overflow:hidden;
-}
+.overflow {overflow:hidden;}
 .accordion_toggle_active span{background:url(/images/nav/store/sml_burst.png) no-repeat left top;}
 .accordion_toggle {background:url(/images/nav/store/nav-dotted-line.png) no-repeat left bottom;cursor:pointer;display:block; padding-top:10px; margin-bottom:10px; padding-bottom:6px !important;}
 .accordion_content {overflow:hidden;}
-
-
 
 .horiz{}
 .horiz li{float: left; display: block; padding: 10px 5px;}
@@ -128,13 +125,14 @@ overflow:hidden;
 #nav-side .subnav{}
 
 /* Home Link Boxes */
-.home #entry-links{}
-.home #entry-links .link {width:167px; height:182px;}
-.home #entry-links .link a{background-position:bottom left; background-repeat:no-repeat; display:block; text-decoration:none;}
-.home #entry-links .link a:hover{background-position:top left;}
+.home #entry-links{background:blue;}
+.home #entry-links .link {width:167px; height:182px; display:block;}
+.home #entry-links .link a{background-position:left bottom; background-repeat:no-repeat; display:block; text-decoration:none;}
+.home #entry-links .link a:hover{background-position:left top;}
+
 .home #entry-links #store{float:left;}
 .home #entry-links #custom{float:right; margin-right:50px;}
-.home #entry-links #store a{width:167px; height:182px;background-image:url(/images/home/store.jpg);}
+.home #entry-links #store  a{width:167px; height:182px;background-image:url(/images/home/store.jpg);}
 .home #entry-links #custom a{width:167px; height:182px;background-image:url(/images/home/custom.jpg);}
 
 

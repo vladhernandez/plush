@@ -5,4 +5,11 @@
 	<title>Plush</title>
   <%= stylesheet_link_tag 'blueprint', 'plush', 'sifr' %>
   <%= javascript_include_tag 'prototype','effects','accordion', 'sifr', 'sifr-config', 'swfobject', 'application' %>
+<!--[if IE 6]>
+<%= javascript_include_tag 'DD_belatedPNG' %>
+<script type="text/javascript" charset="utf-8">
+	DD_belatedPNG.fix('#site, #content, .dotted');
+</script>
+<![endif]-->
+
 </head>
