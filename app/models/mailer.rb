@@ -7,6 +7,15 @@ class Mailer < ActionMailer::Base
   def email_from
     'plush@plush.com'
   end
+  
+  def test_email(sent_at = Time.now)
+    subject    'Occasion Order'
+    recipients email_recipients
+    from       email_from
+    sent_on    sent_at
+    
+    # body       :occasion => occasion
+  end
 
   def occasion(occasion, sent_at = Time.now)
     subject    'Occasion Order'
