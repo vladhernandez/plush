@@ -56,12 +56,12 @@ a:focus{-moz-outline-style: none;}
 /* = Top Nav                                      = */
 /* ================================================ */
 
-#nav-top{clear: both; background:url(/images/home/dotted-line.png) no-repeat 11px 99%; width:561px; height:42px;}
+#nav-top{position:relative; clear: both; float:none; background:url(/images/home/dotted-line.png) no-repeat 11px 99%; width:561px; height:42px;}
 
 #nav-top ul, #nav-top ul li{margin:0; padding:0;}
 /* = Top Nav 1st Tier                              = */
 /* ================================================ */
-#nav-top ul{padding-top:0px; height:auto; position:relative;}
+#nav-top ul{padding-top:0px; height:auto;}
 #nav-top ul li a{text-transform:none;font-family:"Times New Roman", Times, serif; color:#686866; text-decoration:none; background-position:bottom right; display:block; height:42px;}
 #nav-top ul li.active a, #nav-top ul li a:hover{background-position:bottom left;}
 #nav-top ul li a span {visibility:hidden;}
@@ -77,14 +77,17 @@ a:focus{-moz-outline-style: none;}
 
 /* = Top Nav 2nd Tier                              = */
 /* ================================================ */
-#nav-top ul dl{		
+#nav-top ul dl{	
+
 					margin-top:-6px; 
 					margin-left:15px; 
 					padding:5px 10px 15px 10px;
-					position:absolute; 
+					position:absolute;					
+					z-index:99;
 					display:block; 
-					background:url(/images/nav/store/store_dropdown_paper.jpg) repeat-y top left; 
+					background: black url(/images/nav/store/store_dropdown_paper.jpg) repeat-y top left; 
 					width:170px;
+
 					}
 #nav-top ul dl.active{display:block;}
  
@@ -98,7 +101,7 @@ a:focus{-moz-outline-style: none;}
 					position:relative;
 					}
 
-#nav-top ul dl dt span{padding:10px; padding-bottom:5px; padding-left:0;}
+#nav-top ul dl dt span{padding:10px; padding-bottom:5px; padding-left:0;}*/
 /* = Top Nav 3rd Tier                              = */
 /* ================================================ */
 #nav-top ul dl dd{position:relative; background:none; margin:0; padding:0;}
