@@ -74,10 +74,32 @@ end
   end
   
   def page_class_name
-    content_class="shaded"
-    if !@category
+    content_class=""
+    shaded = false
+    landing = false
+    current_page = request.request_uri[1..-1]
+    
+    catIdx = current_page.index('categories')
+     
+    if(catIdx == 0)
+      shaded = true
+    end  
+    
+    if(current_page == "store" || current_page == "custom")
+      landing=true;
+      shaded = true;
+    end
+    
+    
+    
+    if shaded
+      content_class+="shaded"
+    end  
+    if landing
       content_class+=" landing"
     end
+    
+    #content_class=idx
     content_class
   end
   
