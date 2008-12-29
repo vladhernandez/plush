@@ -1,8 +1,11 @@
 require 'test_helper'
 
 class AdminControllerTest < ActionController::TestCase
-  # Replace this with your real tests.
-  def test_truth
-    assert true
+  should "require login for admin" do
+    get :index
+    assert_response :redirect
+    login_as :aaron
+    get :index
+    assert_response :success
   end
 end

@@ -31,7 +31,7 @@
     <%= f.label :email_address %>
     <%= f.text_field :email_address %>
   </p>
-  <p>
+  <p class="date_select">
     <%= f.label :wedding_date %>
     <%= f.date_select :wedding_date %>
   </p>
@@ -43,9 +43,14 @@
     <%= f.label :grooms_name %>
     <%= f.text_field :grooms_name %>
   </p>
-  <p>
+  <div class="clear">
     
-    <%= f.label :design_contact_number, "Did you order you invitations through us? If so, please indicate design and/or your contract number so we can match the fonts." %>
+  </div>
+  <p class="fullwidth">
+    Did you order you invitations through us? If so, please indicate design and/or your contract number so we can match the fonts.
+  </p>
+  <p class="">    
+    <%= f.label :design_contact_number, "" %>
     <%= f.text_field :design_contact_number %>
   </p>
   <p>
@@ -68,19 +73,17 @@
   <p>
     <%= f.label :text_paper %>
     <%= f.text_field :text_paper %>
-  </p>
-  <p>
+
     <%= f.label :text_paper_layer_2, "Layer 2:" %>
     <%= f.text_field :text_paper_layer_2 %>
-  </p>
-  <p>
     <%= f.label :text_paper_layer_3, "Layer 3:" %>
     <%= f.text_field :text_paper_layer_3 %>
-  </p>
-  <p>
     <%= f.label :text_paper_layer_4, "Layer 4:" %>
     <%= f.text_field :text_paper_layer_4 %>
   </p>
+  <div class="clear">
+    
+  </div>
   <p>
     <%= f.label :font_color, "Font colour/s:" %>
     <%= f.text_field :font_color %>
@@ -89,15 +92,17 @@
     <%= f.label :ribbon_color, "Ribbon colour:" %>
     <%= f.text_field :ribbon_color %>
   </p>
-  <p>
+  <p class="textarea">
     <%= f.label :special_requests, "Modifications/special requests. Please indicate the sample number. (charges may apply)" %>
     <%= f.text_area :special_requests %>
   </p>
-  <p>
+  <p class="textarea">
     <%= f.label :card_text, "Thank You card text." %>
     <%= f.text_area :card_text %>
   </p>
-
+  <div class="clear">
+    
+  </div>
   <strong>Notes:</strong>
   <ul>
   <li>Once we receive your order we will send you a contract with estimated timelines and deposit requirements (50% payable by Visa or MasterCard). </li>
@@ -106,11 +111,11 @@
   <li>The remaining 50% is due when your order is shipped. </li>
 </ul>
 
-  <p>Don't hesitate to contact us if you have any questions. Thank you and we look forward to working with you!</p>
+  <p class="fullwidth">Don't hesitate to contact us if you have any questions. <br>Thank you and we look forward to working with you!</p>
 
 
   
-  <p>
+  <p class="submit">
     <%= f.submit "Create" %>
   </p>
 <% end %>

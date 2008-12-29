@@ -20,11 +20,13 @@ class CategoriesControllerTest < ActionController::TestCase
   end
   
   def test_should_get_new
+    login_as :aaron
     get :new
     assert_response :success
   end
   
   def test_should_create_category
+    login_as :aaron
     assert_difference('Category.count') do
       post :create, :category => { }
     end
@@ -39,16 +41,19 @@ class CategoriesControllerTest < ActionController::TestCase
   end
   
   def test_should_get_edit
+    login_as :aaron
     get :edit, :id => categories(:category_00069).permalink
     assert_response :success
   end
   
   def test_should_update_category
+    login_as :aaron
     put :update, :id => categories(:category_00069).permalink, :category => { }
     assert_redirected_to category_path(assigns(:category))
   end
   
   def test_should_destroy_category
+    login_as :aaron
     assert_difference('Category.count', -1) do
       delete :destroy, :id => categories(:category_00069).permalink
     end

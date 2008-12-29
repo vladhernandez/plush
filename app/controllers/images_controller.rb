@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-  
+  before_filter :login_required, :except => [:show]
   # Check for AJAX - Render no layout for those requests
   layout proc{ |c| c.request.xhr? ? false : "application" }
   

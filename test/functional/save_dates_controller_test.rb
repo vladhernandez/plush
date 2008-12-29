@@ -10,12 +10,13 @@ class SaveDatesControllerTest < ActionController::TestCase
   end
   
   
-  # def test_should_get_index
-  #   get :index
-  #   assert_response :success
-  #   assert_not_nil assigns(:save_dates)
-  # end
-  # 
+  def test_should_get_index
+    login_as :aaron
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:save_dates)
+  end
+  
   def test_should_get_new
     get :new
     assert_response :success
@@ -28,27 +29,30 @@ class SaveDatesControllerTest < ActionController::TestCase
   
     assert_redirected_to save_date_path(assigns(:save_date))
   end
-  # 
-  # def test_should_show_save_date
-  #   get :show, :id => save_dates(:one).id
-  #   assert_response :success
-  # end
-  # 
-  # def test_should_get_edit
-  #   get :edit, :id => save_dates(:one).id
-  #   assert_response :success
-  # end
-  # 
-  # def test_should_update_save_date
-  #   put :update, :id => save_dates(:one).id, :save_date => { }
-  #   assert_redirected_to save_date_path(assigns(:save_date))
-  # end
-  # 
-  # def test_should_destroy_save_date
-  #   assert_difference('SaveDateOrder.count', -1) do
-  #     delete :destroy, :id => save_dates(:one).id
-  #   end
-  # 
-  #   assert_redirected_to save_dates_path
-  # end
+  
+  def test_should_show_save_date
+    get :show, :id => save_dates(:one).id
+    assert_response :success
+  end
+  
+  def test_should_get_edit
+    login_as :aaron
+    get :edit, :id => save_dates(:one).id
+    assert_response :success
+  end
+  
+  def test_should_update_save_date
+    login_as :aaron
+    put :update, :id => save_dates(:one).id, :save_date => { }
+    assert_redirected_to save_date_path(assigns(:save_date))
+  end
+  
+  def test_should_destroy_save_date
+    login_as :aaron
+    assert_difference('SaveDate.count', -1) do
+      delete :destroy, :id => save_dates(:one).id
+    end
+  
+    assert_redirected_to save_dates_path
+  end
 end

@@ -179,7 +179,7 @@
     <%= f.text_field :paper_samples_subtotal, :class => 'subtotal' %>
   </p>
   <p class="quantity_group">
-    <%= f.label :paper_swatch_deck_quantity, "Paper swatch deck	 x $15/deck =" %>
+    <%= f.label :paper_swatch_deck_quantity, "Paper swatch deck	" %>
     <%= f.text_field :paper_swatch_deck_quantity, :class => 'quantity' %>
   </p>
   <p class="quantity_group">
@@ -194,19 +194,18 @@
     <%= f.label :ribbon_swatch_deck_subtotal, "x $5/deck =" %>
     <%= f.text_field :ribbon_swatch_deck_subtotal, :class => 'subtotal' %>
   </p>
+  <div class="clear">
+    
+  </div>
   <p>
     <%= f.label :subtotal %>
     <%= f.text_field :subtotal %>
-  </p>
-  <p>
     <%= f.label :gst %>
     <%= f.text_field :gst %>
-  </p>
-  <p>
     <%= f.label :total %>
     <%= f.text_field :total %>
   </p>
-  <p>
+  <p class="submit">
     <%= f.submit "Create" %>
   </p>
 <% end %>

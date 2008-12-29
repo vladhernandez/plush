@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :login_required, :only => :admin_actions
+  before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy]
   layout :determine_layout
   resource_controller
   private
