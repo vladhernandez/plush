@@ -39,8 +39,20 @@ a:focus{-moz-outline-style: none;}
 .home #main #content{padding:0; margin-top:0; height:400px; overflow:hidden; background:none !important;}
 
 
+#pricing{display:none;}
+table.pricing-table{padding-bottom:20px; background: url(/images/home/dotted-line.png) repeat-x bottom left;}
+table.pricing-table thead td{color:#000;}
+table.pricing-table tr td{white-space: nowrap;}
+table.pricing-table tr td.label{font-weight:bold; color:#686866;}
 #side{width: 198px;float: left;}
 #footer{clear: both;}
+/*lightwindow overrides*/
+#lightwindow_contents, #lightwindow_contents p{
+	color:#686866;
+}
+#lightwindow_contents p, #lightwindow_contents li, #lightwindow_contents td{
+	line-height:1em;
+}
 
 #sleeve{
 	margin:0 10px 0 20px; 
