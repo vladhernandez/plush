@@ -105,7 +105,7 @@ a:focus{-moz-outline-style: none;}
 /* = Top Nav 3rd Tier                              = */
 /* ================================================ */
 #nav-top ul dl dd{position:relative; background:none; margin:0; padding:0;}
-#nav-top ul dl dd span{ padding:0; display:block; width:100%;}
+#nav-top ul dl dd span{padding:0; display:block; width:100%;}
 #nav-top ul dl dd span a{color:#fff; background:none; height:auto; display:block; width:100%;}
 #nav-top ul dl dd span a:hover{color:#84AEB3;}
 /* = Accordion Classes                             = */
@@ -155,7 +155,7 @@ a:focus{-moz-outline-style: none;}
 .dotted{background:transparent url(/images/home/dotted-line.png) repeat-x; height:3px; border:0;}
 .column{float:left; display:inline; width:45%;}
 .column.product-image{width:187px; margin-right:20px;}
-.column.product-contents{width:270px;}
+.column.product-contents{width:275px;}
 
 /*Products & Categories */
 .product{width:75px; float:left; margin-right:50px;}
@@ -166,6 +166,7 @@ a:focus{-moz-outline-style: none;}
 
 /* = Forms                                        = */
 /* ================================================ */
+
 form h3, form h4{display: block; clear: both;}
 form p{width: 50%; float: left;}
 form label{display: block; float: left; width: 120px; text-align: right; padding-right: 5px;}
@@ -186,6 +187,11 @@ form .quantity_group input{clear: none;}
 form input.quantity{width: 20px;}
 form input.subtotal{width: 50px;}
 form .submit{width: 100%; clear: both;}
+/*label{display: block; float: left; width: 150px;}*/
+#product-detail button span{display:none;}
+#product-detail button{width:137px; height:33px; border:none;}
+button.sample{background:url(/images/store/request_sample.gif) no-repeat top left;}
+button.order{background:url(/images/store/order_form.gif) no-repeat top left;}
 
 /* = Admin Section	                              = */
 /* ================================================ */

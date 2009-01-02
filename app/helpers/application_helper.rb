@@ -80,8 +80,9 @@ end
     current_page = request.request_uri[1..-1]
     
     catIdx = current_page.index('categories')
-     
-    if(catIdx == 0)
+    prodIdx = current_page.index('products')
+    
+    if(catIdx == 0 || prodIdx==0)
       shaded = true
     end  
     
