@@ -47,16 +47,10 @@ table.pricing-table tr td.label{font-weight:bold; color:#686866;}
 #side{width: 198px;float: left;}
 #footer{clear: both;}
 /*lightwindow overrides*/
-#lightwindow_contents, #lightwindow_contents p{
-	color:#686866;
-}
-#lightwindow_contents p, #lightwindow_contents li, #lightwindow_contents td{
-	line-height:1em;
-}
+#lightwindow_contents, #lightwindow_contents p{color:#686866;}
+#lightwindow_contents p, #lightwindow_contents li, #lightwindow_contents td{line-height:1em;}
+#sleeve{margin:0 10px 0 20px;}
 
-#sleeve{
-	margin:0 10px 0 20px; 
-	}
 
 /* = Navigation                                   = */
 /* ================================================ */
@@ -68,7 +62,7 @@ table.pricing-table tr td.label{font-weight:bold; color:#686866;}
 /* = Top Nav                                      = */
 /* ================================================ */
 
-#nav-top{position:relative; clear: both; float:none; background:url(/images/home/dotted-line.png) no-repeat 11px 99%; width:561px; height:42px;}
+#nav-top{position:relative; clear: both; float:none; background:url(/images/layout/undernav-dots.gif) no-repeat 11px 99%; width:561px; height:42px;}
 
 #nav-top ul, #nav-top ul li{margin:0; padding:0;}
 /* = Top Nav 1st Tier                              = */
@@ -85,6 +79,8 @@ table.pricing-table tr td.label{font-weight:bold; color:#686866;}
 #nav-top-process a{background-image:url(/images/nav/store/process.gif); width:79px;}
 #nav-top-shipping-and-returns a{background-image:url(/images/nav/store/shipping.gif); width:154px;}
 #nav-top-disclaimers a{background-image:url(/images/nav/store/disclaimer.gif); width:104px;}
+#nav-top-portfolio a{background-image:url(/images/nav/custom/portfolio.gif); width:98px;}
+#nav-top-custom-spacer a{background:#f2dbeb; width:125px; height:22px !important; margin-top:10px;}
 #nav-top ul ul li a{background:none; display:block; width:auto; height:auto; }
 
 /* = Top Nav 2nd Tier                              = */

@@ -1,0 +1,15 @@
+  <ul id="nav-top-list" class="nav horiz">
+<% if params[:id] == 'custom-invitations'  %>
+  <%= nav_list_for Category.find_by_title('Custom Invitations') %>
+
+<% else %>
+    <li class="top-nav-item" id="nav-top-portfolio">
+		 <%= link_to content_tag('span','Portfolio'), '/custom/portfolio' %>
+         <%= accordion_nav_for Category.find_by_title('Custom') %>
+	</li>
+	<% end%>
+    <li class="top-nav-item" id="nav-top-process"><%= link_to content_tag('span','Process'), '/process' %></li>
+    <li class="top-nav-item" id="nav-top-shipping-and-returns"><%= link_to content_tag('span','Shipping &amp; Returns'), '/shipping-and-returns' %></li>
+    <li class="top-nav-item" id="nav-top-disclaimers"><%= link_to content_tag('span','Disclaimers'), '/disclaimers' %></li>
+	<li class="top-nav-item" id="nav-top-custom-spacer"><a name="spacer">&nbsp;</a></li>
+  </ul>
