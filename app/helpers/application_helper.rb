@@ -73,26 +73,31 @@ end
     'active' if @category == item
   end
   
+  def top_nav
+    current_page = request.request_uri[1..-1]
+    top_nav = "nav/custom"
+    unless current_page == "custom"
+      top_nav = "nav/top"
+    end
+    top_nav
+        
+  end
+  
   def page_class_name
     content_class=""
     shaded = false
     landing = false
     current_page = request.request_uri[1..-1]
-    
     catIdx = current_page.index('categories')
     prodIdx = current_page.index('products')
     
     if(catIdx == 0 || prodIdx==0)
       shaded = true
     end  
-    
     if(current_page == "store" || current_page == "custom")
       landing=true;
       shaded = true;
     end
-    
-    
-    
     if shaded
       content_class+="shaded"
     end  
