@@ -85,19 +85,23 @@ end
   
   def page_class_name
     content_class=""
-    shaded = false
-    landing = false
     current_page = request.request_uri[1..-1]
     
-    shaded = true if current_page.index('categories') or current_page.index('products')
-
-    landing, shaded = true if current_page == "store" or current_page == "custom"
+    shaded = %w(categories products).include?(current_page)
+    landing = shaded = %w(store custom).include?(current_page)
 
     content_class << ' shaded ' if shaded
     content_class << ' landing ' if landing
-    content_class << params[:layout_class] if params[:layout_class]
-    content_class
+    content_class << orders_class
     content_class
   end
+  
+  def orders_class
+    css_class = ''
+    css_class = ' orders ' if %w( favour_tag_labels save_dates invites occasions programs thank_yous wedding_samples other_samples ).include? params[:controller]
+    css_class
+  end
+  
+  
   
 end

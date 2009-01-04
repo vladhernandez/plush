@@ -11,10 +11,13 @@
 	  	<%= link_to i+1, image.file.url, :class => 'large_image_link' %>
 		<% end %><br>
 		<hr class="dotted" />
-		<button class="sample"><span>Request a Sample</span></button><button class="order"><span>Order Form</span></button>
+		<%= request_sample_link_for @product %>
+		<%= place_order_link_for @product %>
 	</div>
 	<div class="clear"></div>
-	<%= link_to 'Edit', edit_product_path(@product) %> |
-	<%= link_to 'Back', products_path %>
+	<% if logged_in? %>
+  	<%= link_to 'Edit', edit_product_path(@product) %> |
+  	<%= link_to 'Back', products_path %>
+	<% end %>
 </div>
 </div>

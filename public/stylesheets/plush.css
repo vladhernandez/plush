@@ -12,8 +12,8 @@ hi			- Dark Grey = #262626 or whatever
 /* ================================================ */
 body{margin:0; padding:0; background:url(/images/layout/blue-grey-bg.gif);}
 h1, h2, h3, h4, h5{}
-h1{}
-h2{}
+h1{line-height:1.7em; font-size:17px; font-family:"Times New Roman",Times, serif; color:#686866;}
+h2{line-height:1.7em; font-size:17px; font-family:"Times New Roman",Times, serif; color:#686866;}
 h2.fancy{line-height:1.7em; font-size:17px; font-family:"Times New Roman",Times, serif; color:#686866;}
 h3{}
 h4{}
