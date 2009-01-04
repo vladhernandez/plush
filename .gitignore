@@ -9,3 +9,5 @@ public/files
 *.log
 *database.yml
 *deploy.rb
+support/images/
+support/images/*

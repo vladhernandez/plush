@@ -176,9 +176,11 @@ table.pricing-table tr td.label{font-weight:bold; color:#686866;}
 /* ================================================ */
 
 form h3, form h4{display: block; clear: both;}
-form p{width: 50%; float: left;}
-form label{display: block; float: left; width: 120px; text-align: right; padding-right: 5px;}
-form input[type=text], form input.text{float: right; width: 140px;}
+/*
+.order form p{width: 100%; float: left;}
+.order form label{display: block; float: left; width: 100%; text-align: right; padding-right: 5px;}
+.order form input[type=text], form input.text{float: right; width: 140px;}
+*/
 .checkbox_group{}
 .checkbox_group label{width: 245px; text-align: left; float: left; clear: right;}
 .checkbox_group input{clear: left; width: auto; float:left;}
