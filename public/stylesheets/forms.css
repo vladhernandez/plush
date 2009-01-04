@@ -1,0 +1,30 @@
+/* = Forms                                        = */
+/* ================================================ */
+
+form h3, form h4{display: block; clear: both;}
+/*
+.order form p{width: 100%; float: left;}
+.order form label{display: block; float: left; width: 100%; text-align: right; padding-right: 5px;}
+.order form input[type=text], form input.text{float: right; width: 140px;}
+*/
+.checkbox_group{}
+.checkbox_group label{width: 245px; text-align: left; float: left; clear: right;}
+.checkbox_group input{clear: left; width: auto; float:left;}
+
+form .date_select{clear: both; float: none; width: 100%;}
+form .time_select{clear: both; float: none; width: 100%;}
+form .textarea{clear: both; float: none; width: 100%;}
+form .fullwidth{clear: both; float: none; width: 100%;}
+form .fullwidth input{width: 400px; margin-right: 18px;}
+form .choice input{margin-top: 5px;}
+form .quantity_group{width: 190px; clear: right;}
+form .quantity_group label{}
+form .quantity_group input{clear: none;}
+form input.quantity{width: 20px;}
+form input.subtotal{width: 50px;}
+form .submit{width: 100%; clear: both;}
+/*label{display: block; float: left; width: 150px;}*/
+#product-detail button span{display:none;}
+#product-detail button{width:137px; height:33px; border:none;}
+button.sample{background:url(/images/store/request_sample.gif) no-repeat top left;}
+button.order{background:url(/images/store/order_form.gif) no-repeat top left;}

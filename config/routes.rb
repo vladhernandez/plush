@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
   # Form Resources
-  map.with_options :prefix => 'orders' do |m|
+  map.with_options :prefix => 'orders', :layout_class => 'orders' do |m|
    m.resources *%w( favour_tag_labels
                       save_dates
                       invites

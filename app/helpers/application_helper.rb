@@ -88,24 +88,15 @@ end
     shaded = false
     landing = false
     current_page = request.request_uri[1..-1]
-    catIdx = current_page.index('categories')
-    prodIdx = current_page.index('products')
     
-    if(catIdx == 0 || prodIdx==0)
-      shaded = true
-    end  
-    if(current_page == "store" || current_page == "custom")
-      landing=true;
-      shaded = true;
-    end
-    if shaded
-      content_class+="shaded"
-    end  
-    if landing
-      content_class+=" landing"
-    end
-    
-    #content_class=idx
+    shaded = true if current_page.index('categories') or current_page.index('products')
+
+    landing, shaded = true if current_page == "store" or current_page == "custom"
+
+    content_class << ' shaded ' if shaded
+    content_class << ' landing ' if landing
+    content_class << params[:layout_class] if params[:layout_class]
+    content_class
     content_class
   end
   
