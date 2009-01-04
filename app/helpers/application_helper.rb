@@ -21,7 +21,7 @@ module ApplicationHelper
   end
   
   def logo_link
-    link_to(image_tag('/images/logo.gif'), '/', :id => 'logo')
+    link_to('<span>Plush</span>', '/', :id => 'logo')
   end
   
   def nav_list_for(object)
