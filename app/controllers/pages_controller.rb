@@ -4,16 +4,15 @@ class PagesController < ApplicationController
   resource_controller
   
   def show
-    # @object = Page.find(params[:id])
-    @object = Page.find_by_permalink(params[:id])
-    render :template => '/content/'+params[:path].join('/') and return if params[:path]
+    @page = @object = Page.find_by_permalink(params[:id])
+    render :template => '/pages/'+params[:path].join('/') and return if params[:path]
   end
   
   
   private
-    # def object
-    #   @object ||= Page.find_by_permalink(params[:id])
-    # end
+    def object
+      @object ||= Page.find_by_permalink(params[:id])
+    end
     
     def determine_layout
       if params[:action] == 'home'
