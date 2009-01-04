@@ -1,7 +1,14 @@
 <div id="sleeve">
 <div id="product-detail">
 	<div class="column product-image">
-		<%= default_product_image(@product) %>
+
+		<%- 
+		large = @product.images.large.first.file.url unless @product.images.large.empty?
+    xlarge = @product.images.xlarge.first.file.url unless @product.images.xlarge.empty?
+    if large and xlarge
+       -%>
+       <%= link_to image_tag(large), xlarge, :class => 'lightbox'  %>
+    <% end %>
 	</div>
 	<div class="column product-contents">
 		<h2><%= @product.title %></h2>
