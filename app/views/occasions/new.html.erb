@@ -76,16 +76,17 @@
   </p>
   <h2>Select additional items required.</h2>
   <p class="checkbox_group">
-    <%= f.check_box :print_return %>
     <%= f.label :print_return, "Print return on outer envelope:" %>
-    <%= f.check_box :sealing_sticker %>
+    <%= f.check_box :print_return %>
     <%= f.label :sealing_sticker, "Address labels / sealing sticker:" %>
-    <%= f.check_box :colored_envelope %>
+    <%= f.check_box :sealing_sticker %>
     <%= f.label :colored_envelope,"Metallic / coloured envelopes:" %>
-    <%= f.check_box :lined_envelope %>
+    <%= f.check_box :colored_envelope %>
     <%= f.label :lined_envelope %>
-    <%= f.check_box :double_envelope %>
+    <%= f.check_box :lined_envelope %>
     <%= f.label :double_envelope %>
+    <%= f.check_box :double_envelope %>
+    
   </p>
   <div class="clear"></div>
     <%= f.label :verse_information, "Verse Information. <br />(Please email in a seperate MS word Document saved with your names and dated created)" %>
@@ -117,10 +118,10 @@
 </p>
 
   
-  
-  <p class="submit">
-    <%= f.submit "Create" %>
-  </p>
+<p class="submit">  
+  <%= orders_submit_button %>
+</p>
+
 <% end %>
 
 <%= link_to 'Back', occasions_path %>

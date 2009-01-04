@@ -9,6 +9,9 @@ module OrdersHelper
     button_to_image "Order Form", new_wedding_sample_path, :class => :order, :src => '/images/store/order_form.gif', :type => 'button'
   end
   
+  def orders_submit_button
+    submit_tag "Create", :src => '/images/layout/submit.png', :type => 'image'
+  end
   
   def button_to_image(name, options = {}, html_options = {})
     # File actionpack/lib/action_view/helpers/url_helper.rb, line 286

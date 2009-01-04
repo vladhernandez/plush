@@ -2,23 +2,24 @@
 /* ================================================ */
 
 form h3, form h4{display: block; clear: both;}
-/*
-.order form p{width: 100%; float: left;}
-.order form label{display: block; float: left; width: 100%; text-align: right; padding-right: 5px;}
-.order form input[type=text], form input.text{float: right; width: 140px;}
-*/
+.orders form{font-size: 10px;}
+.orders form p{width: 100%; float: left;}
+.orders form label{display: block; float: left; width: 110px; text-align: right; padding-right: 5px;}
+.orders form input[type=text], form input.text{float: left; width: 250px; background: transparent; border: 1px solid #999;}
+
 .checkbox_group{}
-.checkbox_group label{width: 245px; text-align: left; float: left; clear: right;}
-.checkbox_group input{clear: left; width: auto; float:left;}
+.orders form .checkbox_group label{width: 175px; text-align: left; float: left; clear: left;}
+.orders form .checkbox_group input{clear: right; width: auto; float:left;}
+
 
 form .date_select{clear: both; float: none; width: 100%;}
 form .time_select{clear: both; float: none; width: 100%;}
-form .textarea{clear: both; float: none; width: 100%;}
+form .textarea{clear: both; float: none; width: 250px; background: transparent; border: 1px solid #999;}
 form .fullwidth{clear: both; float: none; width: 100%;}
 form .fullwidth input{width: 400px; margin-right: 18px;}
 form .choice input{margin-top: 5px;}
-form .quantity_group{width: 190px; clear: right;}
-form .quantity_group label{}
+form .quantity_group{ clear: right;}
+form .quantity_group label{width: 175px;}
 form .quantity_group input{clear: none;}
 form input.quantity{width: 20px;}
 form input.subtotal{width: 50px;}
