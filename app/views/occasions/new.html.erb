@@ -1,7 +1,8 @@
-<h1>ORDER FORM – Special Occasions</h1>
+<h1><span>ORDER FORM</span> – Special Occasions</h1>
 
 <% form_for(@occasion) do |f| %>
   <%= f.error_messages %>
+  <fieldset>
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -11,15 +12,15 @@
     <%= f.text_field :mailing_address %>
   </p>
   <p>
-    <%= f.label :mailing_address_2, "" %>
+    <label>&nbsp;</label>
     <%= f.text_field :mailing_address_2 %>
   </p>
   <p>
-    <%= f.label :shipping_address, "Shipping address: <br />(if different)" %>
+    <%= f.label :shipping_address, "Shipping address:" %>
     <%= f.text_field :shipping_address %>
   </p>
   <p>
-    <%= f.label :shipping_address_2, "" %>
+    <label>(if different)</label>
     <%= f.text_field :shipping_address_2 %>
   </p>
   <p>
@@ -44,12 +45,11 @@
     <%= f.text_field :ordered_sample %>
   </p>
   <p>
-    <%= f.label :sample_number, "If so, indicate sample number from your quote sheet:" %>
-    <%= f.text_field :sample_number %>
+    <%= f.label :sample_number, "If so, indicate sample number from your quote sheet:", :class => 'medium' %>
+    <%= f.text_field :sample_number, :class => 'numeric' %>
   </p>
-  <div class="clear"></div>
-  
-  <h2>Paper Selection</h2>
+
+  <h5>Paper Selection</h5>
   <p>
     <%= f.label :text_paper %>
     <%= f.text_field :text_paper %>
@@ -74,7 +74,7 @@
     <%= f.label :ribbon_color %>
     <%= f.text_field :ribbon_color %>
   </p>
-  <h2>Select additional items required.</h2>
+  <h5>Select additional items required.</h5>
   <p class="checkbox_group">
     <%= f.label :print_return, "Print return on outer envelope:" %>
     <%= f.check_box :print_return %>
@@ -88,24 +88,22 @@
     <%= f.check_box :double_envelope %>
     
   </p>
-  <div class="clear"></div>
+  <p class="fullwidth">
     <%= f.label :verse_information, "Verse Information. <br />(Please email in a seperate MS word Document saved with your names and dated created)" %>
-    <%= f.text_area :verse_information %>
+  </p>    
+  <%= f.text_area :verse_information %>
   <p class="fullwidth">
     <%= f.label :type_of_event, "Type of event / occasion." %>
     <%= f.text_field :type_of_event %>
   </p>
-  <div class="clear">
-    
-  </div>
-  <p >
+  <p class="fullwidth">
     <%= f.label :rsvp_contact, "E-mail / phone number for RSVP. (if required)" %>
     <%= f.text_field :rsvp_contact %>
   </p>
   <div class="clear"></div>
   
 <p>
-  <h4>Notes:</h4>
+  <h5>Notes:</h5>
   <ol>
   <li>Once we receive your order we will send you a contract with estimated timelines and deposit requirements (50% payable by Visa or MasterCard). </li>
   <li>We will send you PDF text proofs within 1 week of receiving your order.</li>
@@ -116,7 +114,7 @@
 <p class="fullwidth">
   Don't hesitate to contact us if you have any questions. <br>Thank you and we look forward to working with you!
 </p>
-
+</fieldset>
   
 <p class="submit">  
   <%= orders_submit_button %>

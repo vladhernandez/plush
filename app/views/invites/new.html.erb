@@ -1,8 +1,8 @@
-<h1>ORDER FORM – Invitations</h1>
+<h1><span>ORDER FORM</span> – Invitations</h1>
 
 <% form_for(@invite) do |f| %>
   <%= f.error_messages %>
-
+<fieldset>
   <p>
     <%= f.label :contact_name %>
     <%= f.text_field :contact_name %>
@@ -23,8 +23,10 @@
     <%= f.label :email_address %>
     <%= f.text_field :email_address %>
   </p>
-  
-  <h3>SAVE THE DATES (if required)</h3>
+</fieldset>
+
+<fieldset>  
+  <legend>SAVE THE DATES <span>(if required)</span></legend>
   <p>
     <%= f.label :design_name %>
     <%= f.text_field :design_name %>
@@ -37,7 +39,7 @@
     <%= f.label :ordered_sample, "Did you order a sample? If so, indicate sample number from your quote sheet" %>
     <%= f.check_box :ordered_sample %>
   </p>
-  <h4>Paper Selection</h4>
+  <h5>Paper Selection</h5>
   <p>
     <%= f.label :text_paper %>
     <%= f.text_field :text_paper %>
@@ -64,8 +66,9 @@
   </p>
     <%= f.label :special_requests, "Modifications/special requests. (charges may apply)" %>
     <%= f.text_area :special_requests %>
-
-  <h3>INVITATIONS</h3>
+</fieldset>
+<fieldset>
+  <legend>INVITATIONS</legend>
   
   <p>
     <%= f.label :invites_design_name, "Design name:" %>
@@ -78,7 +81,7 @@
     <%= f.label :invites_sample_ordered, "Did you order a sample? If so, indicate sample number from your quote sheet:" %>
     <%= f.check_box :invites_sample_ordered %>
 
-  <h4>Paper Selection</h4>
+  <h5>Paper Selection</h5>
   <p>
     <%= f.label :invites_text_paper, "Text paper:" %>
     <%= f.text_field :invites_text_paper %>
@@ -103,15 +106,15 @@
     <%= f.label :invites_ribbon_color, "Ribbon colour:" %>
     <%= f.text_field :invites_ribbon_color %>
   </p>
-    <label>Reply Cards Style (check one):</label><br>
-  <p>
-    <%= f.radio_button :reply_cards_style, "traditional" %> Traditional mail back:<br>
-    <%= f.radio_button :reply_cards_style, "postcard" %> Postcard:<br>
-    <%= f.radio_button :reply_cards_style, "email_phone" %> E-mail / phone:<br>
+    <h5>Reply Cards Style (check one):</h5>
+  <p class="radio_group">
+    <label>Traditional mail back:</label> <%= f.radio_button :reply_cards_style, "traditional" %> <br>
+    <label>Postcard:</label> <%= f.radio_button :reply_cards_style, "postcard" %> <br>
+    <label>E-mail / phone:</label> <%= f.radio_button :reply_cards_style, "email_phone" %> <br>
     
   </p>
   
-  <h4><strong>Select additional items required.</strong></h4>
+  <h5>Select additional items required.</h5>
   <p class="fullwidth ">
     <%= f.label :map %>
     <%= f.check_box :map %>
@@ -120,28 +123,30 @@
     <%= f.label :hotel_info %>
     <%= f.text_field :hotel_info %>
   </p>
-  <div class="clear">
-    
-  </div><br>
-  <p class="fullwidth"><strong>Additional inserts (please specify):</strong></p>
-
+  <label>Additional inserts (please specify):</label>
+  <%= f.text_field :additional_inserts %>
+  <div class="clear"></div><br>
+  
   <p class="checkbox_group">
+    <%= f.label :address_labels, "Address labels / sealing stickers:" %>
     <%= f.check_box :address_labels %>
-    <%= f.label :address_labels, "Address labels / sealing stickers:" %><br>
+    <%= f.label :coloured_envelopes, "Metallic / coloured envelopes:" %>
     <%= f.check_box :coloured_envelopes %>    
-    <%= f.label :coloured_envelopes, "Metallic / coloured envelopes:" %><br>
+    <%= f.label :lined_envelopes, "Lined envelopes:" %>
     <%= f.check_box :lined_envelopes %>
-    <%= f.label :lined_envelopes, "Lined envelopes:" %><br>
+    <%= f.label :double_envelopes, "Double envelopes:" %>
     <%= f.check_box :double_envelopes %>
-    <%= f.label :double_envelopes, "Double envelopes:" %><br>
+    
   </p>
   <div class="clear"></div>  
+  <p class="textarea">
     <%= f.label :invites_special_requests, "Modifications/special requests. (charges may apply)" %>
     <%= f.text_area :invites_special_requests %>
-
+    </p>
+</fieldset>
   
-  
-  <h2>WEDDING INFORMATION</h2>
+<fieldset>
+  <legend>WEDDING INFORMATION</legend>
   <p class="date_select">
     <%= f.label :wedding_date %>
     <%= f.date_select :wedding_date %>
@@ -155,11 +160,11 @@
     <%= f.text_field :grooms_name %>
   </p>
   <p>
-    <%= f.label :brides_parents, "Bride's Parents (if on invite):" %>
+    <%= f.label :brides_parents, "Bride's Parents <br>(if on invite):" %>
     <%= f.text_field :brides_parents %>
   </p>
   <p>
-    <%= f.label :grooms_parents, "Groom's Parents (if on invite):" %>
+    <%= f.label :grooms_parents, "Groom's Parents <br>(if on invite):" %>
     <%= f.text_field :grooms_parents %>
   </p>
   <p>
@@ -170,22 +175,22 @@
     <%= f.label :reception_location %>
     <%= f.text_field :reception_location %>
   </p>
-  <h3>Reception times:</h3>
+  <h5>Reception times:</h5>
   <p class="time_select">
     <%= f.label :cocktails_time, "Cocktails" %>
-    <%= f.datetime_select :cocktails_time %>
+    <%= f.time_select :cocktails_time, :minute_step => 15 %>
   </p>
   <p class="time_select">
     <%= f.label :dinner_time, "Dinner" %>
-    <%= f.datetime_select :dinner_time %>
+    <%= f.time_select :dinner_time, :minute_step => 15 %>
   </p>
   <p class="time_select">
     <%= f.label :dance_time, "Dance" %>
-    <%= f.datetime_select :dance_time %>
+    <%= f.time_select :dance_time, :minute_step => 15 %>
   </p>
   <p class="">
     <%= f.label :other_time, "Other" %>
-    <%= f.text_field :other_time %>
+    <%= f.text_field :other_time, :minute_step => 15 %>
   </p>
   
   <p class="textarea">
@@ -218,7 +223,7 @@
   </p>
 
 
-  <h3>Notes:</h3>
+  <h5>Notes:</h5>
   <ol>
   <li>Once we receive your order we will send you a contract with estimated timelines and deposit requirements (50% payable by Visa or MasterCard). </li>
   <li>We will send you PDF text proofs of your invitations and inserts within 1 week of receiving your order.</li>
@@ -226,9 +231,10 @@
   <li>The remaining 50% is due when your order is shipped. </li>
   </ol>
   <p class="fullwidth">Don't hesitate to contact us if you have any questions. <br>Thank you and we look forward to working with you!</p>
+</fieldset>
   
   <p class="submit">
-    <%= f.submit "Create" %>
+    <%= orders_submit_button %>
   </p>
 <% end %>
 

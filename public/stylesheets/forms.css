@@ -1,26 +1,47 @@
 /* = Forms                                        = */
 /* ================================================ */
-
-form h3, form h4{display: block; clear: both;}
+.orders h1{font-size: 10px; font-family: Verdana; }
+.orders h1 span{font-weight: bold;}
+form h3, form h4, form h5{display: block; clear: both;color: #555;}
 .orders form{font-size: 10px;}
-.orders form p{width: 100%; float: left;}
-.orders form label{display: block; float: left; width: 110px; text-align: right; padding-right: 5px;}
-.orders form input[type=text], form input.text{float: left; width: 250px; background: transparent; border: 1px solid #999;}
+form fieldset{border: 0;}
+form legend{margin: 0; padding: 0; color: #555;}
+form legend span{font-weight: normal;}
+form p{display: block; clear: both; height: 18px; margin-bottom: 3px;}
+label{color: #777; font-weight: normal; display: block;}
+.orders label{float: left; width: 110px; text-align: right; padding-right: 5px;}
+input[type=text], input.text{float: left; width: 250px; background: transparent; border: 1px solid #999;}
+
+select{color: #555;margin-top: 0;}
 
 .checkbox_group{}
-.orders form .checkbox_group label{width: 175px; text-align: left; float: left; clear: left;}
-.orders form .checkbox_group input{clear: right; width: auto; float:left;}
+.checkbox_group label{width: 175px; text-align: left; float: left; clear: left;}
+.checkbox_group input{clear: right; width: auto; float:left;}
+.radio_group label{width: 175px; text-align: right; float: left; clear: left;}
+.radio_group input{clear: right; width: auto; float:left;}
 
 
 form .date_select{clear: both; float: none; width: 100%;}
 form .time_select{clear: both; float: none; width: 100%;}
-form .textarea{clear: both; float: none; width: 250px; background: transparent; border: 1px solid #999;}
-form .fullwidth{clear: both; float: none; width: 100%;}
-form .fullwidth input{width: 400px; margin-right: 18px;}
+form .textarea{width: 100%; height: 1%; clear: both; float: left; display: block;}
+form .textarea label{width: 100%; float: none; text-align: left;}
+form textarea{clear: both; float: none; width: 350px; height: 90px; background: transparent; border: 1px solid #999;}
+form .fullwidth{clear: both; float: none; width: 100%; height: 20p;}
+form .fullwidth label{width: 100%; text-align: left;}
+.medium label{width: 250px;}
+label.medium{width: 250px;}
+form .fullwidth input{width: 365px; margin-right: 18px;}
+form .numeric{width: 30px;}
 form .choice input{margin-top: 5px;}
+.configure_group{}
+.configure_group .quantity_group{clear: both; }
+.configure_group .quantity_group label{width: 90px;}
+.config_subtotals label{width: 40px;}
+.config_subtotals input{width: 217px;}
 form .quantity_group{ clear: right;}
 form .quantity_group label{width: 175px;}
 form .quantity_group input{clear: none;}
+
 form input.quantity{width: 20px;}
 form input.subtotal{width: 50px;}
 form .submit{width: 100%; clear: both;}

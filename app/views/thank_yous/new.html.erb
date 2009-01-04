@@ -1,8 +1,8 @@
-<h1>ORDER FORM – Thank You Cards</h1>
+<h1><span>ORDER FORM</span> – Thank You Cards</h1>
 
 <% form_for(@thank_you) do |f| %>
   <%= f.error_messages %>
-
+<fieldset>
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -12,7 +12,7 @@
     <%= f.text_field :mailing_address %>
   </p>
   <p>
-    <%= f.label :mailing_address_2, "" %>
+    <label>&nbsp;</label>
     <%= f.text_field :mailing_address_2 %>
   </p>
   <p>
@@ -47,13 +47,14 @@
     
   </div>
   <p class="fullwidth">
-    Did you order you invitations through us? If so, please indicate design and/or your contract number so we can match the fonts.
+    Did you order you invitations through us? <br>If so, please indicate design and/or your contract number so we can match the fonts.
+        <%= f.text_field :design_contact_number, :class => 'numeric' %>
   </p>
   <p class="">    
-    <%= f.label :design_contact_number, "" %>
-    <%= f.text_field :design_contact_number %>
+
+
   </p>
-  <p>
+  <p class="">
     <%= f.label :design_name %>
     <%= f.text_field :design_name %>
   </p>
@@ -66,18 +67,23 @@
     <%= f.text_field :ordered_sample %>
   </p>
   <p>
-    <%= f.label :sample_number, "If so, indicate sample number from your quote sheet:" %>
-    <%= f.text_field :sample_number %>
+    <%= f.label :sample_number, "If so, indicate sample number from your quote sheet:", :class => 'medium' %>
+    <%= f.text_field :sample_number, :class => 'numeric' %>
   </p>
-  <h2>Paper Selection</h2>
+  <h5>Paper Selection</h5>
   <p>
     <%= f.label :text_paper %>
     <%= f.text_field :text_paper %>
-
+  </p>
+  <p>
     <%= f.label :text_paper_layer_2, "Layer 2:" %>
     <%= f.text_field :text_paper_layer_2 %>
+  </p>
+  <p>
     <%= f.label :text_paper_layer_3, "Layer 3:" %>
     <%= f.text_field :text_paper_layer_3 %>
+  </p>
+  <p>
     <%= f.label :text_paper_layer_4, "Layer 4:" %>
     <%= f.text_field :text_paper_layer_4 %>
   </p>
@@ -104,20 +110,21 @@
     
   </div>
   <strong>Notes:</strong>
-  <ul>
+  <ol>
   <li>Once we receive your order we will send you a contract with estimated timelines and deposit requirements (50% payable by Visa or MasterCard). </li>
   <li>We will send you PDF text proofs within 1 week of receiving your order.</li>
   <li>Once you approve all text proofs it will take 2 – 4 weeks to complete your order.</li>
   <li>The remaining 50% is due when your order is shipped. </li>
-</ul>
-
-  <p class="fullwidth">Don't hesitate to contact us if you have any questions. <br>Thank you and we look forward to working with you!</p>
-
-
+</ol>
+<div class="clear">
   
-  <p class="submit">
-    <%= f.submit "Create" %>
+</div>
+  <p>Don't hesitate to contact us if you have any questions. <br>Thank you and we look forward to working with you!</p>
+</fieldset>
+  <p class="submit">  
+    <%= orders_submit_button %>
   </p>
+
 <% end %>
 
 <%= link_to 'Back', thank_yous_path %>

@@ -1,8 +1,8 @@
-<h1>ORDER FORM – Programs</h1>
+<h1><span>ORDER FORM</span> – Programs</h1>
 
 <% form_for(@program) do |f| %>
   <%= f.error_messages %>
-
+<fieldset>
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -43,12 +43,9 @@
     <%= f.label :grooms_name %>
     <%= f.text_field :grooms_name %>
   </p>
-  
-  
-  <p class="fullwidth">Did you order you invitations through us? If so, please indicate design and/or your contract number so we can match the fonts.</p>
-  <p>
-    <%= f.label :design_contact_number, "" %>
-    <%= f.text_field :design_contact_number %>
+  <p class="fullwidth">
+    <%= f.label :design_contact_number, "Did you order you invitations through us? <br>If so, please indicate design and/or your contract number so we can match the fonts." %>
+    <%= f.text_field :design_contact_number, :class => 'numeric' %>
   </p>
   
   <p>
@@ -67,7 +64,7 @@
     <%= f.label :sample_number, "If so, indicate sample number from your quote sheet:" %>
     <%= f.text_field :sample_number %>
   </p>
-  <h2>Paper Selection</h2>
+  <h5>Paper Selection</h5>
   <p>
     <%= f.label :text_paper %>
     <%= f.text_field :text_paper %>
@@ -95,14 +92,12 @@
   <p class="textarea">
     <%= f.label :special_requests, "Modifications/special requests. Please indicate the sample number. (charges may apply)" %>
     <%= f.text_area :special_requests %>
-  </p>
-  <p class="textarea">
-    <%= f.label :program_text, "Program text. <br />Please send in a seperate MS word Document saved with your names and dated created" %>
-    <%= f.text_area :program_text %>
+    
   </p>
 
 
-  <h4>Notes:</h4>
+
+  <h5>Notes:</h5>
   <ol>
   <li>Once we receive your order we will send you a contract with estimated timelines and deposit requirements (50% payable by Visa or MasterCard). </li>
   <li>We will send you PDF text proofs within 1 week of receiving your order.</li>
@@ -110,7 +105,7 @@
   <li>The remaining 50% is due when your order is shipped. </li>
   </ol>
   <p class="fullwidth">Don't hesitate to contact us if you have any questions. <br>Thank you and we look forward to working with you!</p>
-
+</fieldset>
 
   
   <p class="submit">
