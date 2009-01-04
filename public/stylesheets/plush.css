@@ -93,7 +93,7 @@ table.pricing-table tr td.label{font-weight:bold; color:#686866;}
 					position:absolute;					
 					z-index:99;
 					display:block;
-					visibility:hidden;
+					visibility:hidden; 
 					background: black url(/images/nav/store/store_dropdown_paper.jpg) repeat-y top left; 
 					width:170px;
 
