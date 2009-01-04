@@ -15,6 +15,7 @@ class UsersControllerTest < Test::Unit::TestCase
     @controller = UsersController.new
     @request    = ActionController::TestRequest.new
     @response   = ActionController::TestResponse.new
+    login_as :aaron
   end
 
   def test_should_allow_signup

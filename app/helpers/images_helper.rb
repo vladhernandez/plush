@@ -6,9 +6,8 @@ module ImagesHelper
   def default_product_image(product)
       xlarge = product.images.large.first.file.url
       large = product.images.xlarge.first.file.url
-      unless large.empty? or xlarge.empty?
+      if large and xlarge
        linked_image = link_to image_tag(large), xlarge, :class => 'lightbox' 
       end
-      linked_image
   end
 end
