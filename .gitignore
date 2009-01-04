@@ -7,3 +7,5 @@ tmp/*
 public/files
 */log/*
 *.log
+*database.yml
+*deploy.rb
