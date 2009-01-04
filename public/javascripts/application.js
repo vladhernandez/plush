@@ -8,7 +8,12 @@ Plush.prototype = {
 	},
 	init_nav: function(){
 		var t = this;
-		$$(".top-nav-item dl").each(function(node){Element.hide(node);});
+		$$(".top-nav-item dl").each(function(node){
+			node.setStyle({
+				'visibility' : 'visible'
+				});
+				Element.hide(node);	
+			});
 		$$('.top-nav-item').each(function(node){
 			var ul = $A(node.getElementsByTagName("dl")).first();
 			if(ul!=null){
