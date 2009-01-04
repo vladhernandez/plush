@@ -6,7 +6,7 @@
   
   </div>
   <p>
-    <%= link_to_remote "Add An Image", :update => "add_images", :url => new_image_path(:product_id => @product), :method => :get %>
+    <%= link_to_remote "Add An Image", :update => "add_images", :url => new_image_path(:product_id => @product), :method => :get, :position => :bottom  %>
   </p>
   <p>
     <%= f.submit "Create" %>
