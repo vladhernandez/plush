@@ -5,7 +5,7 @@
 <% else %>
     <li class="top-nav-item" id="nav-top-portfolio">
 		 <%= link_to content_tag('span','Portfolio'), '/custom/portfolio' %>
-         <%= accordion_nav_for Category.find_by_title('Custom') %>
+         <%= accordion_nav_for Category.find_by_title('Custom Invitations') %>
 	</li>
 	<% end%>
     <li class="top-nav-item" id="nav-top-process"><%= link_to content_tag('span','Process'), '/process' %></li>
