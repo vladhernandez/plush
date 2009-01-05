@@ -1,13 +1,35 @@
 module OrdersHelper
   def request_sample_link_for(product)
-    # url_for eval("new_#{product.class.name_url}")
-    button_to_image "Request a Sample", new_wedding_sample_path, :class => :sample, :src => '/images/store/request_sample.gif', :type => 'button'
+    # link = determine_link_for(product, :sample)
+    link = new_invite_path
+    button_to_image "Request a Sample", link, :class => :sample, :src => '/images/store/request_sample.gif', :type => 'button', :method => 'get'
   end
   
   def place_order_link_for(product)
-    # url_for eval("new_#{product.class.name_url}")
-    button_to_image "Order Form", new_wedding_sample_path, :class => :order, :src => '/images/store/order_form.gif', :type => 'button'
+    # link = determine_link_for(product, :order)
+    link = new_invite_path
+    button_to_image "Order Form", link, :class => :order, :src => '/images/store/order_form.gif', :type => 'button', :method => 'get'
   end
+  
+  def determine_link_for(product, type)
+    case product.category.parent.permalink.include?
+    when 'invitation'
+      url = new_invite_path
+    when 'occasion'
+      url = new_occasion_path
+    when 'stationary'
+      case product.category.permalink.include?
+      when 'programs'
+        url = new_product_path
+      when 'favour'
+        url = new_favour_tag_label_path
+      when 'thank'
+        url = new_thank_you_path
+      end
+    end
+    url
+  end
+  
   
   def orders_submit_button
     submit_tag "Create", :src => '/images/layout/submit.png', :type => 'image'
