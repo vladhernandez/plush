@@ -5,11 +5,20 @@ class CategoriesControllerTest < ActionController::TestCase
   should "allow unique view (store) for '/store' " do
     get "store"
     assert_response :success
+    # assert_select 'body.landing'
   end
   
   should "allow unique view (custom) for '/custom' " do
     get "custom"
     assert_response :success
+    # assert_select 'body.landing'
+  end
+  
+  should "have shaded class for categories pages" do
+    Category.find(:all).each do |cat|
+      get :show, :id => cat.permalink
+      assert_select "body.shaded"
+    end
   end
   
   
