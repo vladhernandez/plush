@@ -1,5 +1,6 @@
-<div class="blog_post">
-  <h3><%= post.title %></h3>
-  <p class="blog_post_date"><%= post.date %></p>
-  <div class="blog_post_content"><%= markdown post.content %></div>
+<div class="post">
+  <!-- <h3><%= post.title %></h3> -->
+  <p class="post-date"><%= post.formatted_date %></p>
+  <%= image_tag post.images.first.file.url unless post.images.empty? %>
+  <div class="post-content"><%= markdown post.content %></div>
 </div>

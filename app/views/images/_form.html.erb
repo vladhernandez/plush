@@ -1,6 +1,6 @@
 
 
-<% unless params[:product_id] %>
+<% unless params[:product_id] || params[:post_id] %>
 <p>
   <%= f.label :usage %><br>
   <%= f.select :usage, [["Thumb", 'thumb'],["Large", 'large'],["XLarge", 'xlarge']] %>
@@ -25,6 +25,17 @@
     <%= image_form.label :usage %><br>
     <%= image_form.select :usage, [["Thumb", 'thumb'],["Large", 'large'],["XLarge", 'xlarge']] %>
   </p>
+  	<p>
+  		<%= image_form.label :file %><br />
+  		<%= image_form.file_field :file %>
+  	</p>
+  <% end %>
+<% end %>
+<% if params[:post_id] %>
+  
+
+  <% image = Image.new(:post_id => params[:post_id]) %>
+  <% fields_for "post[image_attributes][]", image do |image_form| %>
   	<p>
   		<%= image_form.label :file %><br />
   		<%= image_form.file_field :file %>

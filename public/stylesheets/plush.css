@@ -175,7 +175,10 @@ table.pricing-table tr td.label{font-weight:bold; color:#686866;}
 .product h3 a{color:#686866; font-size:16px; font-family:"Times New Roman",Times, Serif; font-style: italic;}
 #product-detail{margin-top:20px;}
 
-
+.post{border-bottom: 1px solid; float: left; width: 100%; min-height: 90px; padding: 10px 0;}
+.post-date{margin: 0; color: #333;}
+.post-content{float: left; }
+.post img{padding: 0 5px 5px 0; float: left;}
 
 /* = Admin Section	                              = */
 /* ================================================ */

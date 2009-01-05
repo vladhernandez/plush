@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090104204843) do
+ActiveRecord::Schema.define(:version => 20090105023417) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20090104204843) do
     t.integer  "file_file_size",    :limit => 11
     t.datetime "file_updated_at"
     t.string   "usage"
+    t.integer  "post_id",           :limit => 11
   end
 
   create_table "invites", :force => true do |t|

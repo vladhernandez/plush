@@ -1,17 +1,20 @@
 
 <p>
-  <%= f.label :title %><br />
+  <%= f.label :title %>
   <%= f.text_field :title %>
 </p>
 <p>
-  <%= f.label :date %><br />
+  <%= f.label :date %>
   <%= f.date_select :date %>
 </p>
+<br>
 <p>
-  <%= f.label :content %><br />
-  <%= f.text_area :content %>
-</p>
-<p>
-  <%= f.label :active %><br />
+  <%= f.label :active %>
   <%= f.check_box :active %>
+</p>
+<br>
+<p class="textarea">
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+
 </p>

@@ -56,6 +56,7 @@ CREATE TABLE `images` (
   `file_file_size` int(11) default NULL,
   `file_updated_at` datetime default NULL,
   `usage` varchar(255) default NULL,
+  `post_id` int(11) default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
@@ -112,6 +113,7 @@ CREATE TABLE `invites` (
   `invites_additional_inserts` text,
   `created_at` datetime default NULL,
   `updated_at` datetime default NULL,
+  `additional_inserts` varchar(255) default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -219,7 +221,7 @@ CREATE TABLE `posts` (
   `updated_at` datetime default NULL,
   `permalink` varchar(255) default NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL auto_increment,
@@ -364,7 +366,7 @@ CREATE TABLE `users` (
   `remember_token` varchar(255) default NULL,
   `remember_token_expires_at` datetime default NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `wedding_samples` (
   `id` int(11) NOT NULL auto_increment,
@@ -476,3 +478,9 @@ INSERT INTO schema_migrations (version) VALUES ('20081221065958');
 INSERT INTO schema_migrations (version) VALUES ('20081221070620');
 
 INSERT INTO schema_migrations (version) VALUES ('20081227195650');
+
+INSERT INTO schema_migrations (version) VALUES ('20090104204843');
+
+INSERT INTO schema_migrations (version) VALUES ('20090104221139');
+
+INSERT INTO schema_migrations (version) VALUES ('20090105023417');

@@ -7,7 +7,7 @@ form h3, form h4, form h5{display: block; clear: both;color: #555;}
 form fieldset{border: 0;}
 form legend{margin: 0; padding: 0; color: #555;}
 form legend span{font-weight: normal;}
-form p{display: block; clear: both; height: 18px; margin-bottom: 3px;}
+form p{display: block; clear: both; margin-bottom: 3px;}
 label{color: #777; font-weight: normal; display: block;}
 .orders label{float: left; width: 110px; text-align: right; padding-right: 5px;}
 input[type=text], input.text{float: left; width: 250px; background: transparent; border: 1px solid #999;}

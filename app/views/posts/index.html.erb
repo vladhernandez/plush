@@ -1,4 +1,5 @@
-<h1>Blog</h1>
-<%= render :partial => @posts %>
-
-<p><%= link_to 'Archive', blog_archive_path unless params[:archive] %></p>
+<h1>The Plush Blog</h1>
+<div id="blog">
+  <%= render :partial => @posts %>
+  <p><%= link_to 'Archive', blog_archive_path unless params[:archive] %></p>
+</div>

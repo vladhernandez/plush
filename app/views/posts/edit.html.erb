@@ -1,9 +1,18 @@
 <h1>Editing post</h1>
 
 <% form_for(@post, :html => {:multipart => true}) do |f| %>
-<%= render :partial => "form", :locals => {:f => f} %>
   <%= f.error_messages %>
+  <%= render :partial => "form", :locals => {:f => f} %>
+  <div id="existing_images">
+    <%= render :partial => "image", :collection => @post.images %>
+  </div>
+  <div id="add_images">
 
+  </div>
+  <p>
+    <%= link_to_remote "Add An Image", :update => "add_images", :url => new_image_path(:post_id => @post), :method => :get, :position => :bottom  %>
+  </p>
+  
   <p>
     <%= f.submit "Update" %>
   </p>

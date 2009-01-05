@@ -5,4 +5,15 @@ class Post < ActiveRecord::Base
     def to_param
       permalink
     end
+    
+    def formatted_date
+      "#{date.month}.#{date.day}.#{date.year}"
+    end
+    
+    def image_attributes=(attrs)
+      attrs.each do |attr|
+        images.build(attr)
+      end
+    end
+    
 end
