@@ -134,7 +134,7 @@ table.pricing-table tr td.label{font-weight:bold; color:#686866;}
 .horiz li ul li{}
 
 /* Side Nav - Persistant and contextual */
-#nav-side{margin-top:63px;  background:url(/images/home/dotted-line.png) no-repeat top left;}
+#nav-side{margin-top:63px;}
 #nav-side .global{}
 #nav-side .subnav{}
 
@@ -159,6 +159,7 @@ table.pricing-table tr td.label{font-weight:bold; color:#686866;}
 #nav-side li a:hover{background-position:left top;}
 #nav-side li a{text-decoration:none; width:122px; height:20px; display:block;}
 #nav-side li a span, .link span{visibility:hidden;}
+#nav-side #nav-side-orders a span{visibility: visible;}
 
 /* = Generic Classes                              = */
 /* ================================================ */

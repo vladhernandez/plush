@@ -1,3 +1,15 @@
+<div id="nav-side">
+<% if orders_class == ' orders ' %>
+  <ul id="nav-side-orders" class="nav vert">
+    <li id="side-invites"><%= link_to content_tag 'span', 'Invites', new_invite_path %></li>
+    <li id="side-thank_yous"><%= link_to content_tag 'span', 'Thank You Cards', new_thank_you_path %></li>
+    <li id="side-favour_tags"><%= link_to content_tag 'span', 'Favour Tags / Labels', new_favour_tag_label_path %></li>
+    <li id="side-programs"><%= link_to content_tag 'span', 'Programs', new_program_path %></li>
+    <li id="side-occasions"><%= link_to content_tag 'span', 'Special Occasions', new_occasion_path %></li>
+    <li id="side-save-dates"><%= link_to content_tag 'span', 'Save The Dates', new_save_date_path %></li>
+  </ul>  
+<% end %>
+<hr class="dotted">
 <ul id="nav-side-static" class="nav vert">
   <li id="side-about"><%= link_to content_tag('span','About Plush'), '/about' %></li>
   <li id="side-blog"><%= link_to content_tag('span','The Plush Blog'), blog_path %></li>
@@ -5,3 +17,4 @@
   <li id="side-praise"><%= link_to content_tag('span','Plush Praise'), '/testimonials' %></li>
   <li id="side-contact"><%= link_to content_tag('span','Contact Us'), '/contact' %></li>
 </ul>
+</div>
