@@ -75,9 +75,9 @@ end
   
   def top_nav
     current_page = request.request_uri[1..-1]
-    top_nav = "nav/custom"
-    unless current_page == "custom"
-      top_nav = "nav/top"
+    top_nav = "nav/top" 
+    if @category && @category.category_type == "custom" or %w(custom).include?(current_page)
+      top_nav = "nav/custom"
     end
     top_nav
         
